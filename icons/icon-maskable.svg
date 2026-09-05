@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="אני מנגן">
+  <!-- גרסת maskable: הרקע מלא מקצה לקצה, והציור מוקטן אל תוך אזור הבטיחות
+       (80% מרכזיים), כדי שמערכת ההפעלה תוכל לחתוך אותו לכל צורה בלי לקטוע אותו. -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#ffc857"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="#12101d"/>
+  <g transform="translate(256,256) scale(0.68) translate(-256,-256)">
+    <rect x="52" y="52" width="408" height="408" rx="88" fill="url(#g)" opacity=".18"/>
+    <g fill="#fbfaff">
+      <rect x="112" y="150" width="44" height="212" rx="8"/>
+      <rect x="164" y="150" width="44" height="212" rx="8"/>
+      <rect x="216" y="150" width="44" height="212" rx="8"/>
+    </g>
+    <g fill="#1a1730">
+      <rect x="144" y="150" width="26" height="126" rx="6"/>
+      <rect x="200" y="150" width="26" height="126" rx="6"/>
+    </g>
+    <path d="M330 140v148a44 44 0 1 0 22 38V196l58-16v96a44 44 0 1 0 22 38V116z" fill="url(#g)"/>
+  </g>
+</svg>

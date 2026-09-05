@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- בדיקה פרטית: לא לאינדוקס. להסיר כשהאתר נפתח לציבור. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" id="metaDesc" content="אני מנגן – לימוד פסנתר, גיטרה, אוקולילה ועוד בדרך הקלה והמהירה ביותר. 122 מנגינות בנחלת הכלל, מטרונום, מכוון, אימון אוזן ותעודת סיום. 3 שיעורים ראשונים בחינם בכל כלי.">
+<meta name="theme-color" content="#12101d">
+<title>אני מנגן – לימוד נגינה בדרך הקלה</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="אני מנגן">
+<link rel="stylesheet" href="css/app.css?v=2.6.0">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="nav.skip">דילוג לתוכן הראשי</a>
+
+<!-- ===== סרגל נגישות ===== -->
+<button id="a11yToggle" class="a11y-fab" aria-expanded="false" aria-controls="a11yPanel"
+        data-i18n-aria="a11y.open" data-i18n-title="a11y.open"
+        title="תפריט נגישות (Alt+0)" aria-label="פתיחת תפריט נגישות">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <circle cx="12" cy="4" r="2"/>
+    <path d="M12 7c-3 0-5.5-.6-7.5-1.2l-.6 1.9C5.7 8.2 7.7 8.7 10 8.9v3.4L7.4 20l1.9.7L12 14.4l2.7 6.3 1.9-.7L14 12.3V8.9c2.3-.2 4.3-.7 6.1-1.2l-.6-1.9C17.5 6.4 15 7 12 7z"/>
+  </svg>
+</button>
+
+<div id="a11yPanel" class="a11y-panel" role="dialog" aria-modal="false" aria-labelledby="a11yTitle" hidden>
+  <div class="a11y-head">
+    <h2 id="a11yTitle" data-i18n="a11y.title">התאמות נגישות</h2>
+    <button id="a11yClose" class="icon-btn" data-i18n-aria="a11y.close" aria-label="סגירה">✕</button>
+  </div>
+
+  <div class="a11y-group" role="group" aria-labelledby="a11yFontLbl">
+    <span id="a11yFontLbl" class="a11y-lbl" data-i18n="a11y.font">גודל טקסט</span>
+    <div class="a11y-row">
+      <button class="chip" data-a11y="font-" data-i18n-aria="a11y.fontDown" aria-label="הקטנה">A−</button>
+      <output id="fontOut" class="a11y-out">100%</output>
+      <button class="chip" data-a11y="font+" data-i18n-aria="a11y.fontUp" aria-label="הגדלה">A+</button>
+    </div>
+  </div>
+
+  <div class="a11y-group" role="group" aria-labelledby="a11yViewLbl">
+    <span id="a11yViewLbl" class="a11y-lbl" data-i18n="a11y.display">תצוגה</span>
+    <div class="a11y-grid">
+      <button class="chip" data-toggle="hc" data-i18n="a11y.hc" aria-pressed="false">ניגודיות גבוהה</button>
+      <button class="chip" data-toggle="inv" data-i18n="a11y.inv" aria-pressed="false">היפוך צבעים</button>
+      <button class="chip" data-toggle="gray" data-i18n="a11y.gray" aria-pressed="false">גווני אפור</button>
+      <button class="chip" data-toggle="links" data-i18n="a11y.links" aria-pressed="false">הדגשת קישורים</button>
+      <button class="chip" data-toggle="readable" data-i18n="a11y.readable" aria-pressed="false">גופן קריא</button>
+      <button class="chip" data-toggle="spacing" data-i18n="a11y.spacing" aria-pressed="false">ריווח מוגדל</button>
+      <button class="chip" data-toggle="nomotion" data-i18n="a11y.nomotion" aria-pressed="false">עצירת אנימציות</button>
+      <button class="chip" data-toggle="bigcursor" data-i18n="a11y.bigcursor" aria-pressed="false">סמן גדול</button>
+      <button class="chip" data-toggle="guide" data-i18n="a11y.guide" aria-pressed="false">סרגל קריאה</button>
+      <button class="chip" data-toggle="focus" data-i18n="a11y.focus" aria-pressed="false">הדגשת מיקוד</button>
+    </div>
+  </div>
+
+  <div class="a11y-group" role="group" aria-labelledby="a11ySndLbl">
+    <span id="a11ySndLbl" class="a11y-lbl" data-i18n="a11y.hearing">התאמות לכבדי שמיעה</span>
+    <div class="a11y-grid">
+      <button class="chip" data-toggle="visual" data-i18n="a11y.visual" aria-pressed="false">מצב ויזואלי</button>
+      <button class="chip" data-toggle="vibrate" data-i18n="a11y.vibrate" aria-pressed="false">רטט</button>
+      <button class="chip" data-toggle="notenames" data-i18n="a11y.notenames" aria-pressed="false">שמות תווים</button>
+      <button class="chip" data-toggle="nocolor" data-i18n="a11y.nocolor" aria-pressed="false">כיבוי צבעי תווים</button>
+    </div>
+  </div>
+
+  <div class="a11y-group">
+    <button id="a11yReset" class="btn btn-ghost w100" data-i18n="a11y.reset">איפוס כל ההתאמות</button>
+    <a class="a11y-link" href="#/legal/accessibility" data-i18n="a11y.statement">להצהרת הנגישות המלאה</a>
+  </div>
+</div>
+
+<!-- ===== כותרת ===== -->
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#/" data-i18n-aria="nav.brandAria" aria-label="אני מנגן">
+      <span class="brand-mark" aria-hidden="true">♪</span>
+      <span class="brand-txt" id="brandTxt">אני מנגן</span>
+    </a>
+
+    <nav class="mainnav" id="mainnav" aria-label="Main">
+      <a href="#/" data-i18n="nav.home">בית</a>
+      <a href="#/instruments" data-i18n="nav.instruments">כלים ושיעורים</a>
+      <a href="#/songs" data-i18n="nav.songs">שירים</a>
+      <a href="#/repertoire" data-i18n="nav.repertoire">הרפרטואר שלי</a>
+      <a href="#/tools" data-i18n="nav.tools">כלי אימון</a>
+      <a href="#/progress" data-i18n="nav.progress">ההתקדמות שלי</a>
+      <a href="#/pricing" data-i18n="nav.pricing">מנויים</a>
+    </nav>
+
+    <div class="topbar-actions">
+      <div class="lang-wrap">
+        <button id="langBtn" class="icon-btn lang-btn" aria-expanded="false" aria-controls="langMenu"
+                data-i18n-aria="common.langLabel" aria-label="בחירת שפה">🌐</button>
+        <div id="langMenu" class="lang-menu" role="menu" hidden></div>
+      </div>
+      <button id="themeBtn" class="icon-btn" data-i18n-aria="nav.theme" aria-label="מצב תצוגה"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg></button>
+      <button id="navBtn" class="icon-btn only-mobile" aria-expanded="false" aria-controls="mobileNav"
+              data-i18n-aria="nav.menu" aria-label="תפריט"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+  <nav id="mobileNav" class="mobilenav" aria-label="Mobile" hidden>
+    <a href="#/" data-i18n="nav.home">בית</a>
+    <a href="#/instruments" data-i18n="nav.instruments">כלים ושיעורים</a>
+    <a href="#/songs" data-i18n="nav.songs">שירים</a>
+    <a href="#/repertoire" data-i18n="nav.repertoire">הרפרטואר שלי</a>
+    <a href="#/tools" data-i18n="nav.tools">כלי אימון</a>
+    <a href="#/progress" data-i18n="nav.progress">ההתקדמות שלי</a>
+    <a href="#/report" data-i18n="nav.report">דוח למורה / להורה</a>
+    <a href="#/storage" data-i18n="st.h1">הנתונים והגיבוי שלי</a>
+    <a href="#/pricing" data-i18n="nav.pricing">מנויים</a>
+    <a href="#/faq" data-i18n="nav.faq">שאלות נפוצות</a>
+    <a href="#/legal/accessibility" data-i18n="legal.a11y.title">נגישות</a>
+    <a href="#/legal/privacy" data-i18n="legal.privacy.title">פרטיות</a>
+  </nav>
+</header>
+
+<div id="readingGuide" class="reading-guide" hidden aria-hidden="true"></div>
+
+<main id="main" tabindex="-1"></main>
+
+<!-- ===== כותרת תחתונה ===== -->
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="brand small"><span class="brand-mark" aria-hidden="true">♪</span>
+        <span id="brandTxt2">אני מנגן</span></div>
+      <p class="muted" data-i18n="foot.tagline">לומדים לנגן בדרך הקלה.</p>
+    </div>
+    <nav aria-label="Info">
+      <h3 data-i18n="foot.info">מידע</h3>
+      <a href="#/instruments" data-i18n="nav.instruments">כלים ושיעורים</a>
+      <a href="#/songs" data-i18n="nav.songs">שירים</a>
+      <a href="#/tools" data-i18n="nav.tools">כלי אימון</a>
+      <a href="#/report" data-i18n="nav.report">דוח למורה / להורה</a>
+      <a href="#/storage" data-i18n="st.h1">הנתונים והגיבוי שלי</a>
+      <a href="#/pricing" data-i18n="nav.pricing">מנויים</a>
+      <a href="#/faq" data-i18n="nav.faq">שאלות נפוצות</a>
+    </nav>
+    <nav aria-label="Legal">
+      <h3 data-i18n="foot.legal">משפטי</h3>
+      <a href="#/legal/accessibility" data-i18n="legal.a11y.title">הצהרת נגישות</a>
+      <a href="#/legal/privacy" data-i18n="legal.privacy.title">מדיניות פרטיות</a>
+      <a href="#/legal/terms" data-i18n="legal.terms.title">תנאי שימוש</a>
+      <a href="#/legal/credits" data-i18n="legal.credits.title">זכויות יוצרים</a>
+    </nav>
+    <div>
+      <h3 data-i18n="foot.contact">יצירת קשר ורכז נגישות</h3>
+      <p class="muted">עו״ד רפאל צ׳סטר<br>
+        <span data-i18n="foot.phone">טלפון</span>: <a href="tel:0545502848" dir="ltr">054-550-2848</a><br>
+        <span data-i18n="foot.email">דוא״ל</span>: <a href="mailto:rafichester@gmail.com" dir="ltr">rafichester@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <small>© <span id="yr"></span> <span id="footBrand">אני מנגן</span>.
+      <span data-i18n="foot.rights">כל התכנים המוזיקליים הם יצירות מקוריות או נחלת הכלל.</span>
+      <a href="#/legal/credits" data-i18n="foot.creditsLink">פירוט מקורות</a>.</small>
+  </div>
+</footer>
+
+<div id="live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+<div id="toast" class="toast" hidden></div>
+<div id="modalRoot"></div>
+
+<script src="js/data-core.js?v=2.6.0"></script>
+<script src="js/data-songs.js?v=2.6.0"></script>
+<script src="js/data-lessons.js?v=2.6.0"></script>
+<script src="js/lang/song-src-en.js?v=2.6.0"></script>
+<script src="js/i18n.js?v=2.6.0"></script>
+<script src="js/lang/ui-he.js?v=2.6.0"></script>
+<script src="js/lang/ui-en.js?v=2.6.0"></script>
+<script src="js/lang/legal-he.js?v=2.6.0"></script>
+<script src="js/lang/legal-en.js?v=2.6.0"></script>
+<script src="js/lang/device-keys.js?v=2.6.0"></script>
+<script src="js/lang/feature-keys.js?v=2.6.0"></script>
+<script src="js/lang/storage-keys.js?v=2.6.0"></script>
+<script src="js/lang/tuner-keys.js?v=2.6.0"></script>
+<script src="js/lang/chord-tips.js?v=2.6.0"></script>
+<script src="js/audio.js?v=2.6.0"></script>
+<script src="js/store.js?v=2.6.0"></script>
+<script src="js/storage.js?v=2.6.0"></script>
+<script src="js/device.js?v=2.6.0"></script>
+<script src="js/instruments.js?v=2.6.0"></script>
+<script src="js/views.js?v=2.6.0"></script>
+<script src="js/repertoire.js?v=2.6.0"></script>
+<script src="js/backing.js?v=2.6.0"></script>
+<script src="js/tools.js?v=2.6.0"></script>
+<script src="js/practice.js?v=2.6.0"></script>
+<script src="js/mic.js?v=2.6.0"></script>
+<script src="js/guide.js?v=2.6.0"></script>
+<script src="js/legal.js?v=2.6.0"></script>
+<script src="js/consent.js?v=2.6.0"></script>
+<script src="js/app.js?v=2.6.0"></script>
+</body>
+</html>

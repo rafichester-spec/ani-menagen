@@ -1,0 +1,880 @@
+/* ==========================================================================
+   אני מנגן – גיליון סגנון ראשי
+   RTL, מותאם נגישות (ת"י 5568 / WCAG 2.1 AA), ללא תלות חיצונית
+   ========================================================================== */
+
+:root{
+  /* חומרי הכלים עצמם: עץ ולבד כרקע, שנהב לטקסט, פליז ונחושת למבטא.
+     כל זוג צבע/רקע נפתר מראש ל-AA ומאומת בבדיקה אוטומטית. */
+  --bg:#13110f;
+  --bg2:#1a1714;
+  --card:#1f1b17;
+  --card2:#2a251f;
+  --line:#3b342c;
+  --txt:#f6f1e9;
+  --muted:#b5aa9c;
+  --brand:#0e6f63;
+  --on-brand:#fff;
+  --brand2:#5ecfbd;
+  --brand-grad:#12786a;
+  --accent:#e8a33d;
+  --on-accent:#1a1408;
+  --accent-txt:#e8a33d;   /* פליז כטקסט – גרסה כהה במצב הבהיר */
+  --ok:#34d399;
+  --warn:#e8a33d;
+  --err:#f87171;
+  --white-key:#f7f2e9;
+  --black-key:#1c1814;
+  --radius:16px;
+  --radius-sm:10px;
+  --shadow:0 12px 34px rgba(0,0,0,.35);
+  --font:"Rubik","Heebo","Assistant",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --fs:100%;
+  --maxw:1180px;
+}
+
+html[data-theme="light"]{
+  --bg:#faf7f2;
+  --bg2:#ffffff;
+  --card:#ffffff;
+  --card2:#f3ede4;
+  --line:#e2d9cc;
+  --txt:#1c1814;
+  --muted:#6b6156;
+  --brand:#0e6f63;
+  --brand2:#0e6f63;
+  --brand-grad:#12786a;
+  --accent:#e8a33d;
+  --on-accent:#1a1408;
+  --accent-txt:#945f12;
+  --ok:#1a7857;
+  --warn:#945f11;
+  --err:#c81e1e;
+  --white-key:#ffffff;
+  --black-key:#241f1a;
+  --shadow:0 10px 28px rgba(60,45,25,.12);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+/* התכונה hidden מסתמכת על display:none של דפדפן הבסיס, וכל כלל display
+   בגיליון הזה גובר עליה. בלי הכלל הזה כפתור "הצגת עוד" נשאר גלוי
+   גם כשאין מה להציג, וכל רכיב אחר עם hidden ידלוף באותה דרך. */
+[hidden]{display:none!important}
+
+html{font-size:var(--fs);scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
+body{
+  margin:0;background:var(--bg);color:var(--txt);font-family:var(--font);
+  line-height:1.7;-webkit-text-size-adjust:100%;overflow-x:hidden;
+}
+img,svg{max-width:100%}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+h1{font-size:clamp(1.7rem,4.4vw,2.6rem)}
+h2{font-size:clamp(1.3rem,3vw,1.85rem)}
+h3{font-size:1.12rem}
+p{margin:0 0 1em}
+a{color:var(--brand2);text-underline-offset:3px}
+a:hover{color:var(--accent-txt)}
+ul,ol{padding-inline-start:1.3em}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:18px}
+.muted{color:var(--muted)}
+.center{text-align:center}
+.w100{width:100%}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- מיקוד נגיש ---------- */
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{
+  outline:3px solid var(--accent);outline-offset:3px;border-radius:6px;
+}
+html[data-focus="1"] :where(a,button,input,select,textarea,[tabindex]):focus{
+  outline:4px solid #ff2d95!important;outline-offset:3px!important;
+}
+.skip-link{
+  position:absolute;inset-inline-start:0;top:0;z-index:200;
+  transform:translateY(-200%);
+  background:var(--accent);color:var(--on-accent);padding:12px 22px;font-weight:700;border-radius:0 0 12px 0;
+}
+.skip-link:focus{transform:translateY(0)}
+
+/* ---------- כפתורים ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:12px 22px;border-radius:999px;border:1px solid transparent;
+  font:inherit;font-weight:700;cursor:pointer;text-decoration:none;
+  background:var(--brand);color:var(--on-brand);
+  box-shadow:0 1px 0 rgba(255,255,255,.14) inset,0 2px 8px rgba(0,0,0,.22);
+  transition:transform .15s ease,filter .15s ease;min-height:46px;
+}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px);color:#fff}
+.btn:active{transform:translateY(0)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--txt)}
+.btn-ghost:hover{background:var(--card2);color:var(--txt)}
+.btn-accent{background:linear-gradient(135deg,var(--accent),#ff9f43);color:#20182f}
+.btn-accent:hover{color:#20182f}
+.btn-sm{padding:8px 14px;min-height:38px;font-size:.92rem}
+.btn[disabled],.btn[aria-disabled="true"]{opacity:.5;cursor:not-allowed;transform:none}
+.icon-btn{
+  background:var(--card2);border:1px solid var(--line);color:var(--txt);
+  width:42px;height:42px;border-radius:12px;font-size:1.05rem;cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.icon-btn:hover{background:var(--brand);color:#fff}
+.chip{
+  background:var(--card2);border:1px solid var(--line);color:var(--txt);
+  padding:9px 13px;border-radius:999px;font:inherit;font-size:.9rem;cursor:pointer;min-height:40px;
+}
+.chip:hover{border-color:var(--brand2)}
+.chip[aria-pressed="true"],.chip.on{background:var(--brand);border-color:var(--brand);color:var(--on-brand);font-weight:700}
+
+/* ---------- כותרת עליונה ---------- */
+.topbar{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar-in{display:flex;align-items:center;gap:14px;min-height:66px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:1.2rem;color:var(--txt);text-decoration:none}
+.brand b{color:var(--brand2)}
+.brand.small{font-size:1.05rem}
+.brand-mark{
+  width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+  background:var(--accent);color:var(--on-accent);font-size:1.15rem;font-weight:700;
+  box-shadow:0 1px 0 rgba(255,255,255,.25) inset;
+}
+.mainnav{display:flex;gap:4px;margin-inline-start:auto;flex-wrap:wrap}
+.mainnav a{padding:9px 13px;border-radius:10px;color:var(--txt);text-decoration:none;font-size:.96rem;font-weight:500}
+.mainnav a:hover,.mainnav a[aria-current="page"]{background:var(--card2);color:var(--brand2)}
+.topbar-actions{display:flex;gap:8px}
+.only-mobile{display:none}
+.mobilenav{display:none;flex-direction:column;border-top:1px solid var(--line);background:var(--card)}
+.mobilenav a{padding:13px 20px;border-bottom:1px solid var(--line);color:var(--txt);text-decoration:none}
+@media(max-width:900px){
+  .mainnav{display:none}
+  .only-mobile{display:inline-flex}
+  .mobilenav:not([hidden]){display:flex}
+}
+
+/* ---------- כרטיסים ופריסה ---------- */
+.section{padding:34px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.between{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+
+/* ---------- גיבור ---------- */
+.hero{position:relative;overflow:hidden;padding:56px 0 40px;text-align:start}
+/* במקום הילת גרדיאנט: קו פליז דק אחד שמעגן את הכותרת, כמו קו על דף תווים */
+.hero::before{
+  content:"";position:absolute;inset-block-start:0;inset-inline-start:0;
+  width:64px;height:3px;background:var(--accent);border-radius:2px;z-index:0;
+}
+.hero>*{position:relative;z-index:1}
+.hero h1{margin-bottom:.35em}
+.lead{font-size:1.12rem;color:var(--muted);max-width:60ch}
+.badge{display:inline-flex;align-items:center;gap:6px;background:var(--card2);border:1px solid var(--line);
+  padding:6px 13px;border-radius:999px;font-size:.85rem;color:var(--brand2);font-weight:600}
+.pill{display:inline-block;background:var(--card2);border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:.8rem;color:var(--muted)}
+.pill.free{color:#0a2e22;background:var(--ok);border-color:var(--ok);font-weight:700}
+.pill.pro{color:#332103;background:var(--accent);border-color:var(--accent);font-weight:700}
+.pill.done{color:var(--on-brand);background:var(--brand);border-color:var(--brand);font-weight:700}
+
+/* ---------- כרטיס כלי נגינה ---------- */
+.inst-card{
+  display:flex;flex-direction:column;gap:8px;text-align:start;text-decoration:none;color:var(--txt);
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;
+  transition:transform .18s ease,border-color .18s ease;cursor:pointer;font:inherit;
+}
+.inst-card:hover{transform:translateY(-3px);border-color:var(--brand2);color:var(--txt)}
+.inst-emoji{font-size:2.4rem;line-height:1}
+.inst-card h3{margin:0}
+
+/* ---------- פס התקדמות ---------- */
+.bar{height:10px;background:var(--card2);border-radius:999px;overflow:hidden;border:1px solid var(--line)}
+.bar>span{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--accent));border-radius:999px;transition:width .5s ease}
+
+/* ---------- רשימת שיעורים ---------- */
+.lesson-item{
+  display:flex;gap:14px;align-items:center;width:100%;text-align:start;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:14px 16px;color:var(--txt);text-decoration:none;font:inherit;cursor:pointer;
+}
+.lesson-item:hover{border-color:var(--brand2);background:var(--card2);color:var(--txt)}
+.lesson-item.locked{opacity:.72}
+.lesson-num{
+  flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;
+  background:var(--card2);border:1px solid var(--line);font-weight:800;
+}
+.lesson-item.completed .lesson-num{background:var(--ok);color:#06281c;border-color:var(--ok)}
+.lesson-meta{flex:1;min-width:0}
+.lesson-meta b{display:block}
+.lesson-meta small{color:var(--muted)}
+
+/* ---------- תוכן שיעור ---------- */
+.block{margin:0 0 20px}
+.tip{background:var(--card2);border-inline-start:5px solid var(--accent);padding:14px 16px;border-radius:var(--radius-sm)}
+.tip b{color:var(--accent-txt)}
+.warnbox{background:var(--card2);border-inline-start:5px solid var(--err);padding:14px 16px;border-radius:var(--radius-sm)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.steps li{counter-increment:s;position:relative;padding-inline-start:44px;min-height:34px}
+.steps li::before{
+  content:counter(s);position:absolute;inset-inline-start:0;top:0;width:32px;height:32px;border-radius:10px;
+  background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:800;font-size:.9rem;
+}
+
+/* ---------- שאלון ---------- */
+.quiz{background:var(--card2);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.quiz fieldset{border:0;margin:0;padding:0}
+.quiz legend{font-weight:700;margin-bottom:10px;padding:0}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:11px 13px;border:1px solid var(--line);
+  border-radius:10px;margin-bottom:8px;cursor:pointer;background:var(--card)}
+.opt:hover{border-color:var(--brand2)}
+.opt input{margin-top:6px;width:20px;height:20px;accent-color:var(--brand)}
+.opt.correct{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 16%,var(--card))}
+.opt.wrong{border-color:var(--err);background:color-mix(in srgb,var(--err) 16%,var(--card))}
+.feedback{margin-top:10px;font-weight:600}
+.feedback.ok{color:var(--ok)}
+.feedback.no{color:var(--err)}
+
+/* ---------- פסנתר ---------- */
+.piano-wrap{overflow-x:auto;padding:6px 2px 16px;-webkit-overflow-scrolling:touch}
+.piano{position:relative;display:flex;height:190px;min-width:560px;user-select:none;touch-action:manipulation}
+.key{
+  position:relative;border:1px solid #100e22;cursor:pointer;font:inherit;
+  display:flex;align-items:flex-end;justify-content:center;padding-bottom:9px;
+}
+.key.white{background:var(--white-key);color:#2a2545;flex:1 0 auto;width:48px;border-radius:0 0 8px 8px;font-size:.78rem}
+.key.black{
+  background:linear-gradient(180deg,#40382e,var(--black-key));color:#efe9df;
+  flex:0 0 auto;width:32px;height:62%;margin:0 -16px;z-index:2;border-radius:0 0 6px 6px;font-size:.68rem;
+}
+.key.active,.key:active{background:linear-gradient(180deg,var(--brand-grad),var(--brand));color:#fff}
+.key.hl{background:linear-gradient(180deg,var(--accent),#ff9f43);color:#2a2010}
+.key.hl2{background:linear-gradient(180deg,var(--ok),#10b981);color:#04261a}
+.key .lbl{pointer-events:none;font-weight:700}
+/* שם התו על הפסנתר גלוי תמיד – צבע לבדו אינו מספיק (ת"י 5568) */
+.key:focus-visible{outline:3px solid var(--accent);outline-offset:-3px;z-index:5}
+
+/* ---------- דיאגרמת אקורד ---------- */
+.chord-card{background:var(--card2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;text-align:center}
+.chord-card svg{display:block;margin:0 auto 8px}
+.chord-card h4{margin:0 0 4px}
+.chord-card small{color:var(--muted);display:block;margin-bottom:8px}
+
+/* ---------- קצב / תופים ---------- */
+.rhythm{display:flex;gap:6px;flex-wrap:wrap}
+.beat{
+  width:52px;height:52px;border-radius:12px;border:1px solid var(--line);background:var(--card2);
+  display:grid;place-items:center;font-weight:800;font-size:1.1rem;
+}
+.beat.strong{background:var(--brand);color:var(--on-brand);border-color:var(--brand)}
+.beat.on{outline:3px solid var(--accent);transform:scale(1.08)}
+.pad{
+  border:1px solid var(--line);background:var(--card2);color:var(--txt);border-radius:14px;
+  padding:20px 10px;font:inherit;font-weight:700;cursor:pointer;text-align:center;min-height:78px;
+}
+.pad:hover{border-color:var(--brand2)}
+.pad.on{background:var(--brand);color:#fff}
+
+/* ---------- מטרונום ---------- */
+.metro-visual{
+  height:120px;border-radius:var(--radius);border:1px solid var(--line);background:var(--card2);
+  display:grid;place-items:center;font-size:2.4rem;font-weight:800;
+}
+.metro-visual.flash{background:var(--accent);color:#26200c}
+html[data-nomotion="1"] .metro-visual{transition:none!important}
+
+/* ---------- מכוון ---------- */
+.tuner-needle{height:16px;background:var(--card2);border-radius:999px;position:relative;border:1px solid var(--line)}
+.tuner-needle i{position:absolute;top:-6px;width:6px;height:28px;background:var(--accent);border-radius:3px;inset-inline-start:50%;transition:inset-inline-start .12s linear}
+.tuner-needle::after{content:"";position:absolute;inset-inline-start:calc(50% - 1px);top:-10px;bottom:-10px;width:2px;background:var(--ok)}
+.tuner-note{font-size:3.4rem;font-weight:800;text-align:center;line-height:1.1}
+
+/* ---------- טפסים ---------- */
+label{font-weight:600;display:block;margin-bottom:6px}
+input[type=text],input[type=email],input[type=number],select,textarea{
+  width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);
+  background:var(--bg2);color:var(--txt);font:inherit;min-height:46px;
+}
+input[type=range]{width:100%;accent-color:var(--brand);height:36px}
+.field{margin-bottom:14px}
+.hint{color:var(--muted);font-size:.86rem;margin-top:4px}
+
+/* ---------- טבלת מחירים ---------- */
+.plan{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:10px}
+.plan.best{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 28%,transparent)}
+.price{font-size:2.2rem;font-weight:800}
+.price small{font-size:.95rem;color:var(--muted);font-weight:500}
+.plan ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.plan li::before{content:"✓ ";color:var(--ok);font-weight:800}
+
+/* ---------- מודאל ---------- */
+.modal-back{position:fixed;inset:0;background:rgba(6,4,18,.72);display:grid;place-items:center;z-index:120;padding:16px}
+.modal{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;max-width:560px;width:100%;max-height:88vh;overflow:auto;box-shadow:var(--shadow)}
+
+/* ---------- הודעות ---------- */
+.toast{
+  position:fixed;inset-block-end:22px;inset-inline-start:50%;transform:translateX(50%);
+  background:var(--card);border:1px solid var(--brand);color:var(--txt);padding:13px 22px;
+  border-radius:999px;z-index:150;box-shadow:var(--shadow);font-weight:600;max-width:92vw;text-align:center;
+}
+
+/* ---------- תגי הישג ---------- */
+.badge-card{background:var(--card2);border:1px solid var(--line);border-radius:var(--radius);padding:16px;text-align:center}
+.badge-card.locked{opacity:.45;filter:grayscale(1)}
+.badge-ico{font-size:2rem}
+
+/* ---------- מסמכים משפטיים ---------- */
+.doc{max-width:80ch}
+.doc h2{margin-top:1.6em;border-bottom:1px solid var(--line);padding-bottom:.3em}
+.doc h3{margin-top:1.3em;color:var(--brand2)}
+.doc table{width:100%;border-collapse:collapse;margin:1em 0}
+.doc th,.doc td{border:1px solid var(--line);padding:9px 11px;text-align:start}
+.doc th{background:var(--card2)}
+.toc{background:var(--card2);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.toc ol{margin:0}
+
+/* ---------- כותרת תחתונה ---------- */
+.site-footer{border-top:1px solid var(--line);background:var(--bg2);margin-top:50px;padding:34px 0 20px}
+.foot-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.foot-grid h3{font-size:1rem;margin-bottom:.6em}
+.foot-grid nav a{display:block;color:var(--txt);text-decoration:none;padding:4px 0;font-size:.94rem}
+.foot-grid nav a:hover{color:var(--brand2);text-decoration:underline}
+.foot-bottom{border-top:1px solid var(--line);margin-top:22px;padding-top:14px;color:var(--muted)}
+
+/* ==========================================================================
+   סרגל נגישות
+   ========================================================================== */
+.a11y-fab{
+  position:fixed;inset-block-end:20px;inset-inline-end:20px;z-index:130;
+  width:52px;height:52px;border-radius:50%;border:2px solid var(--bg);
+  background:var(--brand);color:#fff;cursor:pointer;display:grid;place-items:center;
+  box-shadow:0 0 0 2px var(--brand),0 6px 18px rgba(0,0,0,.45);
+}
+.a11y-fab svg{width:28px;height:28px;fill:currentColor}
+.a11y-fab:hover{background:var(--brand-grad)}
+.a11y-panel{
+  position:fixed;inset-block-end:86px;inset-inline-end:20px;z-index:131;width:330px;max-width:calc(100vw - 32px);
+  max-height:76vh;overflow:auto;background:var(--card);border:2px solid var(--brand);
+  border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);
+}
+.a11y-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.a11y-head h2{font-size:1.1rem;margin:0}
+.a11y-group{margin-bottom:16px}
+.a11y-lbl{display:block;font-weight:700;font-size:.9rem;margin-bottom:8px;color:var(--muted)}
+.a11y-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.a11y-grid .chip{font-size:.82rem;padding:8px 6px;text-align:center}
+.a11y-row{display:flex;align-items:center;gap:10px}
+.a11y-out{font-weight:800;min-width:60px;text-align:center}
+.a11y-link{display:block;margin-top:10px;font-size:.88rem;text-align:center}
+
+.reading-guide{position:fixed;inset-inline:0;height:44px;background:rgba(255,200,87,.22);
+  border-block:2px solid var(--accent);pointer-events:none;z-index:125}
+
+/* מצבי נגישות */
+html[data-hc="1"]{--bg:#000;--bg2:#000;--card:#000;--card2:#111;--line:#fff;--txt:#fff;--muted:#eaeaea;--brand:#ffe600;--brand2:#ffe600;--accent:#00e5ff;--white-key:#fff;--black-key:#000}
+html[data-hc="1"] .btn{background:#ffe600;color:#000;border:2px solid #fff}
+html[data-hc="1"] a{color:#00e5ff}
+/* על הצהוב של מצב ניגודיות גבוהה חייב לשבת טקסט שחור, לא לבן */
+html[data-hc="1"]{--on-brand:#000;--brand-grad:#ffe600;--accent-txt:#00e5ff;
+  --ok:#4ade80;--warn:#ffe600;--err:#ff8a8a}
+html[data-hc="1"] .pill[class*="lvl"]{background:#000;color:#fff;border:2px solid #fff;font-weight:700}
+html[data-inv="1"] body{filter:invert(1) hue-rotate(180deg)}
+html[data-gray="1"] body{filter:grayscale(1)}
+html[data-inv="1"][data-gray="1"] body{filter:invert(1) hue-rotate(180deg) grayscale(1)}
+html[data-links="1"] a{text-decoration:underline!important;font-weight:700!important}
+html[data-readable="1"]{--font:"Arial","Assistant",sans-serif}
+html[data-readable="1"] body{letter-spacing:.4px}
+html[data-spacing="1"] body{line-height:2.1;letter-spacing:.8px;word-spacing:3px}
+html[data-spacing="1"] p{margin-bottom:1.5em}
+html[data-nomotion="1"] *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+html[data-bigcursor="1"],html[data-bigcursor="1"] *{
+  cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M6 2l30 20-14 2 8 16-6 3-8-16-10 8z' fill='%23fff' stroke='%23000' stroke-width='2'/%3E%3C/svg%3E") 4 2,auto!important;
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+@media print{
+  .topbar,.site-footer,.a11y-fab,.a11y-panel,.skip-link,.toast{display:none!important}
+  body{background:#fff;color:#000}
+}
+
+/* ==========================================================================
+   רפרטואר, ספריית שירים, רסיטל ותעודה
+   ========================================================================== */
+.song-card{transition:border-color .2s ease}
+.song-card.mastered{border-color:var(--ok);box-shadow:0 0 0 2px color-mix(in srgb,var(--ok) 25%,transparent)}
+.song-card h3{font-size:1.05rem}
+
+.notestrip{
+  display:flex;gap:4px;overflow-x:auto;padding:8px 2px;margin-top:10px;
+  border-block:1px solid var(--line);
+}
+.notestrip span{
+  flex:none;min-width:34px;text-align:center;font-size:.78rem;padding:3px 6px;border-radius:8px;
+  background:var(--card2);border:1px solid var(--line);color:var(--muted);
+}
+.notestrip span.on{background:var(--brand);color:var(--on-brand);border-color:var(--brand);font-weight:700}
+
+.pill.lvl1{background:#0c855c;border-color:#0c855c;color:#fff;font-weight:700}
+.pill.lvl2{background:#2563eb;border-color:#2563eb;color:#fff;font-weight:700}
+.pill.lvl3{background:#7756ff;border-color:#7756ff;color:#fff;font-weight:700}
+.pill.lvl4{background:#b06105;border-color:#b06105;color:#fff;font-weight:700}
+.pill.lvl5{background:#b91c1c;border-color:#b91c1c;color:#fff;font-weight:700}
+
+.filters{display:grid;gap:10px}
+.frow{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.flbl{font-weight:700;font-size:.86rem;color:var(--muted);min-width:52px}
+.frow .chip{font-size:.84rem;padding:7px 11px;min-height:36px}
+
+.checklist{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.checklist li{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--card2)}
+.checklist li.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,var(--card2))}
+.checklist li span:first-child{font-size:1.2rem}
+
+.replist{margin:12px 0 0;padding-inline-start:1.4em;display:grid;gap:8px}
+.replist li{padding-inline-start:4px}
+.replist .pill{margin-inline-start:6px}
+
+/* ---------- תעודה ---------- */
+.cert{background:#fff;color:#1c1814;border-radius:var(--radius);padding:10px;box-shadow:var(--shadow)}
+.cert-frame{border:4px double #0e6f63;border-radius:12px;padding:30px 26px;text-align:center;position:relative}
+.cert-frame::before{content:"";position:absolute;inset:8px;border:1px solid #ffc857;border-radius:8px;pointer-events:none}
+.cert-top{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;color:#4c3ba8}
+.cert-mark{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#0e6f63;color:#fff;font-size:1.3rem}
+.cert-title{font-size:2.2rem;margin:0 0 6px;color:#4c3ba8;letter-spacing:1px}
+.cert-sub{color:#5a5580;margin:6px 0}
+.cert-name{font-size:1.9rem;font-weight:800;margin:8px 0;border-bottom:2px solid #ffc857;display:inline-block;padding:0 26px 4px}
+.cert-inst{font-size:1.4rem;font-weight:800;margin:8px 0 16px;color:#4c3ba8}
+.cert-body{max-width:52ch;margin:0 auto 18px;color:#2c2748}
+.cert-songs{text-align:start;background:#faf7f2;border:1px solid #e2d9cc;border-radius:10px;padding:14px 18px;margin:0 auto 18px;max-width:560px}
+.cert-songs ol{margin:8px 0 0;padding-inline-start:1.4em}
+.cert-songs li{margin-bottom:4px;font-size:.94rem}
+.cert-songs .muted{color:#6b6790}
+.cert-foot{display:flex;justify-content:space-around;gap:14px;flex-wrap:wrap;border-top:1px solid #ddd8f5;padding-top:14px;color:#2c2748}
+.cert-note{font-size:.76rem;color:#6b6790;margin:14px 0 0}
+
+@media print{
+  .no-print,.topbar,.site-footer,.a11y-fab,.a11y-panel,.skip-link,.toast{display:none!important}
+  body{background:#fff!important;color:#000!important}
+  .cert{box-shadow:none;page-break-inside:avoid}
+  .card{border:1px solid #ccc!important;box-shadow:none!important;background:#fff!important;color:#000!important}
+  .replist,.replist *{color:#000!important}
+}
+
+/* ==========================================================================
+   רב-לשוניות: בורר שפה, RTL/LTR
+   ========================================================================== */
+.lang-wrap{position:relative}
+.lang-btn{font-size:1.15rem}
+.lang-menu{
+  position:absolute;inset-block-start:calc(100% + 8px);inset-inline-end:0;z-index:80;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:6px;min-width:190px;max-height:70vh;overflow:auto;
+}
+.lang-item{
+  display:flex;align-items:center;gap:10px;width:100%;text-align:start;
+  background:none;border:0;color:var(--txt);font:inherit;padding:10px 12px;
+  border-radius:10px;cursor:pointer;min-height:44px;
+}
+.lang-item:hover{background:var(--card2)}
+.lang-item.on{background:var(--brand);color:#fff;font-weight:700}
+.modal-x{display:flex;justify-content:flex-end}
+
+.narrow{max-width:860px}
+.stats-row .badge b{font-size:1.15rem;margin-inline-end:2px}
+.weekchart{align-items:flex-end;gap:14px;height:150px}
+
+/* ==========================================================================
+   התאמת מכשיר: נייד / טאבלט / מחשב
+   שלושה פרופילים הנקבעים ב-device.js (data-device / data-input / data-orient)
+   ========================================================================== */
+
+/* ---------- אזורים בטוחים (מסכים עם מגרעת) ---------- */
+body{
+  padding-inline: env(safe-area-inset-left) env(safe-area-inset-right);
+}
+
+/* ---------- סרגל ניווט תחתון (נייד בלבד) ---------- */
+.tabbar{display:none}
+html[data-device="mobile"] .tabbar{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  position:fixed;inset-inline:0;inset-block-end:0;z-index:70;
+  background:color-mix(in srgb,var(--bg2) 96%,transparent);
+  backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);
+  padding-block-end:env(safe-area-inset-bottom);
+}
+.tabbar a{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  padding:8px 2px;min-height:58px;color:var(--muted);text-decoration:none;font-size:.68rem;
+}
+.tabbar a[aria-current="page"]{color:var(--brand2);font-weight:700}
+.tabbar .tab-ico{font-size:1.25rem;line-height:1}
+.tabbar a[aria-current="page"] .tab-ico{transform:scale(1.12)}
+html[data-device="mobile"] body{padding-bottom:70px}
+html[data-device="mobile"] .site-footer{margin-bottom:64px}
+html[data-device="mobile"] .a11y-fab{inset-block-end:calc(74px + env(safe-area-inset-bottom))}
+html[data-device="mobile"] .a11y-panel{inset-block-end:calc(140px + env(safe-area-inset-bottom));width:calc(100vw - 28px)}
+html[data-device="mobile"] .toast{inset-block-end:calc(80px + env(safe-area-inset-bottom))}
+
+/* בנייד – התפריט העליון והמבורגר מיותרים */
+html[data-device="mobile"] .only-mobile{display:none}
+html[data-device="mobile"] .mobilenav{display:none!important}
+
+/* ---------- נייד ---------- */
+html[data-device="mobile"]{
+  --radius:14px;
+}
+html[data-device="mobile"] .wrap{padding-inline:14px}
+html[data-device="mobile"] .section{padding:20px 0}
+html[data-device="mobile"] .hero{padding:28px 0 22px}
+html[data-device="mobile"] h1{font-size:1.55rem}
+html[data-device="mobile"] h2{font-size:1.25rem}
+html[data-device="mobile"] .lead{font-size:1rem}
+html[data-device="mobile"] .g2,
+html[data-device="mobile"] .g3{grid-template-columns:1fr}
+html[data-device="mobile"] .g4{grid-template-columns:1fr 1fr}
+html[data-device="mobile"] .card{padding:15px}
+html[data-device="mobile"] .btn{width:100%;justify-content:center}
+html[data-device="mobile"] .row .btn{width:auto;flex:1 1 auto;min-width:44%}
+html[data-device="mobile"] .btn-sm{width:auto}
+html[data-device="mobile"] .topbar-in{min-height:56px}
+html[data-device="mobile"] .brand-txt{font-size:1.02rem}
+html[data-device="mobile"] .foot-grid{grid-template-columns:1fr;gap:18px}
+html[data-device="mobile"] .cert-frame{padding:18px 12px}
+html[data-device="mobile"] .cert-title{font-size:1.5rem}
+html[data-device="mobile"] .cert-name{font-size:1.3rem;padding:0 10px 4px}
+html[data-device="mobile"] .cert-foot{gap:10px;font-size:.85rem}
+html[data-device="mobile"] .doc table{font-size:.85rem}
+html[data-device="mobile"] .doc td,html[data-device="mobile"] .doc th{padding:6px 7px}
+html[data-device="mobile"] .filters .chip{font-size:.8rem;padding:8px 10px}
+html[data-device="mobile"] .weekchart{height:120px;gap:7px}
+html[data-device="mobile"] .metro-visual{height:96px;font-size:2rem}
+html[data-device="mobile"] .tuner-note{font-size:2.4rem}
+html[data-device="mobile"] #clock{font-size:3rem!important}
+
+/* מקלדת פסנתר בנייד – מקשים גדולים ונוחים לאצבע */
+html[data-device="mobile"] .piano{min-width:0;height:170px}
+html[data-device="mobile"] .key.white{width:56px;min-width:56px}
+html[data-device="mobile"] .key.black{width:30px;margin:0 -15px}
+html[data-device="mobile"][data-orient="p"] .piano-wrap{position:relative}
+.rotate-hint{
+  display:flex;align-items:center;gap:8px;justify-content:center;
+  background:var(--card2);border:1px dashed var(--line);border-radius:var(--radius-sm);
+  padding:8px 12px;margin-bottom:8px;font-size:.86rem;color:var(--muted);
+}
+html[data-device="tablet"] .rotate-hint,html[data-device="desktop"] .rotate-hint{display:none}
+
+/* ---------- טאבלט ---------- */
+html[data-device="tablet"] .wrap{padding-inline:22px;max-width:940px}
+html[data-device="tablet"] .g2{grid-template-columns:repeat(2,1fr)}
+html[data-device="tablet"] .g3{grid-template-columns:repeat(2,1fr)}
+html[data-device="tablet"] .g4{grid-template-columns:repeat(3,1fr)}
+html[data-device="tablet"][data-orient="l"] .g3{grid-template-columns:repeat(3,1fr)}
+html[data-device="tablet"][data-orient="l"] .g4{grid-template-columns:repeat(4,1fr)}
+html[data-device="tablet"] .piano{height:210px}
+html[data-device="tablet"] .key.white{width:62px;min-width:62px}
+html[data-device="tablet"] .key.black{width:40px;margin:0 -20px}
+html[data-device="tablet"] .narrow{max-width:760px}
+html[data-device="tablet"] .mainnav a{padding:9px 10px;font-size:.9rem}
+
+/* ---------- מחשב ---------- */
+html[data-device="desktop"] .wrap{max-width:1180px}
+html[data-device="desktop"] .piano{height:200px}
+html[data-device="desktop"] .key.white{width:50px}
+html[data-device="desktop"] .lesson-item:hover{transform:translateX(-2px)}
+html[data-device="desktop"] .kbd-hint{display:inline}
+.kbd-hint{display:none}
+
+/* ---------- מכשירי מגע: שטחי מגע גדולים יותר ---------- */
+html[data-input="touch"] .chip{min-height:44px;padding-block:11px}
+html[data-input="touch"] .btn-sm{min-height:44px}
+html[data-input="touch"] .icon-btn{width:46px;height:46px}
+html[data-input="touch"] .opt{padding:14px}
+html[data-input="touch"] .lesson-item{padding:16px}
+html[data-input="touch"] .notestrip span{min-width:40px;padding:6px 8px}
+html[data-input="touch"] input,html[data-input="touch"] select,html[data-input="touch"] textarea{
+  font-size:16px;   /* מונע זום אוטומטי ב-iOS */
+  min-height:50px;
+}
+html[data-input="touch"] .key{touch-action:none}
+
+/* ---------- אין ריחוף (מגע): לבטל אפקטים תלויי hover ---------- */
+html[data-nohover="1"] .inst-card:hover{transform:none}
+html[data-nohover="1"] .btn:hover{transform:none;filter:none}
+html[data-nohover="1"] .lesson-item:hover{background:var(--card)}
+
+/* ---------- נייד לרוחב: כותרת דקה כדי לפנות מקום למקלדת ---------- */
+html[data-device="mobile"][data-orient="l"] .topbar{position:static}
+html[data-device="mobile"][data-orient="l"] .topbar-in{min-height:46px}
+html[data-device="mobile"][data-orient="l"] .hero{padding:16px 0}
+html[data-device="mobile"][data-orient="l"] .piano{height:150px}
+html[data-device="mobile"][data-orient="l"] .g4{grid-template-columns:repeat(4,1fr)}
+
+/* ---------- באנר התקנה ---------- */
+.install-bar{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  background:var(--card2);border:1px solid var(--brand);border-radius:var(--radius);
+  padding:14px 16px;margin-bottom:16px;
+}
+.install-bar b{display:block}
+
+/* ---------- מסכים רחבים במיוחד ---------- */
+@media (min-width:1600px){
+  html[data-device="desktop"] .wrap{max-width:1320px}
+  html[data-device="desktop"] .g3{grid-template-columns:repeat(3,1fr)}
+}
+
+/* ---------- הדפסה: תמיד פריסת "מחשב" ---------- */
+@media print{
+  .tabbar{display:none!important}
+  html[data-device="mobile"] body{padding-bottom:0}
+}
+
+
+/* ==========================================================================
+   פיצ'רים מתקדמים: ליווי, מאמן נגינה, מעברי אקורדים, קריאת תווים,
+   דוח התקדמות ומסך עמידות הנתונים
+   ========================================================================== */
+
+/* ---------- רשת אקורדים לליווי ---------- */
+.chordgrid{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chordcell{
+  flex:1 1 70px;min-width:64px;text-align:center;font-weight:700;font-size:1.05rem;
+  padding:12px 6px;border-radius:var(--radius-sm);
+  background:var(--card2);border:1px solid var(--line);transition:.15s;
+}
+.chordcell.on{background:var(--brand);color:var(--on-brand);border-color:var(--brand);transform:translateY(-2px)}
+
+/* ---------- מאמן נגינה ---------- */
+.coach-box{
+  display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;
+  background:var(--card2);border-radius:var(--radius);padding:18px 14px;margin:12px 0;
+}
+.coach-target{text-align:center;min-width:110px}
+.coach-note{font-size:2.1rem;font-weight:800;line-height:1.2;color:var(--brand2)}
+.coach-note.dim{color:var(--muted)}
+.coach-arrow{font-size:1.6rem;color:var(--muted)}
+.notestrip span.did{opacity:.45}
+
+/* ---------- מד מעברי אקורדים ---------- */
+.tapzone{
+  display:block;width:100%;border:2px dashed var(--brand);background:var(--card2);
+  border-radius:var(--radius);padding:26px 16px;text-align:center;cursor:pointer;
+  color:inherit;font:inherit;transition:.08s;
+}
+.tapzone:hover{border-style:solid}
+.tapzone.flash{background:var(--brand);color:#fff;transform:scale(.985)}
+.tapcount{font-size:3rem;font-weight:800;line-height:1;color:var(--brand2)}
+.tapzone.flash .tapcount,.tapzone.flash .muted{color:#fff}
+
+/* ---------- מאמן קריאת תווים ---------- */
+.staffbox{
+  display:inline-block;background:var(--card2);border-radius:var(--radius);
+  padding:10px 16px;color:var(--txt);max-width:100%;overflow-x:auto;
+}
+.staffbox svg{display:block;max-width:100%;height:auto}
+
+/* ---------- דוח התקדמות ---------- */
+.report{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.report-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.report h2{margin:22px 0 8px;font-size:1.15rem;border-bottom:1px solid var(--line);padding-bottom:6px}
+.report table{width:100%;border-collapse:collapse;font-size:.94rem}
+.report td,.report th{padding:7px 8px;border-bottom:1px solid var(--line);text-align:start}
+.report th{color:var(--muted);font-weight:600}
+.report-name{margin:4px 0}
+.report-notes{min-height:110px;border:1px dashed var(--line);border-radius:var(--radius-sm);
+  padding:12px;color:var(--muted);font-size:.9rem}
+
+/* ---------- שכבות עמידות הנתונים ---------- */
+.card.layer{border-inline-start:5px solid var(--line);margin-bottom:10px}
+.card.layer.ok{border-inline-start-color:var(--ok)}
+.card.layer.warn{border-inline-start-color:var(--accent)}
+.card.layer.no{border-inline-start-color:var(--err)}
+.pill.ok{color:var(--ok);border-color:var(--ok)}
+.pill.warn{color:var(--accent-txt);border-color:var(--accent)}
+.pill.no{color:var(--err);border-color:var(--err)}
+
+/* ---------- פקדי שיר ---------- */
+.songctl .pill[data-trout]{min-width:44px;text-align:center}
+.songctl .pill[data-trout].on{color:var(--brand2);border-color:var(--brand2)}
+
+/* ---------- מאמן המהירות ---------- */
+.speedgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:560px){ .speedgrid{grid-template-columns:repeat(2,1fr)} }
+.speedgrid input{min-width:0;width:100%}
+
+/* ---------- נייד ---------- */
+html[data-device="mobile"] .coach-note{font-size:1.7rem}
+html[data-device="mobile"] .tapcount{font-size:2.4rem}
+html[data-device="mobile"] .report{padding:16px}
+html[data-input="touch"] .tapzone{padding:36px 16px}
+
+@media print{
+  .report{border:1px solid #ccc!important;background:#fff!important;color:#000!important;padding:0}
+  .report *,.report td,.report th{color:#000!important;border-color:#ccc!important}
+}
+
+/* ---------- מכוון לפי מיתרים ---------- */
+.strings{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:10px 0}
+.stringbtn{
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  padding:12px 4px;border-radius:var(--radius-sm);cursor:pointer;
+  background:var(--card2);border:1px solid var(--line);color:inherit;font:inherit;
+  transition:.15s;min-width:0;
+}
+.stringbtn:hover{border-color:var(--brand)}
+.stringnum{
+  display:grid;place-items:center;width:22px;height:22px;border-radius:50%;
+  background:var(--txt);color:var(--bg);font-size:.75rem;font-weight:700;
+}
+.stringnote{font-size:1.1rem;font-weight:800;line-height:1.1}
+.stringbtn.ringing{background:var(--brand);border-color:var(--brand);color:var(--on-brand)}
+.stringbtn.ringing .stringnum{background:var(--on-brand);color:var(--brand)}
+.stringbtn.ringing .muted{color:rgba(255,255,255,.8)}
+.stringbtn.hot{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent) inset}
+@media (max-width:560px){ .strings{grid-template-columns:repeat(3,1fr)} }
+
+
+/* ==========================================================================
+   צבעי תווים – דו אדום ומשם סביב גלגל הצבעים (מוסכמת Boomwhackers).
+   הצבע הוא תמיד תוספת לשם התו ולעולם לא תחליף לו: כל אלמנט צבעוני נושא
+   גם את שם התו בכתב. כל צמד רקע/טקסט נבדק חישובית ועובר ניגודיות AA,
+   והמסגרת מבטיחה שהאלמנט מובחן גם מול רקע בהיר וגם מול כהה.
+   ========================================================================== */
+.nc-C{--nc:#d92b2b;--ncf:#ffffff}
+.nc-Cs{--nc:#e2622a;--ncf:#1a1200}
+.nc-D{--nc:#ef8a17;--ncf:#1a1200}
+.nc-Ds{--nc:#f0b30f;--ncf:#1a1200}
+.nc-E{--nc:#efe024;--ncf:#1a1200}
+.nc-F{--nc:#a8cf2c;--ncf:#1a1200}
+.nc-Fs{--nc:#3aa64c;--ncf:#1a1200}
+.nc-G{--nc:#159c98;--ncf:#1a1200}
+.nc-Gs{--nc:#2975c5;--ncf:#ffffff}
+.nc-A{--nc:#5f47bd;--ncf:#ffffff}
+.nc-As{--nc:#9a3fae;--ncf:#ffffff}
+.nc-B{--nc:#d84797;--ncf:#1a1200}
+
+.nco{
+  background:var(--nc);color:var(--ncf);
+  border:1px solid rgba(0,0,0,.42);
+  font-weight:700;
+}
+/* כיבוי מסרגל הנגישות – השמות נשארים, שום מידע לא אובד */
+html[data-nocolor="1"] .nco{
+  background:var(--card2);color:inherit;border-color:var(--line);font-weight:inherit;
+}
+/* בפסנתר צובעים תווית קטנה בתחתית הקליד, כדי לא להרוס את הלבן/שחור */
+.key .lbl.nco{
+  background:transparent;border:0;padding:0;border-radius:0;
+  font-size:.72rem;line-height:1.25;
+}
+html[data-nocolor="1"] .key .lbl.nco{background:transparent;border-color:transparent}
+/* ל-.notestrip span יש סגוליות גבוהה יותר מ-.nco, ולכן צריך כלל ממוקד */
+.notestrip span.nco{
+  background:var(--nc);color:var(--ncf);
+  border:1px solid rgba(0,0,0,.42);border-radius:8px;font-weight:700;
+}
+html[data-nocolor="1"] .notestrip span.nco{
+  background:var(--card2);color:inherit;border-color:var(--line);font-weight:inherit;
+}
+/* התו הנוכחי בנגינה/באימון גובר על צבע התו, כדי שיישאר מובחן */
+.notestrip span.nco.on{background:var(--brand);color:var(--on-brand);border-color:var(--brand)}
+
+/* ==========================================================================
+   כיוון מוזיקלי: מוזיקה נקראת משמאל לימין — גם בממשק עברי.
+   מקלדת פסנתר היא אובייקט פיזי (דו משמאל, לא מימין), ורצף תווים, אקורדים
+   ופעימות הוא ציר זמן. בלי הכפייה הזו ה-RTL של הדף הופך אותם לאחור.
+   ========================================================================== */
+.piano-wrap, .piano,
+.melstrip,
+.rhythm,
+.chordgrid,
+.notestrip,
+.strings,
+.padgrid,
+.seqrow,
+.staffbox { direction: ltr; }
+
+/* התוויות עצמן נשארות בשפת הממשק */
+.piano .lbl, .melstrip .pill, .rhythm .beat,
+.chordcell, .notestrip span, .stringbtn { unicode-bidi: plaintext; }
+
+/* ==========================================================================
+   צבע קבוע לכל קליד — פס בתחתית הקליד, ושם התו עליו.
+   הצבע יושב על הקליד ולא על התווית, כדי שיהיה גלוי תמיד; השם נשאר לצדו,
+   כך ששום מידע לא נשען על צבע בלבד.
+   ========================================================================== */
+/* בלי ברירת מחדל על .key – היא הייתה גוברת על .nc-X בגלל סגוליות זהה
+   וסדר מאוחר יותר. ערך הגיבוי נמצא בתוך var() עצמו. */
+.key{ --band:32px }
+.key.black{ --band:24px }
+.key::after{
+  content:"";position:absolute;inset-inline:0;bottom:0;height:var(--band);
+  background:var(--nc,#d8d4ea);border-radius:0 0 7px 7px;pointer-events:none;
+}
+.key.black::after{ border-radius:0 0 5px 5px; }
+.key .lbl{
+  position:absolute;inset-inline:0;bottom:0;height:var(--band);
+  display:flex;align-items:center;justify-content:center;
+  z-index:2;color:var(--ncf,#1a1200);font-weight:800;
+}
+.key.white .lbl{ font-size:.82rem }
+.key.black .lbl{ font-size:.6rem;letter-spacing:-.02em }
+
+/* הדגשה לא מוחקת את צבע התו — היא מוסיפה טבעת וגוף קליד בהיר.
+   כך קליד מודגש עדיין אומר לך *איזה* תו הוא. */
+.key.active,.key.hl,.key.hl2{ box-shadow:inset 0 0 0 3px currentColor }
+.key.hl{ background:linear-gradient(180deg,var(--accent),#ff9f43);color:#2a2010 }
+.key.hl2{ background:linear-gradient(180deg,var(--ok),#10b981);color:#04261a }
+.key.active{ background:linear-gradient(180deg,var(--brand-grad),var(--brand));color:#fff }
+.key.active::after,.key.hl::after,.key.hl2::after{ height:22px }
+
+/* כיבוי צבעי תווים מסרגל הנגישות – השם נשאר */
+html[data-nocolor="1"] .key::after{ background:var(--line) }
+html[data-nocolor="1"] .key .lbl{ color:inherit }
+
+/* ---------- תרגול מודרך ---------- */
+.guide-target{
+  text-align:center;background:var(--card2);border-radius:var(--radius);
+  padding:16px 12px;margin:12px 0;
+}
+.guide-note{
+  display:inline-block;font-size:2.2rem;font-weight:800;line-height:1.2;
+  padding:6px 18px;border-radius:12px;margin:4px 0;
+}
+.guide-note.nco{border:1px solid rgba(0,0,0,.42)}
+html[data-device="mobile"] .guide-note{font-size:1.8rem}
+
+/* ---------- הודעת אחסון (לא קוקיז — האפליקציה לא משתמשת בהם) ---------- */
+.consent-bar{
+  position:fixed;inset-inline:0;bottom:0;z-index:80;
+  background:var(--card);border-top:2px solid var(--brand);
+  box-shadow:0 -8px 28px rgba(0,0,0,.32);padding:16px;
+}
+.consent-inner{
+  max-width:1100px;margin:0 auto;display:flex;gap:18px;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;
+}
+.consent-inner p{margin:6px 0 0;max-width:74ch}
+.consent-detail{font-size:.86rem}
+.consent-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+body.has-consent-bar{padding-bottom:170px}
+html[data-device="mobile"] body.has-consent-bar{padding-bottom:250px}
+@media (max-width:640px){ .consent-inner{flex-direction:column;align-items:stretch} }
+
+/* כותרת שיר היא h2 מטעמי סדר כותרות נגיש – הגודל נשאר של כרטיס */
+.song-card h2.song-title{font-size:1.05rem;font-weight:700;line-height:1.3}
+
+/* שם האקורד הוא כיתוב לתרשים ולא סעיף במסמך – מחוץ למפת הכותרות */
+figure.chord-card{margin:0}
+.chord-name{font-size:1.02rem;font-weight:700;margin:0 0 2px;color:var(--fg)}
+/* כותרות כרטיס: h2 מטעמי סדר כותרות, בגודל שהיה */
+.card-h{font-size:1.08rem;font-weight:700;margin:0 0 6px;line-height:1.35}
+
+
+/* ---------- אייקוני ניווט: SVG בקו אחיד ---------- */
+.tab-ico{display:grid;place-items:center;width:24px;height:24px}
+.tab-ico svg{width:22px;height:22px;display:block}
+
+/* אייקוני כפתורי הראש בגודל אחיד עם שאר מערכת האייקונים */
+.icon-btn svg{width:20px;height:20px;display:block}
+.icon-btn{display:grid;place-items:center}
+.lang-btn{font-size:.8rem;font-weight:800;letter-spacing:.04em}
