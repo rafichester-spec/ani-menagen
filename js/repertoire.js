@@ -137,12 +137,23 @@ const Repertoire = (() => {
     /* רצועת תווים */
     const strip = document.createElement("div");
     strip.className = "notestrip";
-    strip.setAttribute("aria-hidden", "true");
     strip.setAttribute("dir", "ltr");
+    /* כל תו ניתן ללחיצה כדי לשמוע אותו. משהפך לאינטראקטיבי,
+       אסור להשאיר aria-hidden – אחרת המיקוד נכנס לאזור שקורא מסך אינו רואה. */
     song.notes.forEach(([n], i) => {
-      const s = document.createElement("span");
+      const s = document.createElement(n ? "button" : "span");
       s.dataset.i = i;
-      if(n) s.className = "nco " + noteColorClass(n);
+      if(n){
+        s.type = "button";
+        s.className = "nco notebtn " + noteColorClass(n);
+        s.setAttribute("aria-label", noteLabel(n));
+        s.addEventListener("click", () => {
+          Audio1.ensure();
+          Audio1.playNote(n, 0.6, inst.timbre, 0.55);
+        });
+      }else{
+        s.setAttribute("aria-label", t("lesson.rest"));
+      }
       s.textContent = n ? noteHe(n) : "–";
       strip.appendChild(s);
     });

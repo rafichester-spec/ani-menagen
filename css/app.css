@@ -878,3 +878,11 @@ figure.chord-card{margin:0}
 .icon-btn svg{width:20px;height:20px;display:block}
 .icon-btn{display:grid;place-items:center}
 .lang-btn{font-size:.8rem;font-weight:800;letter-spacing:.04em}
+
+/* תווי המנגינה ניתנים ללחיצה – חיווי מגע ומיקוד ברור */
+.melstrip .notebtn{cursor:pointer;font:inherit;transition:transform .12s ease}
+.melstrip .notebtn:hover{transform:translateY(-2px)}
+.melstrip .notebtn:active{transform:translateY(0) scale(.94)}
+.notestrip .notebtn{cursor:pointer;font:inherit;transition:transform .12s ease}
+.notestrip .notebtn:hover{transform:translateY(-2px)}
+.notestrip .notebtn:active{transform:translateY(0) scale(.94)}

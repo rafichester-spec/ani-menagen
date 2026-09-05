@@ -260,12 +260,24 @@ const UI = (() => {
     const strip = document.createElement("div");
     strip.className = "row melstrip";      /* melstrip מאלץ כיוון LTR – ראו app.css */
     strip.style.margin = "12px 0";
-    strip.setAttribute("aria-hidden", "true");
+    /* כל תו הוא כפתור: לוחצים – שומעים. קודם אלו היו span עם aria-hidden,
+       כלומר קישוט בלבד. מרגע שהם ניתנים ללחיצה אסור להסתיר אותם מקורא מסך,
+       ולכן ה-aria-hidden הוסר וכל כפתור קיבל שם נגיש. */
     notes.forEach(([n], i) => {
-      const s = document.createElement("span");
-      s.className = "pill" + (n ? " nco " + noteColorClass(n) : "");
+      const s = document.createElement(n ? "button" : "span");
+      s.className = "pill" + (n ? " nco notebtn " + noteColorClass(n) : "");
       s.dataset.i = i;
       s.textContent = n ? noteHe(n) : "–";
+      if(n){
+        s.type = "button";
+        s.setAttribute("aria-label", noteLabel(n));
+        s.addEventListener("click", () => {
+          Audio1.ensure();
+          Audio1.playNote(n, 0.6, timbre, 0.55);
+        });
+      }else{
+        s.setAttribute("aria-label", t("lesson.rest"));
+      }
       strip.appendChild(s);
     });
     wrap.appendChild(strip);
