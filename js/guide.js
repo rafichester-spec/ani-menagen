@@ -25,11 +25,13 @@ const Guide = (() => {
     return n ? /^([A-G]#?)/.exec(n)[1] : null;
   }
 
-  function view(main, instId){
+  function view(main, instId, songId){
     reset();
     const inst = INST[instId] || INST.piano;
     const songs = SONGS.filter(s => s.instruments.includes(inst.id));
-    let song = songs[0];
+    /* אפשר להגיע לכאן ישירות משיר מסוים: #/guide/piano/twinkle */
+    let song = (songId && SONG_BY_ID[songId] && songs.includes(SONG_BY_ID[songId]))
+             ? SONG_BY_ID[songId] : songs[0];
     let idx = 0, hits = 0, tries = 0, listening = false;
     let stable = null, stableN = 0;
 
@@ -47,7 +49,7 @@ const Guide = (() => {
         <div class="field">
           <label for="gSong">${t("guide.pick")}</label>
           <select id="gSong">${songs.map(s =>
-            `<option value="${s.id}">${esc(I18N.songTitle(s))} — ${t("common.level")} ${s.level}</option>`).join("")}</select>
+            `<option value="${s.id}"${s.id === song.id ? " selected" : ""}>${esc(I18N.songTitle(s))} — ${t("common.level")} ${s.level}</option>`).join("")}</select>
         </div>
 
         <div class="guide-target">

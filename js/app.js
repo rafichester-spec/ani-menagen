@@ -31,7 +31,7 @@ const App = (() => {
     [/^\/tools\/changes$/,            (m) => Practice.changes(m)],
     [/^\/tools\/reading$/,            (m) => Practice.reading(m)],
     [/^\/report$/,                     (m) => Practice.report(m)],
-    [/^\/guide(?:\/(.+))?$/,            (m, a) => Guide.view(m, a)],
+    [/^\/guide(?:\/([^/]+))?(?:\/([^/]+))?$/, (m, a, b) => Guide.view(m, a, b)],
     [/^\/storage$/,                    (m) => Views.storage(m)],
     [/^\/legal\/privacy$/,          (m) => Legal.privacy(m)],
     [/^\/legal\/accessibility$/,    (m) => Legal.accessibility(m)],
@@ -50,7 +50,9 @@ const App = (() => {
     let matched = false;
     for(const [re, fn] of ROUTES){
       const g = re.exec(path);
-      if(g){ fn(m, g[1]); matched = true; break; }
+      /* להעביר את כל קבוצות הלכידה, לא רק את הראשונה –
+         אחרת נתיב עם שני פרמטרים (כלי + שיר) מאבד את השני. */
+      if(g){ fn(m, ...g.slice(1)); matched = true; break; }
     }
     if(!matched) Views.notFound(m);
 
@@ -76,6 +78,7 @@ const App = (() => {
     if(path.startsWith("/recital/"))     return t("recital.h1", { inst: I18N.instName(seg[2]) || "" });
     if(path.startsWith("/certificate/")) return t("cert.title");
     if(path.startsWith("/instrument/"))  return I18N.instName(seg[2]) || t("nav.instruments");
+    if(path.startsWith("/guide"))        return t("tools.guide");
     if(path.startsWith("/tools/backing")) return t("tools.backing");
     if(path.startsWith("/tools/coach"))   return t("tools.playalong");
     const map = {

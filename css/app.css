@@ -886,3 +886,6 @@ figure.chord-card{margin:0}
 .notestrip .notebtn{cursor:pointer;font:inherit;transition:transform .12s ease}
 .notestrip .notebtn:hover{transform:translateY(-2px)}
 .notestrip .notebtn:active{transform:translateY(0) scale(.94)}
+
+/* מפריד קבוצות ברצועת התווים – עוגן ויזואלי לספירה */
+.notestrip .notegap{flex:0 0 auto;width:14px;min-width:14px;background:none;border:0;padding:0}

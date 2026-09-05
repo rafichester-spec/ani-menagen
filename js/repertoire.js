@@ -130,6 +130,8 @@ const Repertoire = (() => {
     train.className = "row";
     train.style.marginTop = "10px";
     train.innerHTML = `
+      ${song.instruments.some(i => i !== "drums")
+        ? `<a class="btn btn-sm" href="#/guide/${inst.id}/${song.id}">${esc(t("song.stepByStep"))}</a>` : ""}
       ${song.chords ? `<a class="btn btn-sm btn-ghost" href="#/tools/backing/${song.id}">${esc(t("song.backing"))}</a>` : ""}
       ${song.instruments.some(i => i !== "drums") ? `<a class="btn btn-sm btn-ghost" href="#/tools/coach/${song.id}">${esc(t("song.coach"))}</a>` : ""}`;
     if(train.children.length) card.appendChild(train);
@@ -156,6 +158,14 @@ const Repertoire = (() => {
       }
       s.textContent = n ? noteHe(n) : "–";
       strip.appendChild(s);
+      /* רווח כל ארבעה תווים: רצף אחיד ארוך קשה למעקב, במיוחד לילדים.
+         הפרדה לקבוצות נותנת נקודות עגינה לעין ולספירה. */
+      if((i + 1) % 4 === 0 && i < song.notes.length - 1){
+        const gap = document.createElement("span");
+        gap.className = "notegap";
+        gap.setAttribute("aria-hidden", "true");
+        strip.appendChild(gap);
+      }
     });
     card.appendChild(strip);
 
