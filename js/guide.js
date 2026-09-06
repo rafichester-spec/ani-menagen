@@ -93,6 +93,13 @@ const Guide = (() => {
         const kb = UI.piano({ from:"C4", octaves:2, timbre:inst.timbre });
         kb.addEventListener("keyplay", e => check(e.detail.note, "touch"));
         box.appendChild(kb);
+      }else if(inst.id === "recorder"){
+        /* לחלילית מציגים את תרשים האצבוע של התו הנוכחי – זה התחליף
+           למקלדת: הלומד רואה בדיוק איזה חור לסגור. */
+        const holder = document.createElement("div");
+        holder.className = "recgrid";
+        holder.id = "gRecFig";
+        box.appendChild(holder);
       }else{
         const p = document.createElement("p");
         p.className = "muted";
@@ -129,6 +136,11 @@ const Guide = (() => {
         main.querySelectorAll(".piano .key").forEach(k => {
           if(pitchClass(k.dataset.note) === want) k.classList.add("hl");
         });
+      }
+      const fig = $("#gRecFig");
+      if(fig){
+        fig.innerHTML = "";
+        if(note) fig.appendChild(UI.recorderChart(note));
       }
       const done = playable().filter(x => x.i < idx).length;
       $("#gBar").style.width = Math.round(done / Math.max(1, playable().length) * 100) + "%";

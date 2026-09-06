@@ -1,7 +1,7 @@
 /* Service Worker – עבודה במצב לא מקוון
    אסטרטגיה: רשת-תחילה עם נפילה למטמון.
    כך המשתמש תמיד מקבל את הגרסה העדכנית כשיש אינטרנט, ועדיין יכול לתרגל בלי חיבור. */
-const CACHE = "animenagen-v6";
+const CACHE = "animenagen-v10";
 const ASSETS = [
   "./", "./index.html", "./css/app.css",
   "./js/data-core.js", "./js/data-songs.js", "./js/data-lessons.js",

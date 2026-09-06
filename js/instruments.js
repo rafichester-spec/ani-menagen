@@ -428,5 +428,66 @@ const UI = (() => {
   }
   function hit(el){ el.classList.add("on"); setTimeout(() => el.classList.remove("on"), 130); }
 
-  return { piano, chordDiagram, melody, rhythm, drumPads, esc, live };
+
+  /* ---------- תרשים אצבוע לחלילית ----------
+     הכלי היחיד שלא היה לו שום ייצוג חזותי: ההסבר איזה חור לסגור
+     ניתן בטקסט בלבד ("אגודל שמאל סוגר את החור האחורי"), וילד אינו
+     יכול לתרגם את זה. התרשים מדבר בעיגולים בלבד – מלא=סגור,
+     ריק=פתוח, חצי=צביטה – ולכן הוא זהה בכל השפות. שם התו מתורגם. */
+  function recorderChart(note, opts){
+    opts = opts || {};
+    const holes = recorderHoles(note);
+    const fig = document.createElement("figure");
+    fig.className = "recfig";
+    if(!holes){
+      fig.innerHTML = '<figcaption class="muted">' + esc(noteLabel(note)) + "</figcaption>";
+      return fig;
+    }
+    const W = 64, H = 210, cx = W / 2;
+    /* חור האגודל מצויר בנפרד בצד, כי הוא בגב הכלי */
+    const ys = [34, 64, 84, 104, 132, 152, 172, 190];
+    let svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' +
+              esc(t("rec.chartAria", { note: noteLabel(note) })) + '">';
+    svg += '<rect x="' + (cx - 13) + '" y="8" width="26" height="' + (H - 16) +
+           '" rx="13" fill="var(--card2)" stroke="var(--line)" stroke-width="1.5"/>';
+    svg += '<path d="M' + (cx - 13) + ' 20 L' + (cx + 13) + ' 20" stroke="var(--line)" stroke-width="1.5"/>';
+    holes.forEach((state, i) => {
+      const back = i === 0;
+      const x = back ? cx - 24 : cx;
+      const y = ys[i];
+      const r = back ? 6 : (i >= 6 ? 5 : 6.5);
+      const fillFull = "var(--txt)", empty = "var(--card)";
+      if(state === "closed"){
+        svg += '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + fillFull +
+               '" stroke="var(--txt)" stroke-width="1.5"/>';
+      }else if(state === "half"){
+        svg += '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + empty +
+               '" stroke="var(--txt)" stroke-width="1.5"/>';
+        svg += '<path d="M' + (x - r) + ' ' + y + ' a' + r + ' ' + r + ' 0 0 1 ' + (2 * r) +
+               ' 0 z" fill="' + fillFull + '"/>';
+      }else{
+        svg += '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + empty +
+               '" stroke="var(--txt)" stroke-width="1.5"/>';
+      }
+      if(back){
+        svg += '<path d="M' + (x + 7) + ' ' + y + ' L' + (cx - 14) + ' ' + y +
+               '" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="2 2"/>';
+      }
+    });
+    svg += "</svg>";
+    fig.innerHTML = svg +
+      '<figcaption class="recfig-note nco ' + noteColorClass(note) + '">' +
+      esc(noteLabel(note)) + "</figcaption>";
+
+    if(opts.play !== false){
+      const b = document.createElement("button");
+      b.className = "btn btn-sm btn-ghost";
+      b.textContent = t("common.play");
+      b.addEventListener("click", () => { Audio1.ensure(); Audio1.playNote(note, 1.1, "flute", .55); });
+      fig.appendChild(b);
+    }
+    return fig;
+  }
+
+  return { piano, chordDiagram, melody, rhythm, drumPads, recorderChart, esc, live };
 })();

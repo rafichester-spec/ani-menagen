@@ -280,6 +280,12 @@ const Views = (() => {
       case "piano": return UI.piano(b);
       case "chord": return UI.chordDiagram(b.inst, b.id);
       case "melody":return UI.melody(b);
+      case "recfing":{
+        const box = document.createElement("div");
+        box.className = "recgrid";
+        b.notes.forEach(n => box.appendChild(UI.recorderChart(n)));
+        return box;
+      }
       case "rhythm":return UI.rhythm(b);
       case "drumpads": return UI.drumPads();
       case "quiz":  return quizBlock(b);

@@ -115,7 +115,7 @@ he:{
 
 "song.transpose":"טרנספוזיציה","song.key":"סולם","song.loop":"לולאה","song.loopOn":"לולאה פעילה","song.reset":"איפוס",
 "song.transposeTip":"מזיז את השיר גבוה או נמוך יותר – שימושי כשהמנגינה גבוהה מדי לכלי או לקול שלך.",
-"song.stepByStep":"👣 צעד אחר צעד","song.backing":"🎸 ליווי","song.coach":"🎤 אימון"
+"rec.chartAria":"אצבוע לתו {note}","song.stepByStep":"👣 צעד אחר צעד","song.backing":"🎸 ליווי","song.coach":"🎤 אימון"
 },
 
 en:{
@@ -229,7 +229,7 @@ en:{
 
 "song.transpose":"Transpose","song.key":"Key","song.loop":"Loop","song.loopOn":"Loop on","song.reset":"Reset",
 "song.transposeTip":"Moves the song higher or lower — useful when the melody is too high for your instrument or your voice.",
-"song.stepByStep":"👣 Step by step","song.backing":"🎸 Backing","song.coach":"🎤 Coach"
+"rec.chartAria":"Fingering for {note}","song.stepByStep":"👣 Step by step","song.backing":"🎸 Backing","song.coach":"🎤 Coach"
 },
 
 ar:{
@@ -305,7 +305,7 @@ ar:{
 
 "song.transpose":"النقل","song.key":"السلّم","song.loop":"حلقة","song.loopOn":"الحلقة مفعّلة","song.reset":"إعادة",
 "song.transposeTip":"ينقل الأغنية إلى طبقة أعلى أو أخفض — مفيد حين يكون اللحن مرتفعاً على آلتك أو صوتك.",
-"tools.guide":"تدريب موجّه","song.stepByStep":"👣 خطوة بخطوة","song.backing":"🎸 مرافقة","song.coach":"🎤 تدريب"
+"tools.guide":"تدريب موجّه","rec.chartAria":"وضع الأصابع لـ {note}","song.stepByStep":"👣 خطوة بخطوة","song.backing":"🎸 مرافقة","song.coach":"🎤 تدريب"
 },
 
 ru:{
@@ -381,7 +381,7 @@ ru:{
 
 "song.transpose":"Транспонирование","song.key":"Тональность","song.loop":"Повтор","song.loopOn":"Повтор включён","song.reset":"Сброс",
 "song.transposeTip":"Смещает песню выше или ниже — удобно, когда мелодия слишком высока для инструмента или голоса.",
-"tools.guide":"Управляемая практика","song.stepByStep":"👣 Шаг за шагом","song.backing":"🎸 Аккомпанемент","song.coach":"🎤 Тренер"
+"tools.guide":"Управляемая практика","rec.chartAria":"Аппликатура для {note}","song.stepByStep":"👣 Шаг за шагом","song.backing":"🎸 Аккомпанемент","song.coach":"🎤 Тренер"
 },
 
 fr:{
@@ -457,7 +457,7 @@ fr:{
 
 "song.transpose":"Transposer","song.key":"Tonalité","song.loop":"Boucle","song.loopOn":"Boucle activée","song.reset":"Réinitialiser",
 "song.transposeTip":"Déplace le morceau plus haut ou plus bas — utile quand la mélodie est trop aiguë pour votre instrument ou votre voix.",
-"tools.guide":"Pratique guidée","song.stepByStep":"👣 Pas à pas","song.backing":"🎸 Accompagnement","song.coach":"🎤 Coach"
+"tools.guide":"Pratique guidée","rec.chartAria":"Doigté pour {note}","song.stepByStep":"👣 Pas à pas","song.backing":"🎸 Accompagnement","song.coach":"🎤 Coach"
 },
 
 es:{
@@ -533,7 +533,7 @@ es:{
 
 "song.transpose":"Transportar","song.key":"Tonalidad","song.loop":"Bucle","song.loopOn":"Bucle activo","song.reset":"Restablecer",
 "song.transposeTip":"Mueve la canción más aguda o más grave: útil cuando la melodía queda demasiado alta para tu instrumento o tu voz.",
-"tools.guide":"Práctica guiada","song.stepByStep":"👣 Paso a paso","song.backing":"🎸 Acompañamiento","song.coach":"🎤 Entrenador"
+"tools.guide":"Práctica guiada","rec.chartAria":"Digitación para {note}","song.stepByStep":"👣 Paso a paso","song.backing":"🎸 Acompañamiento","song.coach":"🎤 Entrenador"
 },
 
 de:{
@@ -609,7 +609,7 @@ de:{
 
 "song.transpose":"Transponieren","song.key":"Tonart","song.loop":"Schleife","song.loopOn":"Schleife aktiv","song.reset":"Zurücksetzen",
 "song.transposeTip":"Verschiebt das Stück höher oder tiefer — nützlich, wenn die Melodie für dein Instrument oder deine Stimme zu hoch liegt.",
-"tools.guide":"Geführtes Üben","song.stepByStep":"👣 Schritt für Schritt","song.backing":"🎸 Begleitung","song.coach":"🎤 Coach"
+"tools.guide":"Geführtes Üben","rec.chartAria":"Griff für {note}","song.stepByStep":"👣 Schritt für Schritt","song.backing":"🎸 Begleitung","song.coach":"🎤 Coach"
 },
 
 pt:{
@@ -685,7 +685,7 @@ pt:{
 
 "song.transpose":"Transpor","song.key":"Tonalidade","song.loop":"Loop","song.loopOn":"Loop ativo","song.reset":"Redefinir",
 "song.transposeTip":"Move a música para mais agudo ou mais grave — útil quando a melodia fica alta demais para o seu instrumento ou a sua voz.",
-"tools.guide":"Prática guiada","song.stepByStep":"👣 Passo a passo","song.backing":"🎸 Acompanhamento","song.coach":"🎤 Treinador"
+"tools.guide":"Prática guiada","rec.chartAria":"Dedilhado para {note}","song.stepByStep":"👣 Passo a passo","song.backing":"🎸 Acompanhamento","song.coach":"🎤 Treinador"
 },
 
 it:{
@@ -761,7 +761,7 @@ it:{
 
 "song.transpose":"Trasporta","song.key":"Tonalità","song.loop":"Loop","song.loopOn":"Loop attivo","song.reset":"Reimposta",
 "song.transposeTip":"Sposta il brano più in alto o più in basso: utile quando la melodia è troppo acuta per il tuo strumento o per la tua voce.",
-"tools.guide":"Pratica guidata","song.stepByStep":"👣 Passo dopo passo","song.backing":"🎸 Accompagnamento","song.coach":"🎤 Coach"
+"tools.guide":"Pratica guidata","rec.chartAria":"Diteggiatura per {note}","song.stepByStep":"👣 Passo dopo passo","song.backing":"🎸 Accompagnamento","song.coach":"🎤 Coach"
 },
 
 am:{
@@ -837,7 +837,7 @@ am:{
 
 "song.transpose":"ማዛወር","song.key":"ሰልፍ","song.loop":"ዙር","song.loopOn":"ዙር ነቅቷል","song.reset":"ዳግም አስጀምር",
 "song.transposeTip":"ዜማውን ከፍ ወይም ዝቅ ያደርገዋል — ዜማው ለመሣሪያህ ወይም ለድምፅህ በጣም ከፍ ሲል ጠቃሚ ነው።",
-"tools.guide":"የሚመራ ልምምድ","song.stepByStep":"👣 እሪስ በእሪስ","song.backing":"🎸 አጃቢ","song.coach":"🎤 አሠልጣኝ"
+"tools.guide":"የሚመራ ልምምድ","rec.chartAria":"ለ{note} የጣት አቀማመጥ","song.stepByStep":"👣 እሪስ በእሪስ","song.backing":"🎸 አጃቢ","song.coach":"🎤 አሠልጣኝ"
 }
 
 };

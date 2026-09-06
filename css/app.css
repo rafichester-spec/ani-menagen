@@ -889,3 +889,10 @@ figure.chord-card{margin:0}
 
 /* מפריד קבוצות ברצועת התווים – עוגן ויזואלי לספירה */
 .notestrip .notegap{flex:0 0 auto;width:14px;min-width:14px;background:none;border:0;padding:0}
+
+/* ---------- תרשים אצבוע לחלילית ---------- */
+.recgrid{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin:14px 0}
+.recfig{margin:0;display:flex;flex-direction:column;align-items:center;gap:8px;
+  background:var(--card2);border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 10px}
+.recfig svg{width:56px;height:auto;display:block}
+.recfig-note{font-size:1.05rem;font-weight:800;padding:3px 12px;border-radius:999px}

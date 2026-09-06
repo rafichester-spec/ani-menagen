@@ -125,6 +125,52 @@ function noteColor(note){
 }
 
 /* ---------- אקורדים (דיאגרמות מקוריות; ידע מוזיקלי בסיסי אינו מוגן בזכויות יוצרים) ---------- */
+
+/* ---------------------------------------------------------------------------
+   אצבועי חלילית סופרן (אצבוע בארוקי/אנגלי).
+   המקור: טבלת האצבועים בערך "Recorder (musical instrument)" בוויקיפדיה,
+   המבוססת על טבלת Dolmetsch. המוסכמה מאומתת בגוף הערך עצמו:
+   חור האגודל הוא 0, חורי האצבעות 1-7, והספרות מציינות חורים סגורים.
+   שתי עובדות בגוף הערך שימשו הצלבה: 0123 הוא G, ו-012356 הוא F#.
+   half = חור סגור למחצה ("צביטת" האגודל, הכרחית לאוקטבה השנייה).
+   --------------------------------------------------------------------------- */
+const RECORDER_FINGERINGS = {
+  "C4":  { closed:"01234567", half:"" },
+  "C#4": { closed:"0123456", half:"7" },
+  "D4":  { closed:"0123456", half:"" },
+  "D#4": { closed:"012345", half:"6" },
+  "E4":  { closed:"012345", half:"" },
+  "F4":  { closed:"0123467", half:"" },
+  "F#4": { closed:"012356", half:"" },
+  "G4":  { closed:"0123", half:"" },
+  "G#4": { closed:"01245", half:"6" },
+  "A4":  { closed:"012", half:"" },
+  "A#4": { closed:"0134", half:"" },
+  "B4":  { closed:"01", half:"" },
+  "C5":  { closed:"02", half:"" },
+  "C#5": { closed:"12", half:"" },
+  "D5":  { closed:"2", half:"" },
+  "D#5": { closed:"23456", half:"" },
+  "E5":  { closed:"12345", half:"0" },
+  "F5":  { closed:"12346", half:"0" },
+  "F#5": { closed:"1235", half:"0" },
+  "G5":  { closed:"123", half:"0" },
+  "G#5": { closed:"124", half:"0" },
+  "A5":  { closed:"12", half:"0" },
+  "A#5": { closed:"12456", half:"0" },
+  "B5":  { closed:"1245", half:"0" },
+  "C6":  { closed:"145",  half:"0" },
+  "D6":  { closed:"1346", half:"07" }
+};
+
+/* מצב כל חור לתו נתון: closed | half | open */
+function recorderHoles(note){
+  const f = RECORDER_FINGERINGS[normNote(note) || note];
+  if(!f) return null;
+  return "01234567".split("").map(h =>
+    f.half.includes(h) ? "half" : (f.closed.includes(h) ? "closed" : "open"));
+}
+
 /* מערך אצבועים: מהמיתר העבה לדק. -1 = מיתר מושתק, 0 = פתוח */
 const CHORDS = {
   guitar: [
