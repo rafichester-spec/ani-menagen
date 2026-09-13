@@ -489,5 +489,65 @@ const UI = (() => {
     return fig;
   }
 
-  return { piano, chordDiagram, melody, rhythm, drumPads, recorderChart, esc, live };
+
+  /* ---------- תרשים מיקום תו על הצוואר ----------
+     לבס לא היה שום עזר חזותי: תשעה שיעורים בלי ולו תרשים אחד שמראה
+     איפה לשים אצבע. זה מצויר מהכוונון, ולכן עובד לכל כלי מיתר.
+     כמו תרשים החלילית – נקודה על תמונה, בלי מילים, זהה בכל השפות. */
+  function fretNote(instId, note, opts){
+    opts = opts || {};
+    const inst = INST[instId] || INST.bass;
+    const pos = fretPositions(instId, note, 5);
+    const fig = document.createElement("figure");
+    fig.className = "fretfig";
+    const strings = (inst.tune || "").split(/\s+/);
+    const nS = strings.length, FR = 5;
+    if(!pos.length || !nS){
+      fig.innerHTML = '<figcaption class="muted">' + esc(noteLabel(note)) + "</figcaption>";
+      return fig;
+    }
+    /* אפשר לקבע מיתר: לה קיים גם כמיתר פתוח וגם בסריג 5 של מי,
+       ושיעור שמלמד "סריג 5" חייב להראות דווקא אותו. */
+    const best = (opts.string != null && pos.find(x => x.string === opts.string)) || pos[0];
+    const W = 34 + nS * 22, H = 168, x0 = 26, y0 = 22, sp = 22, fh = 26;
+    let svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' +
+              esc(t("fret.aria", { note: noteLabel(note), n: best.fret })) + '">';
+    /* אגוז הצוואר */
+    svg += '<rect x="' + (x0 - 4) + '" y="' + (y0 - 6) + '" width="' + ((nS - 1) * sp + 8) +
+           '" height="5" rx="2" fill="var(--txt)"/>';
+    for(let f = 1; f <= FR; f++){
+      const y = y0 + f * fh;
+      svg += '<line x1="' + x0 + '" y1="' + y + '" x2="' + (x0 + (nS - 1) * sp) +
+             '" y2="' + y + '" stroke="var(--line)" stroke-width="1.5"/>';
+      svg += '<text x="' + (x0 - 12) + '" y="' + (y - fh / 2 + 4) +
+             '" text-anchor="middle" font-size="10" fill="var(--muted)">' + f + "</text>";
+    }
+    for(let i = 0; i < nS; i++){
+      const x = x0 + i * sp;
+      svg += '<line x1="' + x + '" y1="' + (y0 - 4) + '" x2="' + x + '" y2="' + (y0 + FR * fh) +
+             '" stroke="var(--muted)" stroke-width="' + (1 + (nS - 1 - i) * .5) + '"/>';
+    }
+    const bx = x0 + best.string * sp;
+    if(best.fret === 0){
+      /* מיתר פתוח: עיגול חלול מעל האגוז, כמוסכמה בתרשימי מיתר */
+      svg += '<circle cx="' + bx + '" cy="' + (y0 - 13) + '" r="6" fill="none" stroke="var(--txt)" stroke-width="2"/>';
+    }else{
+      const by = y0 + (best.fret - 0.5) * fh;
+      svg += '<circle cx="' + bx + '" cy="' + by + '" r="9" fill="var(--brand)" stroke="var(--on-brand)" stroke-width="1.5"/>';
+    }
+    svg += "</svg>";
+    fig.innerHTML = svg +
+      '<figcaption class="fretfig-note nco ' + noteColorClass(note) + '">' +
+      esc(noteLabel(note)) + "</figcaption>";
+    if(opts.play !== false){
+      const b = document.createElement("button");
+      b.className = "btn btn-sm btn-ghost";
+      b.textContent = t("common.play");
+      b.addEventListener("click", () => { Audio1.ensure(); Audio1.playNote(note, 1, inst.timbre, .55); });
+      fig.appendChild(b);
+    }
+    return fig;
+  }
+
+  return { piano, chordDiagram, melody, rhythm, drumPads, recorderChart, fretNote, esc, live };
 })();

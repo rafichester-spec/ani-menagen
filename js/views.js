@@ -280,6 +280,13 @@ const Views = (() => {
       case "piano": return UI.piano(b);
       case "chord": return UI.chordDiagram(b.inst, b.id);
       case "melody":return UI.melody(b);
+      case "fretnote":{
+        const box = document.createElement("div");
+        box.className = "recgrid";
+        if(b.pairs) b.pairs.forEach(([n, str]) => box.appendChild(UI.fretNote(b.inst, n, { string:str })));
+        else b.notes.forEach(n => box.appendChild(UI.fretNote(b.inst, n)));
+        return box;
+      }
       case "recfing":{
         const box = document.createElement("div");
         box.className = "recgrid";

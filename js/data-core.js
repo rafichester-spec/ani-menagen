@@ -171,6 +171,38 @@ function recorderHoles(note){
     f.half.includes(h) ? "half" : (f.closed.includes(h) ? "closed" : "open"));
 }
 
+
+/* מספר חצאי-טונים מ-C-1, כדי להשוות גבהים בין תווים */
+function noteToSemis(note){
+  const n = normNote(note);
+  if(!n) return null;
+  const m = /^([A-G]#?)(-?\d)$/.exec(n);
+  return NOTE_ORDER.indexOf(m[1]) + (parseInt(m[2], 10) + 1) * 12;
+}
+
+/* מיקומי התו על הצוואר: איזה מיתר ואיזה סריג.
+   נגזר חשבונית מהכוונון של הכלי, ולכן נכון לכל כלי מיתר שמוגדר ב-INST.
+   מוחזר ממוין: קודם הסריג הנמוך ביותר – המיקום הנוח למתחיל. */
+function fretPositions(instId, note, maxFret){
+  const inst = INST[instId];
+  if(!inst || !inst.tune) return [];
+  const want = noteToSemis(note);
+  if(want == null) return [];
+  const strings = inst.tune.split(/\s+/);
+  const top = maxFret || 5;
+  const out = [];
+  strings.forEach((open, i) => {
+    const base = noteToSemis(open);
+    if(base == null) return;
+    const fret = want - base;
+    if(fret >= 0 && fret <= top){
+      /* i=0 הוא המיתר העבה ביותר, כפי שהכוונון רשום */
+      out.push({ string: i, fret, openNote: open });
+    }
+  });
+  return out.sort((a, b) => a.fret - b.fret || b.string - a.string);
+}
+
 /* מערך אצבועים: מהמיתר העבה לדק. -1 = מיתר מושתק, 0 = פתוח */
 const CHORDS = {
   guitar: [
