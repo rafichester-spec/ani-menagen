@@ -33,9 +33,21 @@ const INSTRUMENTS = [
   { id:"drums",    name:"תופים והקשה", emoji:"🥁", tag:"בלי תווים – רק גרוב",
     blurb:"קצב הוא הבסיס של כל מוזיקה. לומדים גרוּב, ספירה, פילים – גם על שולחן או על כריות.",
     tune:"", timbre:"drum" },
-  { id:"bass",     name:"גיטרה בס", emoji:"🎻", tag:"הכלי המבוקש בהרכבים",
+  { id:"bass",     name:"גיטרה בס", emoji:"🎸", tag:"הכלי המבוקש בהרכבים",
     blurb:"נגן אחד עם ארבעה מיתרים שמחזיק את כל הלהקה. קל להתחיל, קשה להפסיק.",
-    tune:"E1 A1 D2 G2", timbre:"bass" }
+    tune:"E1 A1 D2 G2", timbre:"bass" },
+  { id:"violin",   name:"כינור", emoji:"🎻", tag:"הצליל שנשאר איתך",
+    blurb:"ארבעה מיתרים, בלי סריגים – האוזן מובילה את האצבע. מתחילים במיתרים פתוחים ובאצבע ראשונה.",
+    tune:"G3 D4 A4 E5", timbre:"violin" },
+  { id:"harmonica",name:"מפוחית", emoji:"🎵", tag:"נכנסת לכיס",
+    blurb:"הכלי הזול והנייד ביותר. נושפים ושואבים – ותוך דקות יוצאת מנגינה אמיתית.",
+    tune:"", timbre:"harmonica" },
+  { id:"glock",    name:"מצילתיים", emoji:"🔔", tag:"הכי קל להתחיל",
+    blurb:"מוטות מתכת בסדר של מקלדת. מכים – ומקבלים צליל נקי. אין מה לכוון ואין מה לאצבע.",
+    tune:"", timbre:"glock" },
+  { id:"mandolin", name:"מנדולינה", emoji:"🪕", tag:"קטנה ומהירה",
+    blurb:"מכוונת בדיוק כמו כינור, אבל עם סריגים – מה שהופך את מציאת התווים לקלה בהרבה.",
+    tune:"G3 D4 A4 E5", timbre:"uke" }
 ];
 const INST = Object.fromEntries(INSTRUMENTS.map(i => [i.id, i]));
 
@@ -171,6 +183,28 @@ function recorderHoles(note){
     f.half.includes(h) ? "half" : (f.closed.includes(h) ? "closed" : "open"));
 }
 
+
+
+/* ---------------------------------------------------------------------------
+   מפוחית דיאטונית בדו, כוונון ריכטר (Richter) – עשרה חורים, עשרים לשוניות.
+   המקור: הערך "Richter-tuned harmonica" בוויקיפדיה. הנתונים מצטלבים פנימית
+   בשלוש דרכים שמאמתות אותם: מרחק שלוש אוקטבות בין חור 1 ל-10 בנשיפה,
+   היפוך היחס בין נשיפה לשאיבה החל מחור 7, ותו כפול יחיד (סול בחור 2 שאיבה
+   ובחור 3 נשיפה) שמסביר מדוע יש 19 צלילים ולא 20.
+   --------------------------------------------------------------------------- */
+const HARMONICA_C = {
+  blow: ["C4","E4","G4","C5","E5","G5","C6","E6","G6","C7"],
+  draw: ["D4","G4","B4","D5","F5","A5","B5","D6","F6","A6"]
+};
+
+/* איפה נמצא תו על המפוחית: חור, ונשיפה או שאיבה */
+function harmonicaSpots(note){
+  const n = normNote(note);
+  const out = [];
+  HARMONICA_C.blow.forEach((b, i) => { if(b === n) out.push({ hole:i + 1, air:"blow" }); });
+  HARMONICA_C.draw.forEach((d, i) => { if(d === n) out.push({ hole:i + 1, air:"draw" }); });
+  return out.sort((a, b) => a.hole - b.hole);
+}
 
 /* מספר חצאי-טונים מ-C-1, כדי להשוות גבהים בין תווים */
 function noteToSemis(note){

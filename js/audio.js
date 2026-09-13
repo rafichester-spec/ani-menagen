@@ -39,7 +39,16 @@ const Audio1 = (() => {
     uke:    { waves:[["triangle",.8],["square",.18]], attack:.003, decay:1.2, cut:3400, q:1 },
     flute:  { waves:[["sine",1],["triangle",.12]], attack:.05, decay:1.1, cut:5000, q:.6, vib:5 },
     bass:   { waves:[["sine",1],["triangle",.4]], attack:.008, decay:1.6, cut:900, q:1.4 },
-    synth:  { waves:[["sawtooth",.6],["square",.25]], attack:.01, decay:1.1, cut:2200, q:1 }
+    synth:  { waves:[["sawtooth",.6],["square",.25]], attack:.01, decay:1.1, cut:2200, q:1 },
+    /* כינור: קשת מייצרת עלייה הדרגתית וויברטו מתמשך, ולכן attack ארוך
+       יחסית ו-vib. המשונן נותן את העושר ההרמוני של מיתר מנוגן בקשת. */
+    violin: { waves:[["sawtooth",.7],["triangle",.35]], attack:.09, decay:1.8, cut:3200, q:1.1, vib:5.5 },
+    /* מפוחית: לשונית מתכת – גל מרובע עם מעט משונן, פתיחה מהירה. */
+    harmonica:{ waves:[["square",.5],["sawtooth",.3]], attack:.02, decay:1.0, cut:2800, q:1.3, vib:3 },
+    /* קלימבה: לשונית מתכת נפרטת – התקפה מיידית ודעיכה מהירה, גוון נקי. */
+    kalimba:{ waves:[["sine",1],["triangle",.3]], attack:.002, decay:1.3, cut:4800, q:.8 },
+    /* פעמונית/קסילופון: מוט מתכת מוכה – התקפה חדה מאוד וזנב ארוך ונקי. */
+    glock:  { waves:[["sine",1],["sine",.28]], attack:.001, decay:2.6, cut:7000, q:.5 }
   };
 
   /* ==========================================================================

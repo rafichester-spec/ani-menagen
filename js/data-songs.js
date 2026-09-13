@@ -552,6 +552,27 @@ function instFor(s){
   /* תופים: שיר עם דופק אחיד – ערכי אורך מעטים וללא שברים מסובכים */
   const durs = new Set(parseMel(s.n).map(x => x[1]));
   if(durs.size <= 3 && s.lvl <= 3) out.push("drums");
+
+  /* כינור ומנדולינה מכוונים זהה (G3-E5 פתוחים); הטווח המעשי למתחיל
+     הוא מהמיתר הנמוך ועד סוף האוקטבה הראשונה מעל המיתר הגבוה. */
+  if(lo >= 55 && hi <= 88) { out.push("violin"); out.push("mandolin"); }
+
+  /* מפוחית דיאטונית בדו: רק תווים שקיימים בפועל בכוונון ריכטר.
+     מנגינה עם חצי טון שאינו בכוונון דורשת כיפוף, ולכן אינה למתחילים. */
+  if(typeof HARMONICA_C !== "undefined"){
+    const have = new Set(HARMONICA_C.blow.concat(HARMONICA_C.draw)
+      .map(n => NOTE_ORDER.indexOf(/^([A-G]#?)/.exec(normNote(n))[1])));
+    const pcs = [...new Set(midi.map(m => m % 12))];
+    /* מפוחית דיאטונית אינה כרומטית, ולכן שיר נכנס רק אם *אחת* מ-12
+       ההעברות מכניסה את כל מחלקות הגובה שלו לתוך הכוונון. האפליקציה
+       כבר יודעת להעביר סולם, ולכן זו הצעה מעשית ולא הבטחה ריקה. */
+    for(let tr = 0; tr < 12; tr++){
+      if(pcs.every(p => have.has((p + tr) % 12))){ out.push("harmonica"); break; }
+    }
+  }
+
+  /* מצילתיים: כרומטי כמו פסנתר, בטווח המעשי של כלי לימודי */
+  if(lo >= 60 && hi <= 96) out.push("glock");
   return out;
 }
 

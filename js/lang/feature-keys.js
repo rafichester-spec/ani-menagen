@@ -115,7 +115,7 @@ he:{
 
 "song.transpose":"טרנספוזיציה","song.key":"סולם","song.loop":"לולאה","song.loopOn":"לולאה פעילה","song.reset":"איפוס",
 "song.transposeTip":"מזיז את השיר גבוה או נמוך יותר – שימושי כשהמנגינה גבוהה מדי לכלי או לקול שלך.",
-"fret.aria":"{note} – סריג {n}","rec.chartAria":"אצבוע לתו {note}","song.stepByStep":"👣 צעד אחר צעד","song.backing":"🎸 ליווי","song.coach":"🎤 אימון"
+"harp.aria":"{note} – חור {n}, {air}","harp.blow":"נשיפה","harp.draw":"שאיבה","fret.aria":"{note} – סריג {n}","rec.chartAria":"אצבוע לתו {note}","song.stepByStep":"👣 צעד אחר צעד","song.backing":"🎸 ליווי","song.coach":"🎤 אימון"
 },
 
 en:{
@@ -229,7 +229,7 @@ en:{
 
 "song.transpose":"Transpose","song.key":"Key","song.loop":"Loop","song.loopOn":"Loop on","song.reset":"Reset",
 "song.transposeTip":"Moves the song higher or lower — useful when the melody is too high for your instrument or your voice.",
-"fret.aria":"{note} – fret {n}","rec.chartAria":"Fingering for {note}","song.stepByStep":"👣 Step by step","song.backing":"🎸 Backing","song.coach":"🎤 Coach"
+"harp.aria":"{note} – hole {n}, {air}","harp.blow":"blow","harp.draw":"draw","fret.aria":"{note} – fret {n}","rec.chartAria":"Fingering for {note}","song.stepByStep":"👣 Step by step","song.backing":"🎸 Backing","song.coach":"🎤 Coach"
 },
 
 ar:{
@@ -305,7 +305,7 @@ ar:{
 
 "song.transpose":"النقل","song.key":"السلّم","song.loop":"حلقة","song.loopOn":"الحلقة مفعّلة","song.reset":"إعادة",
 "song.transposeTip":"ينقل الأغنية إلى طبقة أعلى أو أخفض — مفيد حين يكون اللحن مرتفعاً على آلتك أو صوتك.",
-"tools.guide":"تدريب موجّه","fret.aria":"{note} – العتبة {n}","rec.chartAria":"وضع الأصابع لـ {note}","song.stepByStep":"👣 خطوة بخطوة","song.backing":"🎸 مرافقة","song.coach":"🎤 تدريب"
+"tools.guide":"تدريب موجّه","harp.aria":"{note} – الفتحة {n}، {air}","harp.blow":"نفخ","harp.draw":"شهيق","fret.aria":"{note} – العتبة {n}","rec.chartAria":"وضع الأصابع لـ {note}","song.stepByStep":"👣 خطوة بخطوة","song.backing":"🎸 مرافقة","song.coach":"🎤 تدريب"
 },
 
 ru:{
@@ -381,7 +381,7 @@ ru:{
 
 "song.transpose":"Транспонирование","song.key":"Тональность","song.loop":"Повтор","song.loopOn":"Повтор включён","song.reset":"Сброс",
 "song.transposeTip":"Смещает песню выше или ниже — удобно, когда мелодия слишком высока для инструмента или голоса.",
-"tools.guide":"Управляемая практика","fret.aria":"{note} – лад {n}","rec.chartAria":"Аппликатура для {note}","song.stepByStep":"👣 Шаг за шагом","song.backing":"🎸 Аккомпанемент","song.coach":"🎤 Тренер"
+"tools.guide":"Управляемая практика","harp.aria":"{note} – отверстие {n}, {air}","harp.blow":"выдох","harp.draw":"вдох","fret.aria":"{note} – лад {n}","rec.chartAria":"Аппликатура для {note}","song.stepByStep":"👣 Шаг за шагом","song.backing":"🎸 Аккомпанемент","song.coach":"🎤 Тренер"
 },
 
 fr:{
@@ -457,7 +457,7 @@ fr:{
 
 "song.transpose":"Transposer","song.key":"Tonalité","song.loop":"Boucle","song.loopOn":"Boucle activée","song.reset":"Réinitialiser",
 "song.transposeTip":"Déplace le morceau plus haut ou plus bas — utile quand la mélodie est trop aiguë pour votre instrument ou votre voix.",
-"tools.guide":"Pratique guidée","fret.aria":"{note} – case {n}","rec.chartAria":"Doigté pour {note}","song.stepByStep":"👣 Pas à pas","song.backing":"🎸 Accompagnement","song.coach":"🎤 Coach"
+"tools.guide":"Pratique guidée","harp.aria":"{note} – trou {n}, {air}","harp.blow":"souffler","harp.draw":"aspirer","fret.aria":"{note} – case {n}","rec.chartAria":"Doigté pour {note}","song.stepByStep":"👣 Pas à pas","song.backing":"🎸 Accompagnement","song.coach":"🎤 Coach"
 },
 
 es:{
@@ -533,7 +533,7 @@ es:{
 
 "song.transpose":"Transportar","song.key":"Tonalidad","song.loop":"Bucle","song.loopOn":"Bucle activo","song.reset":"Restablecer",
 "song.transposeTip":"Mueve la canción más aguda o más grave: útil cuando la melodía queda demasiado alta para tu instrumento o tu voz.",
-"tools.guide":"Práctica guiada","fret.aria":"{note} – traste {n}","rec.chartAria":"Digitación para {note}","song.stepByStep":"👣 Paso a paso","song.backing":"🎸 Acompañamiento","song.coach":"🎤 Entrenador"
+"tools.guide":"Práctica guiada","harp.aria":"{note} – agujero {n}, {air}","harp.blow":"soplar","harp.draw":"aspirar","fret.aria":"{note} – traste {n}","rec.chartAria":"Digitación para {note}","song.stepByStep":"👣 Paso a paso","song.backing":"🎸 Acompañamiento","song.coach":"🎤 Entrenador"
 },
 
 de:{
@@ -609,7 +609,7 @@ de:{
 
 "song.transpose":"Transponieren","song.key":"Tonart","song.loop":"Schleife","song.loopOn":"Schleife aktiv","song.reset":"Zurücksetzen",
 "song.transposeTip":"Verschiebt das Stück höher oder tiefer — nützlich, wenn die Melodie für dein Instrument oder deine Stimme zu hoch liegt.",
-"tools.guide":"Geführtes Üben","fret.aria":"{note} – Bund {n}","rec.chartAria":"Griff für {note}","song.stepByStep":"👣 Schritt für Schritt","song.backing":"🎸 Begleitung","song.coach":"🎤 Coach"
+"tools.guide":"Geführtes Üben","harp.aria":"{note} – Loch {n}, {air}","harp.blow":"blasen","harp.draw":"ziehen","fret.aria":"{note} – Bund {n}","rec.chartAria":"Griff für {note}","song.stepByStep":"👣 Schritt für Schritt","song.backing":"🎸 Begleitung","song.coach":"🎤 Coach"
 },
 
 pt:{
@@ -685,7 +685,7 @@ pt:{
 
 "song.transpose":"Transpor","song.key":"Tonalidade","song.loop":"Loop","song.loopOn":"Loop ativo","song.reset":"Redefinir",
 "song.transposeTip":"Move a música para mais agudo ou mais grave — útil quando a melodia fica alta demais para o seu instrumento ou a sua voz.",
-"tools.guide":"Prática guiada","fret.aria":"{note} – casa {n}","rec.chartAria":"Dedilhado para {note}","song.stepByStep":"👣 Passo a passo","song.backing":"🎸 Acompanhamento","song.coach":"🎤 Treinador"
+"tools.guide":"Prática guiada","harp.aria":"{note} – furo {n}, {air}","harp.blow":"soprar","harp.draw":"aspirar","fret.aria":"{note} – casa {n}","rec.chartAria":"Dedilhado para {note}","song.stepByStep":"👣 Passo a passo","song.backing":"🎸 Acompanhamento","song.coach":"🎤 Treinador"
 },
 
 it:{
@@ -761,7 +761,7 @@ it:{
 
 "song.transpose":"Trasporta","song.key":"Tonalità","song.loop":"Loop","song.loopOn":"Loop attivo","song.reset":"Reimposta",
 "song.transposeTip":"Sposta il brano più in alto o più in basso: utile quando la melodia è troppo acuta per il tuo strumento o per la tua voce.",
-"tools.guide":"Pratica guidata","fret.aria":"{note} – tasto {n}","rec.chartAria":"Diteggiatura per {note}","song.stepByStep":"👣 Passo dopo passo","song.backing":"🎸 Accompagnamento","song.coach":"🎤 Coach"
+"tools.guide":"Pratica guidata","harp.aria":"{note} – foro {n}, {air}","harp.blow":"soffiare","harp.draw":"aspirare","fret.aria":"{note} – tasto {n}","rec.chartAria":"Diteggiatura per {note}","song.stepByStep":"👣 Passo dopo passo","song.backing":"🎸 Accompagnamento","song.coach":"🎤 Coach"
 },
 
 am:{
@@ -837,7 +837,7 @@ am:{
 
 "song.transpose":"ማዛወር","song.key":"ሰልፍ","song.loop":"ዙር","song.loopOn":"ዙር ነቅቷል","song.reset":"ዳግም አስጀምር",
 "song.transposeTip":"ዜማውን ከፍ ወይም ዝቅ ያደርገዋል — ዜማው ለመሣሪያህ ወይም ለድምፅህ በጣም ከፍ ሲል ጠቃሚ ነው።",
-"tools.guide":"የሚመራ ልምምድ","fret.aria":"{note} – ፍሬት {n}","rec.chartAria":"ለ{note} የጣት አቀማመጥ","song.stepByStep":"👣 እሪስ በእሪስ","song.backing":"🎸 አጃቢ","song.coach":"🎤 አሠልጣኝ"
+"tools.guide":"የሚመራ ልምምድ","harp.aria":"{note} – ቀዳዳ {n}, {air}","harp.blow":"መንፋት","harp.draw":"መሳብ","fret.aria":"{note} – ፍሬት {n}","rec.chartAria":"ለ{note} የጣት አቀማመጥ","song.stepByStep":"👣 እሪስ በእሪስ","song.backing":"🎸 አጃቢ","song.coach":"🎤 አሠልጣኝ"
 }
 
 };

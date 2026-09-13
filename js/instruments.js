@@ -549,5 +549,55 @@ const UI = (() => {
     return fig;
   }
 
-  return { piano, chordDiagram, melody, rhythm, drumPads, recorderChart, fretNote, esc, live };
+
+  /* ---------- תרשים מפוחית ----------
+     מראה באיזה חור, ואם נושפים או שואבים. חץ כלפי חוץ = נשיפה,
+     כלפי פנים = שאיבה. כמו שאר התרשימים – בלי מילים, ולכן זהה בכל שפה. */
+  function harmonicaChart(note, opts){
+    opts = opts || {};
+    const spots = harmonicaSpots(note);
+    const fig = document.createElement("figure");
+    fig.className = "harpfig";
+    if(!spots.length){
+      fig.innerHTML = '<figcaption class="muted">' + esc(noteLabel(note)) + "</figcaption>";
+      return fig;
+    }
+    const sp = spots[0], HOLES = 10;
+    const cw = 17, W = HOLES * cw + 16, H = 74, x0 = 8, y0 = 20, bh = 26;
+    let svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' +
+              esc(t("harp.aria", { note: noteLabel(note), n: sp.hole,
+                                   air: t(sp.air === "blow" ? "harp.blow" : "harp.draw") })) + '">';
+    svg += '<rect x="' + x0 + '" y="' + y0 + '" width="' + (HOLES * cw) + '" height="' + bh +
+           '" rx="5" fill="var(--card)" stroke="var(--line)" stroke-width="1.5"/>';
+    for(let i = 0; i < HOLES; i++){
+      const x = x0 + i * cw, on = (i + 1) === sp.hole;
+      if(on){
+        svg += '<rect x="' + (x + 2) + '" y="' + (y0 + 3) + '" width="' + (cw - 4) + '" height="' + (bh - 6) +
+               '" rx="3" fill="var(--brand)"/>';
+      }
+      svg += '<text x="' + (x + cw / 2) + '" y="' + (y0 + bh + 13) + '" text-anchor="middle" font-size="9" fill="' +
+             (on ? "var(--txt)" : "var(--muted)") + '" font-weight="' + (on ? "800" : "400") + '">' + (i + 1) + "</text>";
+      if(i) svg += '<line x1="' + x + '" y1="' + y0 + '" x2="' + x + '" y2="' + (y0 + bh) +
+                   '" stroke="var(--line)" stroke-width="1"/>';
+    }
+    /* החץ: למעלה = נשיפה (אוויר יוצא), למטה = שאיבה (אוויר נכנס) */
+    const ax = x0 + (sp.hole - 0.5) * cw;
+    svg += sp.air === "blow"
+      ? '<path d="M' + ax + ' 4 l5 9 h-10 z" fill="var(--accent)"/>'
+      : '<path d="M' + ax + ' 14 l5 -9 h-10 z" fill="var(--brand2)"/>';
+    svg += "</svg>";
+    fig.innerHTML = svg +
+      '<figcaption class="harpfig-note nco ' + noteColorClass(note) + '">' + esc(noteLabel(note)) + "</figcaption>" +
+      '<small class="muted">' + esc(t(sp.air === "blow" ? "harp.blow" : "harp.draw")) + "</small>";
+    if(opts.play !== false){
+      const b = document.createElement("button");
+      b.className = "btn btn-sm btn-ghost";
+      b.textContent = t("common.play");
+      b.addEventListener("click", () => { Audio1.ensure(); Audio1.playNote(note, .9, "harmonica", .55); });
+      fig.appendChild(b);
+    }
+    return fig;
+  }
+
+  return { piano, chordDiagram, melody, rhythm, drumPads, recorderChart, fretNote, harmonicaChart, esc, live };
 })();
