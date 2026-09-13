@@ -477,3 +477,279 @@ I18N.registerLessons("de", {
 3:"Spiele einen ganzen Song von Anfang bis Ende mit Metronom."}}
 
 });
+
+/* ---- die vier neuen Instrumente ---- */
+I18N.registerLessons("de", {
+
+"violin-1":{title:"Haltung und leere Saiten",goal:"Auf allen vier Saiten einen sauberen Ton erzeugen",b:{
+0:"Die Geige ist das Instrument, bei dem <b>das Ohr den Finger führt</b>. Es gibt keine Bünde, jeder Ton entsteht also durch Hören — und genau das macht sie zur besten Lehrerin für das Gehör.",
+1:"Vier Saiten, von der dicksten zur dünnsten: <b>G, D, A, E</b>. Zwischen je zwei liegt eine Quinte.",
+3:["Lege die Geige auf das Schlüsselbein, das Kinn auf den Kinnhalter.","Die linke Hand hält den Hals locker — sie umklammert ihn nicht.","Der Bogen liegt auf der Saite, in der Mitte zwischen Steg und Griffbrett.","Ziehe den Bogen langsam und mit gleichmäßigem Druck. Ein sauberer Ton zählt mehr als ein lauter."],
+4:"Ein Pfeifen? Eine von drei Ursachen: ungleicher Druck, der Bogen zu weit vom Steg, oder wechselnde Geschwindigkeit. Werde langsamer.",
+5:{q:"Wie sind die Saiten der Geige gestimmt?",o:["In Quarten","In Quinten","In Oktaven","In Terzen"],w:"G-D-A-E — eine Quinte zwischen je zwei benachbarten Saiten."},
+6:"Spiele jede leere Saite achtmal mit ganzem Bogen, ohne Pfeifen."}},
+
+"violin-2":{title:"Der erste Finger",goal:"Vier neue Töne spielen",b:{
+0:"Der erste Finger setzt einen <b>Ganzton</b> von der leeren Saite entfernt auf. Das ist der Ankerpunkt der ganzen Hand.",
+2:"Klebe ein Stückchen Klebeband dorthin, wo der erste Finger landet. Das ist kein Schummeln — so lernen alle Geigerinnen und Geiger der Welt im ersten Jahr.",
+3:"Leere Saite und erster Finger",
+4:{q:"Wie groß ist der Abstand von der leeren Saite zum ersten Finger?",o:["Ein Halbton","Ein Ganzton","Anderthalb Töne","Zwei Töne"],w:"Ein Ganzton — und das ist der erste Abstand, den das Ohr lernt."},
+5:"Spiele die Übung langsam und prüfe jeden Ton mit dem Stimmgerät in der App."}},
+
+"violin-3":{title:"Eine erste Melodie",goal:"Ein ganzes Stück auf zwei Saiten spielen",b:{
+0:"Mit den leeren Saiten und dem ersten Finger kannst du bereits eine echte Melodie spielen.",
+2:"Übung auf zwei Saiten",
+3:"<b>Die Regel des ersten Jahres:</b> langsam und sauber schlägt schnell und schlampig — immer.",
+4:{q:"Worauf kommt es in dieser Phase am meisten an?",o:["Schnell spielen, um voranzukommen","Langsam spielen und jedem Ton zuhören","Schwere Töne überspringen","So laut wie möglich spielen"],w:"Auf der Geige hört man jede Ungenauigkeit sofort. Langsamer zu werden ist die Abkürzung."},
+5:"Spiele die Melodie fünfmal, jedes Mal ein wenig schneller."}},
+
+"violin-4":{title:"Drei Finger — deine erste Tonleiter",goal:"D-Dur über zwei Saiten spielen",b:{
+0:"Auf der Geige entsteht eine Tonleiter nicht aus Bünden, sondern aus einem <b>festen Fingermuster</b>. Hat die Hand es einmal gelernt, wiederholt es sich auf jeder Saite.",
+1:"Auf der D-Saite: Finger 1 = E, Finger 2 = Fis, Finger 3 = G. Achte darauf, dass Finger 2 und 3 <b>einander berühren</b> — das ist das Zeichen, dass das Muster stimmt.",
+3:"D-Dur-Tonleiter",
+4:"In einer Durtonleiter liegen Finger 2 und 3 dicht beieinander. Öffnet sich eine Lücke, wird das Fis zu tief.",
+5:{q:"Was kennzeichnet die Lage von Finger 2 und 3 in Dur?",o:["Ein großer Abstand","Sie berühren einander","Finger 3 wird nicht gebraucht","Es gibt keine feste Regel"],w:"Ihre Nähe ist der Halbton zwischen der dritten und vierten Stufe."},
+6:"Spiele die Tonleiter zehnmal auf und ab, langsam, und prüfe jeden Ton mit dem Stimmgerät."}},
+
+"violin-5":{title:"Bogeneinteilung",goal:"Länge und Stärke des Tons steuern",b:{
+0:"Der Bogen ist der <b>Atem</b> der Geige. Ein langer Ton braucht einen langsamen Bogen, ein kurzer wenig Bogen — und der Druck bleibt gleich.",
+1:["Markiere dir drei Bereiche: Frosch, Mitte, Spitze.","Spiele eine ganze Note mit ganzem Bogen, vom Frosch bis zur Spitze, in vier Sekunden.","Spiele vier Viertel in demselben Bogen — jedes ein Viertel der Strecke.","Spiele nun Achtel nur in der Bogenmitte."],
+2:"Bogeneinteilung",
+3:"Wird der Ton zur Spitze hin schwächer? Der Druck sinkt mit deinem Arm. Halte ihn bis zur Spitze gleichmäßig.",
+4:{q:"Was bestimmt die Länge eines Tons auf der Geige?",o:["Der Fingerdruck","Die Bogengeschwindigkeit","Wie man das Instrument hält","Die Saitenstärke"],w:"Die Bogengeschwindigkeit bestimmt die Länge, der Druck die Lautstärke."},
+5:"Spiele eine ganze Tonleiter mit ganzem Bogen pro Ton, danach mit halbem Bogen."}},
+
+"violin-6":{title:"Zweite Saite und Saitenwechsel",goal:"Ohne Nebengeräusche zwischen Saiten wechseln",b:{
+0:"Der Saitenwechsel ist die Stelle, an der man den Unterschied zwischen Anfänger und Spieler hört. Das Geheimnis: <b>der Arm setzt sich in Bewegung, bevor der Ton wechselt</b>.",
+2:"Wechselübung",
+3:"Klingt beim Wechsel ein Doppelton, hat der Bogen zwei Saiten berührt. Ändern muss sich der Winkel, nicht der Druck.",
+4:{q:"Wodurch entsteht beim Saitenwechsel ein Doppelton?",o:["Zu viel Druck","Der Bogen berührt zwei Saiten","Das Instrument ist verstimmt","Der Finger liegt falsch"],w:"Es ist der Bogenwinkel, der die Saiten trennt."},
+5:"Spiele die Wechselübung zehnmal, vollkommen sauber."}},
+
+"violin-7":{title:"Ein erstes Vibrato",goal:"Die Vibratobewegung kennenlernen",b:{
+0:"Vibrato ist ein <b>kleines Wiegen des Fingers</b>, das den Ton wärmt. Es wird später unterrichtet, als man denkt — und das mit Absicht: es verdeckt Ungenauigkeit, also lernt man zuerst, ohne es sauber zu spielen.",
+1:["Setze Finger 2 auf die A-Saite, ohne Bogen.","Wiege die Hand aus dem Handgelenk vor und zurück, nicht aus dem Finger.","Der Finger bleibt liegen — nur die Tonhöhe ändert sich leicht.","Nimm den Bogen erst dazu, wenn die Bewegung fließt."],
+2:"Ein schnelles, enges Vibrato klingt wie Zittern. Ein langsames, weites klingt wie Gesang. Fang langsam an.",
+3:{q:"Woher kommt die Vibratobewegung?",o:["Aus dem Finger","Aus dem Handgelenk","Nur aus dem Ellbogen","Aus der Schulter"],w:"Die Bewegung kommt aus dem Handgelenk; der Finger geht nur mit."},
+4:"Übe die Bewegung eine Minute ohne Bogen, danach eine Minute mit Bogen."}},
+
+"violin-8":{title:"Eine vollständige Melodie",goal:"Ein bekanntes Stück von Anfang bis Ende spielen",b:{
+0:"Jetzt fügt sich alles zusammen: das Fingermuster, die Bogeneinteilung und die Saitenwechsel.",
+1:"Melodie für zwei Saiten",
+2:"Spiele zuerst ohne Bogen — nur gezupft — um zu prüfen, ob die Finger sitzen. Dann nimm den Bogen dazu.",
+3:{q:"Was sollte man prüfen, bevor man den Bogen dazunimmt?",o:["Die Lautstärke","Dass die Finger richtig liegen","Das Tempo","Die Kopfhaltung"],w:"Zupfen isoliert die linke Hand und deckt Ungenauigkeiten sofort auf."},
+4:"Spiele die Melodie fünfmal — zweimal gezupft und dreimal gestrichen."}},
+
+"violin-9":{title:"Rückblick und Ausblick",goal:"Sicher spielen und wissen, wie es weitergeht",b:{
+0:"Du hast die Grundlagen abgeschlossen: Haltung, leere Saiten, Fingermuster, Bogeneinteilung und Saitenwechsel. Alles Weitere baut darauf auf.",
+1:"Wie es weitergeht: <b>zweite Lage</b> (die ganze Hand den Hals hinaufschieben), <b>Spiel auf zwei Saiten gleichzeitig</b> und <b>Notenlesen</b> während des Spielens.",
+2:"Abschlussstück",
+3:"<b>Der klassische Fehler im zweiten Jahr:</b> schneller werden, bevor der Ton sauber ist. Spiele alles mit langsamem Metronom — und du überholst die, die geeilt sind.",
+4:{q:"Was ist der natürliche nächste Schritt auf der Geige?",o:["Schneller spielen","Zweite Lage und Notenlesen","Das Instrument wechseln","Auf den Bogen verzichten"],w:"Die zweite Lage öffnet den restlichen Hals, das Notenlesen das Repertoire."},
+5:"Spiele das Abschlussstück und nimm dich auf. Sich selbst zuzuhören ist die ehrlichste Lehrerin."}},
+
+"harmonica-1":{title:"Blasen und ziehen",goal:"Aus einem einzelnen Kanal einen sauberen Ton erzeugen",b:{
+0:"Die Mundharmonika ist das einzige Instrument, bei dem <b>Blasen und Ziehen beide einen Ton erzeugen</b> — und zwar zwei verschiedene aus demselben Kanal.",
+1:"Eine Mundharmonika in C hat zehn Kanäle und zwanzig Stimmzungen. Der vierte Kanal ist der Ausgangspunkt fast jeder Melodie.",
+3:["Halte die Mundharmonika zwischen Daumen und Zeigefinger, die Zahlen nach oben.","Spitze die Lippen, als würdest du „u“ sagen.","Blase sanft in Kanal vier — das ist C.","Zieh nun aus demselben Kanal — das ist D."],
+4:"Es klingen mehrere Töne gleichzeitig? Dein Mund ist zu weit offen. Verenge die Lippen, bis nur ein sauberer Ton bleibt.",
+5:{q:"Was unterscheidet die Mundharmonika von anderen Blasinstrumenten?",o:["Sie hat keine hohen Töne","Blasen und Ziehen erzeugen beide einen Ton","Sie muss jedes Mal gestimmt werden","Man muss Knöpfe drücken"],w:"In jedem Kanal sitzen zwei Stimmzungen — eine zum Blasen, eine zum Ziehen."},
+6:"Wechsle auf Kanal 4 zwanzigmal zwischen Blasen und Ziehen, mit sauberem Ton."}},
+
+"harmonica-2":{title:"Vier Kanäle — deine erste Melodie",goal:"Eine bekannte Melodie spielen",b:{
+0:"Die Kanäle 4 bis 7 enthalten eine vollständige C-Dur-Tonleiter. Dort lebt fast jedes Volkslied.",
+2:"Sieh dir den Pfeil über der Grafik an: nach oben heißt blasen, nach unten ziehen. Mehr musst du dir nicht merken.",
+3:"Die Tonleiter auf der Mundharmonika",
+4:{q:"In welchen Kanälen liegt eine vollständige C-Dur-Tonleiter?",o:["1 bis 4","4 bis 7","7 bis 10","In allen"],w:"Nur in den Kanälen 4 bis 7 ist die Tonleiter ohne Bending vollständig."},
+5:"Spiele die Tonleiter zehnmal auf und ab."}},
+
+"harmonica-3":{title:"Dein erstes Lied",goal:"Eine ganze Melodie auswendig spielen",b:{
+0:"Jetzt fügt sich alles zusammen. Diese Melodie nutzt nur die Kanäle 4 bis 6.",
+2:"Melodie für vier Kanäle",
+3:"Versuch zu spielen, ohne auf die Zahlen zu sehen. Auf der Mundharmonika findet das Ohr den Kanal schneller als das Auge.",
+4:{q:"Wie lernt man eine Melodie auf der Mundharmonika am besten?",o:["Die Kanalnummern auswendig lernen","Hinhören und nach Gehör suchen","Atemzüge zählen","Noten lesen"],w:"Die Mundharmonika wurde fürs Spielen nach Gehör gebaut — das ist ihre Stärke."},
+5:"Spiele die Melodie dreimal mit geschlossenen Augen."}},
+
+"harmonica-4":{title:"Einen einzelnen Kanal spielen",goal:"Einen sauberen Einzelton ohne Nachbarn erzeugen",b:{
+0:"Bisher klangen vielleicht mehrere Töne zugleich. Jetzt lernst du, <b>nur einen</b> herauszuholen — und genau das macht aus Lärm eine Melodie.",
+1:["Nimm die Mundharmonika tiefer zwischen die Lippen, als würdest du trinken.","Die Zunge liegt unten und entspannt.","Verenge die Lippenöffnung, bis ein einzelner Ton klingt.","Prüfe es: blase in Kanal 4 — hörst du einen Akkord, sind die Lippen zu weit."],
+3:"Eine zweite Methode, das <b>Zungenblocken</b>: Bedecke drei Kanäle mit dem Mund und blockiere zwei davon mit der Zunge. Einer bleibt offen.",
+4:{q:"Warum klingen mehrere Töne gleichzeitig?",o:["Die Mundharmonika ist kaputt","Die Lippenöffnung ist zu weit","Du bläst zu kräftig","Die Kanäle sind verstopft"],w:"Ein weiter Mund bedeckt mehrere Kanäle auf einmal."},
+5:"Spiele die Kanäle 4, 5 und 6 blasend — jeden einzeln und sauber, zwanzigmal."}},
+
+"harmonica-5":{title:"Die zweite Oktave",goal:"Den Umfang auf die Kanäle 1 bis 7 erweitern",b:{
+0:"Die tiefen Kanäle (1–3) geben die vollen Töne, die hohen (7–10) die schneidenden. Die meisten Melodien leben in der Mitte.",
+2:"Achte auf eine Merkwürdigkeit: ab Kanal 7 ist <b>der Zugton tiefer als der Blaston</b> — umgekehrt als bei den tiefen Kanälen. Das ist eine Eigenschaft der Stimmung, kein Defekt.",
+3:"Voller Umfang",
+4:{q:"Was ändert sich ab Kanal 7?",o:["Nichts","Der Zugton wird tiefer als der Blaston","Man kann nicht mehr ziehen","Der Ton ist schwächer"],w:"Das ist eine eingebaute Umkehrung der Richter-Stimmung."},
+5:"Spiele alle Blastöne von Kanal 1 bis 10 und zurück."}},
+
+"harmonica-6":{title:"Rhythmus und Atmung",goal:"Im Takt spielen, ohne außer Atem zu geraten",b:{
+0:"Auf der Mundharmonika ist der Atem zugleich Klang und Treibstoff. Spielst du zu lange in eine Richtung, geht dir die Luft aus.",
+1:"Blasen und Ziehen im Wechsel",
+2:"<b>Die Regel:</b> Verlangt die Melodie drei Blastöne hintereinander, suche eine Stelle zum Richtungswechsel. Meist gibt es denselben Ton in einem anderen Kanal.",
+3:"Atemübung",
+4:{q:"Was tust du, wenn dir mitten in einer Phrase die Luft ausgeht?",o:["Kräftiger blasen","Eine Stelle zum Richtungswechsel suchen","Aufhören zu spielen","Schneller spielen"],w:"Der Richtungswechsel ist die Atmung der Mundharmonika."},
+5:"Spiele die Übung zwei Minuten am Stück, ohne außer Atem zu kommen."}},
+
+"harmonica-7":{title:"Akkorde und Tremolo",goal:"Mehrere Kanäle bewusst zusammen nutzen",b:{
+0:"Bisher haben wir gegen die Nachbartöne gekämpft. Jetzt <b>nutzen wir sie bewusst</b>: mehrere Kanäle zusammen ergeben einen vollen Akkord.",
+1:"Blasen in die Kanäle 1–4 ergibt einen C-Dur-Akkord. Ziehen in die Kanäle 1–4 ergibt einen G-Akkord.",
+2:"<b>Tremolo:</b> Bewege die Hand, die die Mundharmonika hält, vor dem Mund. Der Ton beginnt zu wogen und erinnert an einen Zug.",
+3:"Akkordbegleitung",
+4:{q:"Welcher Akkord entsteht beim Blasen in die Kanäle 1 bis 4?",o:["G-Dur","C-Dur","a-Moll","D-Dur"],w:"Die Blastöne sind aus den Tönen des C-Akkords gebaut — C, E und G."},
+5:"Spiele zwei Minuten lang eine Akkordbegleitung zu einem Lied, das du kennst."}},
+
+"harmonica-8":{title:"Ein ganzes Lied",goal:"Eine bekannte Melodie von Anfang bis Ende spielen",b:{
+0:"Jetzt fügt sich alles zusammen: Einzelton, Rhythmus und geplante Atmung.",
+2:"Vollständige Melodie",
+3:"Markiere dir vorher, wo du bläst und wo du ziehst. Vorausplanen erspart dir die Atemnot.",
+4:{q:"Was hilft gegen Atemnot?",o:["Leise spielen","Vorher planen, wann geblasen und wann gezogen wird","Schnell spielen","Das Lied kürzen"],w:"Die Luftrichtung zu planen ist die Kernfähigkeit auf der Mundharmonika."},
+5:"Spiele die Melodie fünfmal hintereinander ohne Pause."}},
+
+"harmonica-9":{title:"Rückblick und Ausblick",goal:"Wissen, was du gelernt hast und wie es weitergeht",b:{
+0:"Du hast die Grundlagen abgeschlossen: Blasen und Ziehen, Einzelton, voller Umfang, Rhythmus, Akkorde und ein ganzes Lied.",
+1:"Wie es weitergeht: <b>Bending</b> — die Tonhöhe mit der Zunge verändern, wodurch sich die Töne spielen lassen, die nicht in der Stimmung liegen. Genau das gibt der Mundharmonika ihren Blues-Klang.",
+2:"Abschlussstück",
+3:"Bending braucht Monate, nicht Tage. Übe es nicht, bevor deine Einzeltöne vollkommen sauber sind.",
+4:{q:"Was macht Bending möglich?",o:["Eine andere Mundharmonika","Die Form von Mund und Zunge zu verändern","Kräftig blasen","Die Stimmzungen tauschen"],w:"Die Form des Mundraums verändert die Tonhöhe."},
+5:"Spiele das Abschlussstück und nimm dich auf."}},
+
+"glock-1":{title:"Der erste Schlag",goal:"Einen sauberen Ton erzeugen und den Aufbau verstehen",b:{
+0:"Das Glockenspiel ist das einfachste Melodieinstrument für den Anfang: <b>nichts zu stimmen, kein Fingersatz und kein Atem</b>. Du schlägst an — und der richtige Ton erklingt.",
+1:"Die Platten sind genau wie Klaviertasten angeordnet: eine lange Reihe weißer, darüber Gruppen aus zwei und drei.",
+2:"Schlag die markierte Platte an — das ist C",
+3:["Halte den Schlägel locker, zwischen Daumen und Zeigefinger.","Triff die Mitte der Platte — nicht das Ende.","Hebe den Schlägel sofort nach dem Schlag. Ein liegen bleibender Schlägel erstickt den Ton.","Ein leichter Schlag genügt. Das Instrument erledigt den Rest."],
+4:"Dumpfer Klang? Der Schlägel bleibt auf der Platte liegen. Denk an Abprallen, nicht an Drücken.",
+5:{q:"Wo schlägt man die Platte an?",o:["Am Ende","In der Mitte","Nahe der Schraube","Das ist egal"],w:"Die Mitte gibt den vollsten Ton. Die Enden klingen dumpf."},
+6:"Schlage jede weiße Platte einmal an, von unten nach oben, mit sauberem Ton."}},
+
+"glock-2":{title:"Die Tonleiter und deine erste Melodie",goal:"Eine bekannte Melodie spielen",b:{
+0:"Die C-Dur-Tonleiter sind schlicht alle weißen Platten hintereinander. Mehr braucht es für die erste Melodie nicht.",
+1:"C-Dur-Tonleiter",
+2:"Erste Melodie",
+3:"<b>Hände abwechseln:</b> rechts-links-rechts-links. Das verdoppelt das Tempo ohne zusätzliche Mühe.",
+4:{q:"Was bringt das Abwechseln der Hände?",o:["Einen lauteren Klang","Man spielt schneller ohne Mühe","Die Platten nutzen sich weniger ab","Es bringt nichts"],w:"Eine Hand muss zurück; zwei Hände wechseln ohne Unterbrechung."},
+5:"Spiele die Melodie fünfmal mit abwechselnden Händen."}},
+
+"glock-3":{title:"Rhythmus und Dynamik",goal:"In verschiedenen Stärken und im Takt spielen",b:{
+0:"Auf dem Glockenspiel ist der Ton kurz, also sind <b>Zeit und Stärke</b> der ganze Ausdruck, den du hast. Genau das macht aus unauffälligem Spiel eindrucksvolles Spiel.",
+1:"Grundrhythmus",
+2:"Spiel dieselbe Melodie einmal kräftig und einmal zart. Der Unterschied ist größer, als man denkt.",
+3:"Dieselbe Melodie, anderer Rhythmus",
+4:{q:"Was schafft Ausdruck auf dem Glockenspiel?",o:["Die Tonlänge","Stärke und Zeit","Das Stimmen der Platten","Die Zahl der Schlägel"],w:"Der Ton ist kurz und unveränderlich — deine Mittel sind Lautstärke und Timing."},
+5:"Spiele die Melodie dreimal: leise, mittel und laut."}},
+
+"glock-4":{title:"Zwei Hände und Sprünge",goal:"Eine Passage mit Lagenwechseln spielen",b:{
+0:"Auf dem Glockenspiel bleibt die Hand nicht stehen. <b>Das Auge führt — die Hand folgt</b>, und das lernt man gesondert.",
+1:"Drei Ankerpunkte — C, G und hohes C",
+2:["Finde die drei Ankerpunkte auf dem Instrument.","Schlage C an, dann G, ohne auf den Schlägel zu sehen.","Nimm das hohe C dazu.","Spiele nun alle drei nacheinander bei Metronom 60."],
+3:"Sieh auf die <b>nächste</b> Platte, während du die aktuelle anschlägst. Das ist das Geheimnis jedes Mallet-Spielers.",
+4:{q:"Wohin sieht man beim Spielen?",o:["Auf den Schlägel","Auf die nächste Platte","Nur in die Noten","Das ist egal"],w:"Der Blick eilt der Hand voraus, genau wie beim Lesen."},
+5:"Spiele C-G-C zwanzigmal, ohne danebenzuschlagen."}},
+
+"glock-5":{title:"Die oberen Platten",goal:"In einer Tonart mit Kreuz spielen",b:{
+0:"Die oberen Platten sind die Halbtöne — genau wie die schwarzen Tasten am Klavier, und in denselben Gruppen aus zwei und drei.",
+1:"G-Dur-Tonleiter — achte auf das Fis",
+2:"Die oberen Platten sind schmaler. Ziele auf die Mitte, sonst rutscht der Schlägel ab.",
+3:{q:"Wie sind die oberen Platten angeordnet?",o:["In einer gleichmäßigen Reihe","In Gruppen aus zwei und drei","Zufällig","Es gibt keine oberen Platten"],w:"Genau wie die schwarzen Tasten eines Klaviers."},
+4:"Spiele die G-Dur-Tonleiter fünfmal auf und ab."}},
+
+"glock-6":{title:"Komplexerer Rhythmus",goal:"Achtel und punktierte Noten spielen",b:{
+0:"Der Ton auf dem Glockenspiel ist kurz, deshalb hört man <b>rhythmische Genauigkeit</b> sofort. Hier lernst du, den Schlag zu teilen.",
+1:"Achtel",
+2:"Melodie in Achteln",
+3:"Zähle laut mit: „eins-und-zwei-und“. Lautes Zählen ist genauer als Zählen im Kopf.",
+4:{q:"Was hilft der rhythmischen Genauigkeit?",o:["Laut spielen","Laut mitzählen","Schnell spielen","Auf die Hände sehen"],w:"Lautes Zählen verbindet den Körper mit der Zeit."},
+5:"Spiele die Melodie bei Metronom 70, dann bei 85."}},
+
+"glock-7":{title:"Zwei Stimmen",goal:"Melodie und Begleitung zugleich spielen",b:{
+0:"Zwei Hände heißt zwei Stimmen. Eine Hand spielt die Melodie, die andere setzt einen Ankerton.",
+1:"C-Akkord — die drei Töne zusammen",
+2:"Melodie mit Anker",
+3:"Beginne damit, dass die zweite Hand nur auf der ersten Zählzeit jedes Takts anschlägt. Das klingt schon voll.",
+4:{q:"Wie fügt man am einfachsten eine zweite Stimme hinzu?",o:["Alles zweimal spielen","Ein Ankerton auf der ersten Zählzeit","Schneller spielen","Einen dritten Schlägel nehmen"],w:"Ein einziger Anker pro Takt erzeugt bereits das Gefühl einer Begleitung."},
+5:"Spiele die Melodie fünfmal mit Anker."}},
+
+"glock-8":{title:"Ein Vortragsstück",goal:"Ein ganzes Stück sicher spielen",b:{
+0:"Jetzt kommt alles zusammen: Sprünge, obere Platten, Rhythmus und zwei Stimmen.",
+1:"Vortragsstück",
+2:"Übe das Stück in drei getrennten Abschnitten und füge sie erst danach zusammen. So lernen Profis.",
+3:{q:"Wie lernt man ein langes Stück?",o:["Es immer wieder durchspielen","In Abschnitte teilen und dann zusammenfügen","Nur den Anfang spielen","Allmählich schneller werden"],w:"Das Aufteilen spart Zeit und verhindert, dass sich Fehler festsetzen."},
+4:"Spiele das Stück dreimal hintereinander ohne Unterbrechung."}},
+
+"glock-9":{title:"Rückblick und Ausblick",goal:"Wissen, was du gelernt hast und wie es weitergeht",b:{
+0:"Du hast geschafft: den sauberen Schlag, die Tonleiter, Sprünge, die oberen Platten, Rhythmus und zwei Stimmen.",
+1:"Wie es weitergeht: <b>Xylophon und Marimba</b> (Holzplatten, wärmerer Klang), <b>vier Schlägel</b> in zwei Händen und <b>Notenlesen</b> während des Spielens.",
+2:"Abschlussstück",
+3:"Das Glockenspiel ist ein hervorragendes Tor zu allen Mallet-Instrumenten. Das Können überträgt sich fast vollständig.",
+4:{q:"Was unterscheidet Glockenspiel und Xylophon?",o:["Die Größe","Metallplatten gegenüber Holzplatten","Die Zahl der Platten","Die Stimmung"],w:"Metall klingt hell und lang, Holz warm und kurz."},
+5:"Spiele das Abschlussstück und nimm dich auf."}},
+
+"mandolin-1":{title:"Kennenlernen und leere Saiten",goal:"Einen sauberen Ton erzeugen und die Stimmung verstehen",b:{
+0:"Die Mandoline ist <b>genau wie eine Geige gestimmt</b> — G, D, A, E — aber sie hat Bünde. Jeder Ton hat seinen festen Platz, und nichts muss nach Gehör gesucht werden.",
+2:["Halte das Plektrum zwischen Daumen und Zeigefinger, nur an der Spitze.","Schlage abwechselnd ab- und aufwärts — das ist die Grundbewegung.","Linke Hand: direkt hinter dem Bund drücken, nicht darauf.","Spiele jedes leere Saitenpaar viermal."],
+3:"Zu jedem Ton gehören zwei nebeneinanderliegende Saiten. Das gibt der Mandoline ihren klingelnden Klang.",
+4:{q:"Worin unterscheidet sich die Mandoline von der Geige?",o:["In der Stimmung","Darin, dass sie Bünde hat","In der Zahl der Saiten","Nur in der Größe"],w:"Die Stimmung ist identisch; der Unterschied sind die Bünde, und gerade sie erleichtern den Anfang."},
+5:"Schlage jede leere Saite achtmal an, abwärts und aufwärts."}},
+
+"mandolin-2":{title:"Erste Töne auf dem Hals",goal:"Deine erste Tonleiter spielen",b:{
+0:"Dank der Bünde ist das Finden eines Tons auf der Mandoline eine Sache des Zählens — nicht des Hörens.",
+2:"Fünf Töne",
+3:"Ein Finger pro Bund — das ist die Regel, die dir Jahre an Korrekturen erspart.",
+4:{q:"Wie findet man einen Ton auf der Mandoline?",o:["Nur nach Gehör","Über die Bundnummer","An der Farbe der Saite","Sicher gar nicht"],w:"Die Bünde legen die Tonhöhe genau fest."},
+5:"Spiele die fünf Töne zehnmal auf und ab."}},
+
+"mandolin-3":{title:"Eine erste Melodie",goal:"Ein ganzes Stück spielen",b:{
+0:"Jetzt fügt sich alles zusammen: leere Saiten, Töne auf dem Hals und ein gleichmäßiger Anschlag.",
+2:"Melodie für Mandoline",
+3:"<b>Tremolo:</b> schnelles, wiederholtes Anschlagen desselben Tons. Das ist der Klang, den alle sofort als Mandoline erkennen — aber erst, wenn der normale Anschlag stabil ist.",
+4:{q:"Was ist Tremolo?",o:["Ein schneller Akkordwechsel","Schnelles wiederholtes Anschlagen desselben Tons","Spiel auf zwei Saiten","Langsamer werden am Schluss"],w:"Es ist die charakteristische Technik der Mandoline."},
+5:"Spiele die Melodie fünfmal mit gleichmäßigem Anschlag."}},
+
+"mandolin-4":{title:"Dein erster Akkord",goal:"Einen G-Akkord spielen und darauf wechseln",b:{
+0:"Auf der Mandoline besteht ein Akkord meist aus <b>nur zwei Fingern</b> — weit weniger, als eine Gitarre verlangt.",
+2:["Finger 1 auf die A-Saite, 2. Bund.","Finger 2 auf die E-Saite, 3. Bund.","Die beiden übrigen Saiten bleiben leer.","Schlage abwärts über alle vier Paare."],
+3:"Drücke direkt hinter dem Bund, nicht darauf. Dort braucht es die geringste Kraft.",
+4:{q:"Wie viele Finger braucht ein einfacher Mandolinen-Akkord?",o:["Vier","Zwei","Drei","Keinen"],w:"Für die meisten offenen Akkorde genügen zwei."},
+5:"Wechsle zwanzigmal zwischen G-Akkord und leeren Saiten."}},
+
+"mandolin-5":{title:"Zwei Akkorde und ein Lied",goal:"Ein ganzes Lied mit zwei Akkorden begleiten",b:{
+0:"Mit zwei Akkorden lassen sich bereits Hunderte von Liedern begleiten. Der Wechsel zwischen ihnen ist die ganze Übung.",
+1:"Ab- und Aufschlag",
+2:"<b>Die Regel des Wechsels:</b> Hebe die Finger einen Moment vor der Zählzeit, nicht auf ihr. So entsteht kein Loch im Rhythmus.",
+3:"Begleitübung",
+4:{q:"Wann hebt man beim Akkordwechsel die Finger?",o:["Genau auf der Zählzeit","Einen Moment vor der Zählzeit","Nach der Zählzeit","Das ist egal"],w:"Frühes Abheben erhält den durchgehenden Rhythmus."},
+5:"Wechsle zwei Minuten lang ohne Pause zwischen den beiden Akkorden."}},
+
+"mandolin-6":{title:"Tremolo",goal:"Mit wiederholtem Anschlag einen getragenen Ton erzeugen",b:{
+0:"Die Mandoline hat keinen langen Ton — er verklingt sofort. Das <b>Tremolo</b> ist die Lösung: schnelles wiederholtes Anschlagen erzeugt die Illusion eines getragenen Tons.",
+1:["Halte das Plektrum sehr locker — das ist entscheidend.","Bewege dich aus dem Handgelenk, nicht aus dem Ellbogen.","Beginne langsam und gleichmäßig, und werde erst dann schneller.","Spiele einen Ton vier Sekunden lang im Tremolo."],
+2:"Ein verkrampfter Griff ergibt ein holpriges Tremolo. Je weicher der Griff, desto glatter der Klang.",
+3:"Langer Ton im Tremolo",
+4:{q:"Worauf kommt es beim Tremolo am meisten an?",o:["Auf Tempo","Auf einen lockeren Griff","Auf starken Druck","Auf ein dickes Plektrum"],w:"Lockerheit ermöglicht das Tempo; Anspannung verhindert es."},
+5:"Übe Tremolo auf einem einzelnen Ton, eine Minute pro Saite."}},
+
+"mandolin-7":{title:"Tonleitern über zwei Oktaven",goal:"Den Umfang auf dem Hals erweitern",b:{
+0:"Dank der Quintenstimmung wiederholt sich dasselbe Fingermuster auf jedem Saitenpaar. Einmal gelernt — überall spielbar.",
+2:"G-Tonleiter über zwei Oktaven",
+3:"Das auf der G-Saite gelernte Muster funktioniert auf der D-Saite genau gleich. Das ist die große Ersparnis der Quintenstimmung.",
+4:{q:"Was ist der Vorteil einer Quintenstimmung?",o:["Lauterer Klang","Dasselbe Muster wiederholt sich auf jedem Saitenpaar","Leichter zu stimmen","Weniger Saiten"],w:"Das Muster bleibt erhalten, man lernt es also nur ein einziges Mal."},
+5:"Spiele die Tonleiter zehnmal über zwei Oktaven."}},
+
+"mandolin-8":{title:"Melodie mit Begleitung",goal:"Ein ganzes Lied spielen und Akkorde einweben",b:{
+0:"Jetzt kommt alles zusammen: Melodie, Akkorde und Tremolo in einem Stück.",
+1:"Kombiniertes Stück",
+2:"Spiele zuerst nur die Melodie, dann nur die Akkorde, und verbinde beides erst danach. Zu frühes Verbinden verdirbt beides.",
+3:{q:"Wie verbindet man Melodie und Begleitung?",o:["Von Anfang an zusammen spielen","Jedes für sich lernen und dann verbinden","Auf eines von beiden verzichten","Sehr langsam spielen"],w:"Erst trennen, dann verbinden — das ist der schnelle Weg."},
+4:"Spiele das kombinierte Stück fünfmal."}},
+
+"mandolin-9":{title:"Rückblick und Ausblick",goal:"Wissen, was du gelernt hast und wie es weitergeht",b:{
+0:"Du hast geschafft: leere Saiten, Töne auf dem Hals, Akkorde, Tremolo und Tonleitern über zwei Oktaven.",
+1:"Wie es weitergeht: <b>Bluegrass-Stil</b> (schneller, präziser Anschlag), <b>geschlossene Akkorde</b>, die sich auf dem Hals verschieben, und <b>Improvisation</b> über die gelernten Tonleitern.",
+2:"Abschlussstück",
+3:"Die Mandoline teilt ihre Stimmung mit der Geige — alles hier Gelernte überträgt sich fast vollständig, falls du sie einmal ausprobieren willst.",
+4:{q:"Welches Instrument teilt die Stimmung der Mandoline?",o:["Gitarre","Geige","Bass","Ukulele"],w:"Beide sind G-D-A-E gestimmt."},
+5:"Spiele das Abschlussstück und nimm dich auf."}}
+
+});

@@ -477,3 +477,279 @@ I18N.registerLessons("fr", {
 3:"Jouez un morceau complet du début à la fin avec un métronome."}}
 
 });
+
+/* ---- les quatre nouveaux instruments ---- */
+I18N.registerLessons("fr", {
+
+"violin-1":{title:"Tenue et cordes à vide",goal:"Produire un son net sur les quatre cordes",b:{
+0:"Le violon est l'instrument où <b>l'oreille guide le doigt</b>. Il n'y a pas de frettes, donc chaque note se construit en écoutant — et c'est précisément ce qui en fait le meilleur professeur pour l'oreille.",
+1:"Quatre cordes, de la plus grosse à la plus fine : <b>sol, ré, la, mi</b>. L'intervalle entre chaque paire est une quinte.",
+3:["Posez le violon sur la clavicule, la mâchoire sur la mentonnière.","La main gauche tient le manche légèrement — elle ne serre pas.","L'archet se pose sur la corde à mi-chemin entre le chevalet et la touche.","Tirez l'archet lentement, avec une pression régulière. Un son net vaut mieux qu'un son fort."],
+4:"Un sifflement ? Trois causes possibles : pression inégale, archet trop loin du chevalet, ou vitesse changeante. Ralentissez.",
+5:{q:"Comment les cordes du violon sont-elles accordées ?",o:["En quartes","En quintes","En octaves","En tierces"],w:"Sol-ré-la-mi — une quinte entre chaque paire de cordes voisines."},
+6:"Jouez chaque corde à vide huit fois avec un archet complet, sans sifflement."}},
+
+"violin-2":{title:"Le premier doigt",goal:"Jouer quatre notes nouvelles",b:{
+0:"Le premier doigt se pose à <b>un ton entier</b> de la corde à vide. C'est le point d'ancrage de toute la main.",
+2:"Collez un petit morceau de ruban à l'endroit du premier doigt. Ce n'est pas tricher — c'est ainsi que tous les violonistes du monde apprennent la première année.",
+3:"Corde à vide et premier doigt",
+4:{q:"Quelle est la distance entre la corde à vide et le premier doigt ?",o:["Un demi-ton","Un ton entier","Un ton et demi","Deux tons"],w:"Un ton entier — et c'est la première distance que l'oreille apprend."},
+5:"Jouez l'exercice lentement et vérifiez chaque note avec l'accordeur de l'application."}},
+
+"violin-3":{title:"Une première mélodie",goal:"Jouer un morceau entier sur deux cordes",b:{
+0:"Avec les cordes à vide et le premier doigt, vous pouvez déjà jouer une vraie mélodie.",
+2:"Exercice sur deux cordes",
+3:"<b>La règle de la première année :</b> lent et net l'emporte toujours sur rapide et brouillon.",
+4:{q:"Qu'est-ce qui compte le plus à ce stade ?",o:["Jouer vite pour progresser","Jouer lentement et écouter chaque note","Sauter les notes difficiles","Jouer le plus fort possible"],w:"Au violon, la moindre imprécision s'entend aussitôt. Ralentir est le raccourci."},
+5:"Jouez la mélodie cinq fois, un peu plus vite à chaque fois."}},
+
+"violin-4":{title:"Trois doigts — votre première gamme",goal:"Jouer la gamme de ré majeur sur deux cordes",b:{
+0:"Au violon, la gamme ne se construit pas à partir de frettes mais d'un <b>schéma de doigts fixe</b>. Une fois que la main l'a appris, il se répète sur chaque corde.",
+1:"Sur la corde de ré : doigt 1 = mi, doigt 2 = fa dièse, doigt 3 = sol. Remarquez que les doigts 2 et 3 <b>se touchent</b> — c'est le signe que le schéma est juste.",
+3:"Gamme de ré majeur",
+4:"Les doigts 2 et 3 sont collés dans une gamme majeure. Si un écart s'ouvre entre eux, le fa dièse sortira trop bas.",
+5:{q:"Qu'est-ce qui caractérise la position des doigts 2 et 3 en majeur ?",o:["Un large écart entre eux","Ils se touchent","Le doigt 3 n'est pas utilisé","Il n'y a pas de règle fixe"],w:"Leur proximité est le demi-ton entre le troisième et le quatrième degré."},
+6:"Jouez la gamme dans les deux sens dix fois, lentement, en vérifiant chaque note à l'accordeur."}},
+
+"violin-5":{title:"La distribution de l'archet",goal:"Maîtriser la durée et la force du son",b:{
+0:"L'archet est la <b>respiration</b> du violon. Une note longue demande un archet lent, une note courte peu d'archet — et la pression reste constante.",
+1:["Repérez trois zones : le talon, le milieu, la pointe.","Jouez une ronde avec l'archet entier, du talon à la pointe, en quatre secondes.","Jouez quatre noires dans ce même archet — chacune un quart de la longueur.","Maintenant jouez des croches uniquement au milieu de l'archet."],
+2:"Distribution de l'archet",
+3:"Le son faiblit en fin d'archet ? La pression descend avec votre bras. Gardez-la régulière jusqu'à la pointe.",
+4:{q:"Qu'est-ce qui détermine la durée d'une note au violon ?",o:["La pression du doigt","La vitesse de l'archet","La tenue de l'instrument","L'épaisseur de la corde"],w:"La vitesse de l'archet donne la durée ; la pression donne le volume."},
+5:"Jouez une gamme entière avec un archet complet par note, puis avec un demi-archet."}},
+
+"violin-6":{title:"Deuxième corde et changements",goal:"Passer d'une corde à l'autre sans bruit",b:{
+0:"Le passage entre cordes est l'endroit où s'entend la différence entre un débutant et un musicien. Le secret : <b>le bras commence à bouger avant que la note ne change</b>.",
+2:"Exercice de changements",
+3:"Si un son double se fait entendre pendant le passage, l'archet a touché deux cordes. C'est l'angle qui doit changer, pas la pression.",
+4:{q:"Qu'est-ce qui provoque un son double lors d'un changement de corde ?",o:["Une pression trop forte","L'archet touche deux cordes","L'instrument est désaccordé","Le doigt est mal placé"],w:"C'est l'angle de l'archet qui sépare les cordes."},
+5:"Jouez l'exercice dix fois, parfaitement net."}},
+
+"violin-7":{title:"Un premier vibrato",goal:"Découvrir le mouvement du vibrato",b:{
+0:"Le vibrato est un <b>petit balancement du doigt</b> qui réchauffe le son. On l'enseigne plus tard qu'on ne le croit — et c'est volontaire : il masque l'imprécision, on apprend donc d'abord à jouer net sans lui.",
+1:["Posez le doigt 2 sur la corde de la, sans archet.","Balancez la main d'avant en arrière depuis le poignet, pas depuis le doigt.","Le doigt reste en place — seule la hauteur varie légèrement.","N'ajoutez l'archet que lorsque le mouvement est fluide."],
+2:"Un vibrato rapide et étroit ressemble à un tremblement. Lent et large, il ressemble à un chant. Commencez lentement.",
+3:{q:"D'où vient le mouvement du vibrato ?",o:["Du doigt","Du poignet","Du coude seulement","De l'épaule"],w:"Le mouvement vient du poignet ; le doigt ne fait que l'accompagner."},
+4:"Travaillez le mouvement une minute sans archet, puis une minute avec."}},
+
+"violin-8":{title:"Une mélodie complète",goal:"Jouer un air connu du début à la fin",b:{
+0:"Tout se réunit maintenant : le schéma de doigts, la distribution de l'archet et les changements de corde.",
+1:"Mélodie pour deux cordes",
+2:"Jouez d'abord sans archet — en pizzicato — pour vérifier que les doigts sont en place. Ajoutez l'archet ensuite.",
+3:{q:"Que vaut-il mieux vérifier avant d'ajouter l'archet ?",o:["Le volume","Que les doigts sont bien placés","Le tempo","La position de la tête"],w:"Le pizzicato isole la main gauche et révèle aussitôt les imprécisions."},
+4:"Jouez la mélodie cinq fois — deux fois en pizzicato et trois fois à l'archet."}},
+
+"violin-9":{title:"Bilan et suite",goal:"Jouer avec assurance et savoir où aller",b:{
+0:"Vous avez terminé les bases : la tenue, les cordes à vide, le schéma de doigts, la distribution de l'archet et les changements. Tout le reste se construit là-dessus.",
+1:"La suite : <b>la deuxième position</b> (déplacer toute la main sur le manche), <b>jouer sur deux cordes à la fois</b>, et <b>lire la musique</b> en jouant.",
+2:"Morceau final",
+3:"<b>L'erreur classique de deuxième année :</b> accélérer avant que le son ne soit net. Jouez tout au métronome lent — et vous dépasserez ceux qui se sont pressés.",
+4:{q:"Quelle est la suite naturelle au violon ?",o:["Jouer plus vite","La deuxième position et la lecture","Changer d'instrument","Abandonner l'archet"],w:"La deuxième position ouvre le reste du manche, et la lecture ouvre le répertoire."},
+5:"Jouez le morceau final et enregistrez-vous. Se réécouter est le professeur le plus honnête."}},
+
+"harmonica-1":{title:"Souffler et aspirer",goal:"Produire un son net depuis un seul trou",b:{
+0:"L'harmonica est le seul instrument où <b>souffler et aspirer produisent tous deux un son</b> — et deux sons différents depuis le même trou.",
+1:"Un harmonica en do a dix trous et vingt anches. Le quatrième trou est le point de départ de presque toutes les mélodies.",
+3:["Tenez l'harmonica entre le pouce et l'index, les chiffres vers le haut.","Arrondissez les lèvres comme pour dire « ou ».","Soufflez doucement dans le trou quatre — c'est do.","Maintenant aspirez depuis le même trou — c'est ré."],
+4:"Plusieurs notes sortent en même temps ? Votre bouche est trop ouverte. Resserrez les lèvres jusqu'à ce qu'il ne reste qu'une note nette.",
+5:{q:"Qu'est-ce qui distingue l'harmonica des autres instruments à vent ?",o:["Il n'a pas de notes aiguës","Souffler et aspirer produisent tous deux un son","Il faut le réaccorder chaque fois","Il faut appuyer sur des boutons"],w:"Chaque trou contient deux anches — une pour souffler, une pour aspirer."},
+6:"Alternez souffle et aspiration sur le trou 4, vingt fois, avec un son net."}},
+
+"harmonica-2":{title:"Quatre trous — votre première mélodie",goal:"Jouer une mélodie connue",b:{
+0:"Les trous 4 à 7 contiennent une gamme complète de do majeur. Presque toutes les chansons populaires y vivent.",
+2:"Regardez la flèche au-dessus du schéma : vers le haut, on souffle ; vers le bas, on aspire. C'est tout ce qu'il faut retenir.",
+3:"La gamme à l'harmonica",
+4:{q:"Dans quels trous se trouve une gamme complète de do majeur ?",o:["De 1 à 4","De 4 à 7","De 7 à 10","Dans tous"],w:"Seuls les trous 4 à 7 donnent la gamme complète sans bend."},
+5:"Jouez la gamme dans les deux sens dix fois."}},
+
+"harmonica-3":{title:"Votre première chanson",goal:"Jouer une mélodie entière de mémoire",b:{
+0:"Maintenant on assemble tout. Cette mélodie n'utilise que les trous 4 à 6.",
+2:"Mélodie pour quatre trous",
+3:"Essayez de jouer sans regarder les chiffres. À l'harmonica, l'oreille trouve le trou plus vite que l'œil.",
+4:{q:"Quelle est la meilleure façon d'apprendre une mélodie à l'harmonica ?",o:["Mémoriser les numéros de trous","Écouter et chercher à l'oreille","Compter les respirations","Lire la partition"],w:"L'harmonica a été conçu pour jouer d'oreille — c'est sa force."},
+5:"Jouez la mélodie trois fois les yeux fermés."}},
+
+"harmonica-4":{title:"Jouer un seul trou",goal:"Produire une note nette sans voisines",b:{
+0:"Jusqu'ici plusieurs notes se faisaient peut-être entendre ensemble. Vous allez apprendre à n'en sortir <b>qu'une seule</b> — et c'est ce qui transforme le bruit en mélodie.",
+1:["Enfoncez l'harmonica plus profondément entre les lèvres, comme si vous buviez.","La langue repose en bas, détendue.","Resserrez l'ouverture des lèvres jusqu'à ce qu'une seule note sonne.","Vérifiez : soufflez dans le trou 4 — si vous entendez un accord, vos lèvres sont trop larges."],
+3:"Deuxième méthode, le <b>blocage de langue</b> : couvrez trois trous avec la bouche et bloquez-en deux avec la langue. Il en reste un d'ouvert.",
+4:{q:"Pourquoi plusieurs notes sonnent-elles ensemble ?",o:["L'harmonica est cassé","L'ouverture des lèvres est trop large","Vous soufflez trop fort","Les trous sont bouchés"],w:"Une bouche large couvre plusieurs trous à la fois."},
+5:"Jouez les trous 4, 5 et 6 en soufflant — chacun séparément et proprement, vingt fois."}},
+
+"harmonica-5":{title:"La deuxième octave",goal:"Étendre la tessiture aux trous 1 à 7",b:{
+0:"Les trous graves (1–3) donnent les sons profonds, les aigus (7–10) les sons perçants. La plupart des mélodies vivent au milieu.",
+2:"Notez une curiosité : à partir du trou 7, <b>l'aspiration est plus grave que le souffle</b> — l'inverse des trous graves. C'est une propriété de l'accord, pas une panne.",
+3:"Tessiture complète",
+4:{q:"Qu'est-ce qui change à partir du trou 7 ?",o:["Rien","L'aspiration devient plus grave que le souffle","On ne peut plus aspirer","Le son est plus faible"],w:"C'est une inversion intégrée à l'accord Richter."},
+5:"Jouez tous les souffles du trou 1 au trou 10 et retour."}},
+
+"harmonica-6":{title:"Rythme et respiration",goal:"Jouer en mesure sans manquer d'air",b:{
+0:"À l'harmonica, la respiration est à la fois le son et le carburant. Jouez trop longtemps dans un sens et vous manquerez d'air.",
+1:"Alternance souffle et aspiration",
+2:"<b>La règle :</b> si la mélodie demande trois souffles d'affilée, cherchez un endroit pour changer de sens. On retrouve souvent la même note dans un autre trou.",
+3:"Exercice de respiration",
+4:{q:"Que faire quand l'air manque au milieu d'une phrase ?",o:["Souffler plus fort","Chercher un endroit pour changer de sens","Arrêter de jouer","Jouer plus vite"],w:"Changer de sens, c'est la respiration de l'harmonica."},
+5:"Jouez l'exercice deux minutes d'affilée sans être essoufflé."}},
+
+"harmonica-7":{title:"Accords et trémolo",goal:"Utiliser plusieurs trous ensemble volontairement",b:{
+0:"Jusqu'ici nous luttions contre les notes voisines. Maintenant on les <b>utilise volontairement</b> : plusieurs trous ensemble donnent un accord complet.",
+1:"Souffler dans les trous 1–4 donne un accord de do majeur. Aspirer dans les trous 1–4 donne un accord de sol.",
+2:"<b>Trémolo :</b> agitez la main qui tient l'harmonica devant votre bouche. Le son ondule et évoque un train.",
+3:"Accompagnement en accords",
+4:{q:"Quel accord donne un souffle dans les trous 1 à 4 ?",o:["Sol majeur","Do majeur","La mineur","Ré majeur"],w:"Les souffles sont bâtis sur les notes de l'accord de do — do, mi, sol."},
+5:"Jouez un accompagnement en accords sur une chanson que vous connaissez, deux minutes."}},
+
+"harmonica-8":{title:"Une chanson entière",goal:"Jouer une mélodie connue du début à la fin",b:{
+0:"Maintenant on assemble : trou unique, rythme et respiration planifiée.",
+2:"Mélodie complète",
+3:"Repérez à l'avance où vous soufflez et où vous aspirez. Planifier évite l'essoufflement.",
+4:{q:"Qu'est-ce qui aide à ne pas s'essouffler ?",o:["Jouer doucement","Planifier à l'avance souffles et aspirations","Jouer vite","Raccourcir la chanson"],w:"Planifier le sens de l'air est la compétence centrale de l'harmonica."},
+5:"Jouez la mélodie cinq fois de suite sans vous arrêter."}},
+
+"harmonica-9":{title:"Bilan et suite",goal:"Savoir ce que vous avez appris et où aller",b:{
+0:"Vous avez terminé les bases : souffle et aspiration, trou unique, tessiture complète, rythme, accords et une chanson entière.",
+1:"La suite : le <b>bend</b> — modifier la hauteur du son avec la langue, ce qui permet de jouer les notes absentes de l'accord. C'est ce qui donne à l'harmonica sa couleur blues.",
+2:"Morceau final",
+3:"Le bend demande des mois, pas des jours. Ne vous y attaquez pas avant que vos notes simples soient parfaitement nettes.",
+4:{q:"Qu'est-ce qui rend le bend possible ?",o:["Un autre harmonica","Changer la forme de la bouche et de la langue","Souffler fort","Remplacer les anches"],w:"La forme de la cavité buccale modifie la hauteur du son."},
+5:"Jouez le morceau final et enregistrez-vous."}},
+
+"glock-1":{title:"Une première frappe",goal:"Produire un son net et comprendre la disposition",b:{
+0:"Le glockenspiel est l'instrument mélodique le plus facile pour commencer : <b>rien à accorder, pas de doigté et pas de souffle</b>. On frappe — et la bonne note sort.",
+1:"Les lames sont disposées exactement comme les touches d'un piano : une longue rangée de blanches, et au-dessus des groupes de deux et de trois.",
+2:"Frappez la lame marquée — c'est do",
+3:["Tenez la mailloche souplement, entre le pouce et l'index.","Frappez au centre de la lame — pas à son extrémité.","Relevez la mailloche aussitôt après la frappe. Une mailloche qui reste posée étouffe le son.","Une frappe légère suffit. L'instrument fait le travail."],
+4:"Un son mat ? La mailloche reste sur la lame. Pensez rebond, pas pression.",
+5:{q:"Où frappe-t-on la lame ?",o:["À l'extrémité","Au centre","Près de la vis","Peu importe"],w:"Le centre donne le son le plus plein. Les extrémités sonnent mat."},
+6:"Frappez chaque lame blanche une fois, du grave à l'aigu, avec un son net."}},
+
+"glock-2":{title:"La gamme et votre première mélodie",goal:"Jouer une mélodie connue",b:{
+0:"La gamme de do majeur, ce sont simplement toutes les lames blanches à la suite. C'est tout ce qu'il faut pour la première mélodie.",
+1:"Gamme de do majeur",
+2:"Première mélodie",
+3:"<b>Alterner les mains :</b> droite-gauche-droite-gauche. Cela double la vitesse sans effort supplémentaire.",
+4:{q:"Quel est l'avantage d'alterner les mains ?",o:["Un son plus fort","On joue plus vite sans effort","Les lames s'usent moins","Aucun avantage"],w:"Une seule main doit revenir ; deux mains alternent sans interruption."},
+5:"Jouez la mélodie en alternant les mains, cinq fois."}},
+
+"glock-3":{title:"Rythme et nuances",goal:"Jouer à différentes intensités et en mesure",b:{
+0:"Au glockenspiel le son est court, donc <b>le temps et l'intensité</b> sont toute l'expression dont vous disposez. C'est ce qui transforme un jeu banal en jeu marquant.",
+1:"Rythme de base",
+2:"Essayez de jouer la même mélodie une fois fort et une fois doucement. La différence est plus grande qu'il n'y paraît.",
+3:"La même mélodie, un autre rythme",
+4:{q:"Qu'est-ce qui crée l'expression au glockenspiel ?",o:["La durée des notes","L'intensité et le temps","L'accord des lames","Le nombre de mailloches"],w:"Le son est court et fixe : vos outils sont le volume et le placement."},
+5:"Jouez la mélodie trois fois : doucement, moyennement et fort."}},
+
+"glock-4":{title:"Deux mains et déplacements",goal:"Jouer un passage qui se déplace entre les registres",b:{
+0:"Au glockenspiel la main ne reste pas en place. <b>L'œil guide — la main suit</b>, et cela s'apprend séparément.",
+1:"Trois points de repère — do, sol et do aigu",
+2:["Repérez les trois points d'ancrage sur l'instrument.","Frappez do puis sol, sans regarder la mailloche.","Ajoutez le do aigu.","Jouez maintenant les trois à la suite au métronome 60."],
+3:"Regardez la lame <b>suivante</b> pendant que vous frappez l'actuelle. C'est le secret de tout percussionniste à claviers.",
+4:{q:"Où regarder pendant qu'on joue ?",o:["La mailloche","La lame suivante","Uniquement la partition","Peu importe"],w:"Le regard précède la main, exactement comme en lecture."},
+5:"Jouez do-sol-do vingt fois sans manquer."}},
+
+"glock-5":{title:"Les lames supérieures",goal:"Jouer dans une gamme avec un dièse",b:{
+0:"Les lames supérieures sont les demi-tons — exactement comme les touches noires du piano, et dans les mêmes groupes de deux et de trois.",
+1:"Gamme de sol majeur — attention au fa dièse",
+2:"Les lames supérieures sont plus étroites. Visez le centre, sinon la mailloche glisse.",
+3:{q:"Comment sont disposées les lames supérieures ?",o:["En rangée régulière","En groupes de deux et de trois","Au hasard","Il n'y a pas de lames supérieures"],w:"Exactement comme les touches noires d'un piano."},
+4:"Jouez la gamme de sol majeur dans les deux sens, cinq fois."}},
+
+"glock-6":{title:"Un rythme plus complexe",goal:"Jouer des croches et des notes pointées",b:{
+0:"Le son du glockenspiel est court, donc <b>la précision rythmique</b> s'entend aussitôt. Ici on apprend à diviser le temps.",
+1:"Croches",
+2:"Mélodie en croches",
+3:"Comptez à voix haute : « un-et-deux-et ». Compter à voix haute est plus précis que compter dans sa tête.",
+4:{q:"Qu'est-ce qui aide à la précision rythmique ?",o:["Jouer fort","Compter à voix haute","Jouer vite","Regarder ses mains"],w:"Compter à voix haute relie le corps au temps."},
+5:"Jouez la mélodie au métronome 70, puis à 85."}},
+
+"glock-7":{title:"Deux voix",goal:"Jouer une mélodie et un accompagnement ensemble",b:{
+0:"Deux mains, deux voix. Une main joue la mélodie, l'autre ajoute une note d'ancrage.",
+1:"Accord de do — les trois notes ensemble",
+2:"Mélodie avec ancrage",
+3:"Commencez avec la seconde main qui ne frappe que sur le premier temps de chaque mesure. C'est déjà assez pour que cela sonne plein.",
+4:{q:"Quelle est la façon la plus simple d'ajouter une deuxième voix ?",o:["Tout jouer deux fois","Une note d'ancrage sur le premier temps","Jouer plus vite","Ajouter une troisième mailloche"],w:"Un seul ancrage par mesure crée déjà la sensation d'accompagnement."},
+5:"Jouez la mélodie avec ancrage, cinq fois."}},
+
+"glock-8":{title:"Un morceau à interpréter",goal:"Jouer une pièce complète avec assurance",b:{
+0:"Maintenant tout se combine : déplacements, lames supérieures, rythme et deux voix.",
+1:"Morceau à interpréter",
+2:"Travaillez la pièce en trois sections séparées, et ne les reliez qu'ensuite. C'est ainsi que travaillent les professionnels.",
+3:{q:"Comment apprend-on une pièce longue ?",o:["En la rejouant encore et encore","En la découpant en sections puis en les reliant","En ne jouant que le début","En accélérant progressivement"],w:"Le découpage fait gagner du temps et empêche les erreurs de s'installer."},
+4:"Jouez la pièce trois fois de suite sans vous arrêter."}},
+
+"glock-9":{title:"Bilan et suite",goal:"Savoir ce que vous avez appris et où aller",b:{
+0:"Vous avez terminé : la frappe nette, la gamme, les déplacements, les lames supérieures, le rythme et les deux voix.",
+1:"La suite : le <b>xylophone et le marimba</b> (lames de bois, son plus chaud), <b>quatre mailloches</b> dans deux mains, et <b>la lecture</b> en jouant.",
+2:"Morceau final",
+3:"Le glockenspiel est une excellente porte d'entrée vers toutes les percussions mélodiques. La compétence se transfère presque intégralement.",
+4:{q:"Quelle est la différence entre un glockenspiel et un xylophone ?",o:["La taille","Lames de métal contre lames de bois","Le nombre de lames","L'accord"],w:"Le métal donne un son clair et long ; le bois, chaud et court."},
+5:"Jouez le morceau final et enregistrez-vous."}},
+
+"mandolin-1":{title:"Découverte et cordes à vide",goal:"Produire un son net et comprendre l'accord",b:{
+0:"La mandoline est accordée <b>exactement comme un violon</b> — sol, ré, la, mi — mais elle a des frettes. Chaque note a une place fixe, et rien n'est à chercher à l'oreille.",
+2:["Tenez le médiator entre le pouce et l'index, par la pointe seulement.","Jouez alternativement vers le bas et vers le haut — c'est le mouvement de base.","Main gauche : appuyez juste derrière la frette, pas dessus.","Jouez chaque paire de cordes à vide quatre fois."],
+3:"Chaque note a deux cordes côte à côte. C'est ce qui donne à la mandoline sa sonorité claire.",
+4:{q:"En quoi la mandoline diffère-t-elle du violon ?",o:["Par son accord","Par la présence de frettes","Par le nombre de cordes","Par la taille seulement"],w:"L'accord est identique ; les frettes font la différence, et c'est ce qui facilite les débuts."},
+5:"Jouez chaque corde à vide huit fois, vers le bas et vers le haut."}},
+
+"mandolin-2":{title:"Premières notes sur le manche",goal:"Jouer votre première gamme",b:{
+0:"Grâce aux frettes, trouver une note à la mandoline est affaire de comptage — pas d'écoute.",
+2:"Cinq notes",
+3:"Un doigt par frette — c'est la règle qui vous épargne des années de corrections.",
+4:{q:"Comment trouve-t-on une note à la mandoline ?",o:["À l'oreille seulement","Par le numéro de frette","À la couleur de la corde","On ne peut pas en être sûr"],w:"Les frettes fixent la hauteur avec précision."},
+5:"Jouez les cinq notes dans les deux sens, dix fois."}},
+
+"mandolin-3":{title:"Une première mélodie",goal:"Jouer un morceau entier",b:{
+0:"Maintenant on assemble : cordes à vide, notes sur le manche et médiator régulier.",
+2:"Mélodie pour mandoline",
+3:"<b>Trémolo :</b> répétition rapide du médiator sur la même note. C'est la sonorité que tout le monde reconnaît — mais seulement une fois le jeu ordinaire bien stable.",
+4:{q:"Qu'est-ce que le trémolo ?",o:["Un changement d'accord rapide","Une répétition rapide du médiator sur la même note","Jouer sur deux cordes","Ralentir à la fin"],w:"C'est la technique emblématique de la mandoline."},
+5:"Jouez la mélodie cinq fois avec un médiator régulier."}},
+
+"mandolin-4":{title:"Votre premier accord",goal:"Jouer un accord de sol et y enchaîner",b:{
+0:"À la mandoline, un accord ne demande le plus souvent que <b>deux doigts</b> — bien moins qu'à la guitare.",
+2:["Doigt 1 sur la corde de la, frette 2.","Doigt 2 sur la corde de mi, frette 3.","Les deux autres cordes restent à vide.","Jouez vers le bas sur les quatre paires."],
+3:"Appuyez juste derrière la frette, pas dessus. C'est là qu'il faut le moins de force.",
+4:{q:"Combien de doigts faut-il pour un accord de base à la mandoline ?",o:["Quatre","Deux","Trois","Aucun"],w:"Deux suffisent pour la plupart des accords ouverts."},
+5:"Alternez entre l'accord de sol et les cordes à vide, vingt fois."}},
+
+"mandolin-5":{title:"Deux accords et une chanson",goal:"Accompagner une chanson entière avec deux accords",b:{
+0:"Avec deux accords on peut déjà accompagner des centaines de chansons. Le passage de l'un à l'autre, c'est tout le travail.",
+1:"Jeu bas-haut",
+2:"<b>La règle du changement :</b> levez les doigts un instant avant le temps, pas dessus. Ainsi il n'y a pas de trou dans le rythme.",
+3:"Exercice d'accompagnement",
+4:{q:"Quand lève-t-on les doigts lors d'un changement d'accord ?",o:["Exactement sur le temps","Un instant avant le temps","Après le temps","Peu importe"],w:"Lever tôt préserve la continuité du rythme."},
+5:"Alternez les deux accords pendant deux minutes sans vous arrêter."}},
+
+"mandolin-6":{title:"Le trémolo",goal:"Produire un son tenu par répétition du médiator",b:{
+0:"La mandoline n'a pas de son long — il s'éteint aussitôt. Le <b>trémolo</b> est la solution : une répétition rapide qui crée l'illusion d'un son tenu.",
+1:["Tenez le médiator très souplement — c'est la clé.","Bougez depuis le poignet, pas depuis le coude.","Commencez lentement et régulièrement, et n'accélérez qu'ensuite.","Jouez une note en trémolo pendant quatre secondes."],
+2:"Une prise crispée donne un trémolo saccadé. Plus la prise est souple, plus le son est lisse.",
+3:"Note longue en trémolo",
+4:{q:"Qu'est-ce qui compte le plus dans le trémolo ?",o:["La vitesse","Une prise détendue","Une forte pression","Un médiator épais"],w:"La détente permet la vitesse ; la tension l'empêche."},
+5:"Travaillez le trémolo sur une seule note, une minute par corde."}},
+
+"mandolin-7":{title:"Gammes sur deux octaves",goal:"Étendre la tessiture le long du manche",b:{
+0:"Grâce à l'accord en quintes, le même schéma de doigts se répète sur chaque paire de cordes. On l'apprend une fois — et on le joue partout.",
+2:"Gamme de sol sur deux octaves",
+3:"Le schéma appris sur la corde de sol fonctionne exactement pareil sur celle de ré. C'est la grande économie de l'accord en quintes.",
+4:{q:"Quel est l'avantage d'un accord en quintes ?",o:["Un son plus fort","Le même schéma se répète sur chaque paire de cordes","C'est plus facile à accorder","Moins de cordes"],w:"Le schéma est conservé : on ne l'apprend donc qu'une seule fois."},
+5:"Jouez la gamme sur deux octaves, dix fois."}},
+
+"mandolin-8":{title:"Mélodie avec accompagnement",goal:"Jouer une chanson entière en y glissant des accords",b:{
+0:"Maintenant on combine : mélodie, accords et trémolo dans le même morceau.",
+1:"Morceau combiné",
+2:"Jouez d'abord la mélodie seule, puis les accords seuls, et seulement ensuite combinez. Combiner trop tôt gâche les deux.",
+3:{q:"Comment combiner mélodie et accompagnement ?",o:["Les jouer ensemble dès le début","Apprendre chacun séparément puis combiner","Renoncer à l'un des deux","Jouer très lentement"],w:"Séparer d'abord, combiner ensuite — c'est la voie rapide."},
+4:"Jouez le morceau combiné cinq fois."}},
+
+"mandolin-9":{title:"Bilan et suite",goal:"Savoir ce que vous avez appris et où aller",b:{
+0:"Vous avez terminé : cordes à vide, notes sur le manche, accords, trémolo et gammes sur deux octaves.",
+1:"La suite : le <b>style bluegrass</b> (jeu rapide et précis au médiator), les <b>accords barrés</b> qui se déplacent sur le manche, et <b>l'improvisation</b> sur les gammes apprises.",
+2:"Morceau final",
+3:"La mandoline partage son accord avec le violon — tout ce que vous avez appris ici se transfère presque intégralement si vous voulez l'essayer.",
+4:{q:"Quel instrument partage l'accord de la mandoline ?",o:["La guitare","Le violon","La basse","Le ukulélé"],w:"Les deux sont accordés sol-ré-la-mi."},
+5:"Jouez le morceau final et enregistrez-vous."}}
+
+});

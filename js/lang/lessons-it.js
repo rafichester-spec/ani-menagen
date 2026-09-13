@@ -477,3 +477,279 @@ I18N.registerLessons("it", {
 3:"Suona un brano completo dall'inizio alla fine con il metronomo."}}
 
 });
+
+/* ---- i quattro nuovi strumenti ---- */
+I18N.registerLessons("it", {
+
+"violin-1":{title:"Impugnatura e corde vuote",goal:"Produrre un suono pulito su tutte e quattro le corde",b:{
+0:"Il violino è lo strumento in cui <b>l'orecchio guida il dito</b>. Non ci sono tasti, quindi ogni nota si costruisce ascoltando — ed è proprio questo a renderlo il miglior maestro per l'orecchio.",
+1:"Quattro corde, dalla più grossa alla più sottile: <b>sol, re, la, mi</b>. Fra ogni coppia c'è una quinta.",
+3:["Appoggia il violino sulla clavicola, con la mascella sulla mentoniera.","La mano sinistra tiene il manico con leggerezza: non lo stringe.","L'archetto poggia sulla corda a metà strada fra il ponticello e la tastiera.","Tira l'archetto lentamente e con pressione uniforme. Un suono pulito vale più di uno forte."],
+4:"Un fischio? Una di tre cose: pressione irregolare, archetto troppo lontano dal ponticello, oppure velocità che cambia. Rallenta.",
+5:{q:"Come sono accordate le corde del violino?",o:["Per quarte","Per quinte","Per ottave","Per terze"],w:"Sol-re-la-mi: una quinta fra ogni coppia di corde vicine."},
+6:"Suona ogni corda vuota otto volte con arcata intera, senza fischi."}},
+
+"violin-2":{title:"Il primo dito",goal:"Suonare quattro note nuove",b:{
+0:"Il primo dito si appoggia a <b>un tono intero</b> dalla corda vuota. È il punto di riferimento di tutta la mano.",
+2:"Attacca un pezzetto di nastro dove cade il primo dito. Non è barare: è così che imparano tutti i violinisti del mondo nel primo anno.",
+3:"Corda vuota e primo dito",
+4:{q:"Qual è la distanza fra la corda vuota e il primo dito?",o:["Un semitono","Un tono intero","Un tono e mezzo","Due toni"],w:"Un tono intero, ed è la prima distanza che l'orecchio impara."},
+5:"Suona l'esercizio lentamente e controlla ogni nota con l'accordatore dell'app."}},
+
+"violin-3":{title:"Una prima melodia",goal:"Suonare un brano intero su due corde",b:{
+0:"Con le corde vuote e il primo dito puoi già suonare una melodia vera.",
+2:"Esercizio su due corde",
+3:"<b>La regola del primo anno:</b> lento e pulito batte sempre veloce e confuso.",
+4:{q:"Che cosa conta di più in questa fase?",o:["Suonare veloce per progredire","Suonare lentamente e ascoltare ogni nota","Saltare le note difficili","Suonare il più forte possibile"],w:"Sul violino ogni imprecisione si sente subito. Rallentare è la scorciatoia."},
+5:"Suona la melodia cinque volte, ogni volta un po' più veloce."}},
+
+"violin-4":{title:"Tre dita: la tua prima scala",goal:"Suonare la scala di re maggiore su due corde",b:{
+0:"Sul violino la scala non si costruisce con i tasti ma con uno <b>schema fisso di dita</b>. Una volta che la mano lo impara, si ripete su ogni corda.",
+1:"Sulla corda re: dito 1 = mi, dito 2 = fa diesis, dito 3 = sol. Nota che le dita 2 e 3 <b>si toccano</b>: è il segnale che lo schema è corretto.",
+3:"Scala di re maggiore",
+4:"Le dita 2 e 3 stanno unite in una scala maggiore. Se si apre uno spazio fra loro, il fa diesis risulterà calante.",
+5:{q:"Che cosa caratterizza la posizione delle dita 2 e 3 in maggiore?",o:["Un ampio spazio fra loro","Si toccano","Il dito 3 non si usa","Non c'è una regola fissa"],w:"La loro vicinanza è il semitono fra il terzo e il quarto grado."},
+6:"Suona la scala nei due sensi dieci volte, lentamente, controllando ogni nota con l'accordatore."}},
+
+"violin-5":{title:"La distribuzione dell'arco",goal:"Controllare la durata e la forza del suono",b:{
+0:"L'arco è il <b>respiro</b> del violino. Una nota lunga chiede un arco lento, una corta poco arco — e la pressione resta costante.",
+1:["Individua tre zone: tallone, metà, punta.","Suona una semibreve con arcata intera, dal tallone alla punta, in quattro secondi.","Suona quattro semiminime nella stessa arcata: ciascuna un quarto del percorso.","Ora suona crome usando solo la metà dell'arco."],
+2:"Distribuzione dell'arco",
+3:"Il suono si indebolisce alla fine dell'arco? La pressione cala insieme al braccio. Tienila uniforme fino alla punta.",
+4:{q:"Che cosa determina la durata di una nota sul violino?",o:["La pressione del dito","La velocità dell'arco","Come si tiene lo strumento","Lo spessore della corda"],w:"La velocità dell'arco fissa la durata; la pressione il volume."},
+5:"Suona una scala intera con arcata intera per nota, poi con mezza arcata."}},
+
+"violin-6":{title:"Seconda corda e cambi",goal:"Passare fra le corde senza rumore",b:{
+0:"Il passaggio fra le corde è il punto in cui si sente la differenza fra un principiante e un musicista. Il segreto: <b>il braccio inizia a muoversi prima che la nota cambi</b>.",
+2:"Esercizio di cambi",
+3:"Se durante il passaggio si sente un suono doppio, l'archetto ha toccato due corde. A cambiare dev'essere l'angolo, non la pressione.",
+4:{q:"Che cosa provoca un suono doppio nel cambio di corda?",o:["Troppa pressione","L'archetto tocca due corde","Lo strumento è scordato","Il dito è fuori posto"],w:"È l'angolo dell'archetto a separare le corde."},
+5:"Suona l'esercizio dieci volte, perfettamente pulito."}},
+
+"violin-7":{title:"Un primo vibrato",goal:"Conoscere il movimento del vibrato",b:{
+0:"Il vibrato è un <b>piccolo dondolio del dito</b> che scalda il suono. Si insegna più tardi di quanto si creda, e non a caso: nasconde l'imprecisione, quindi prima si impara a suonare pulito senza.",
+1:["Metti il dito 2 sulla corda la, senza archetto.","Fai dondolare la mano avanti e indietro dal polso, non dal dito.","Il dito resta al suo posto: cambia solo leggermente l'altezza.","Aggiungi l'archetto solo quando il movimento è fluido."],
+2:"Un vibrato veloce e stretto sembra un tremito. Lento e ampio sembra un canto. Comincia lento.",
+3:{q:"Da dove nasce il movimento del vibrato?",o:["Dal dito","Dal polso","Solo dal gomito","Dalla spalla"],w:"Il movimento nasce dal polso; il dito lo accompagna soltanto."},
+4:"Esercita il movimento un minuto senza archetto e poi un minuto con l'archetto."}},
+
+"violin-8":{title:"Una melodia completa",goal:"Suonare un brano noto dall'inizio alla fine",b:{
+0:"Ora si unisce tutto: lo schema delle dita, la distribuzione dell'arco e i cambi di corda.",
+1:"Melodia per due corde",
+2:"Suona prima senza archetto, in pizzicato, per verificare che le dita siano al loro posto. Poi aggiungi l'archetto.",
+3:{q:"Che cosa conviene verificare prima di aggiungere l'archetto?",o:["Il volume","Che le dita siano al posto giusto","Il tempo","La posizione della testa"],w:"Il pizzicato isola la mano sinistra e rivela subito le imprecisioni."},
+4:"Suona la melodia cinque volte: due in pizzicato e tre con l'arco."}},
+
+"violin-9":{title:"Bilancio e prossimi passi",goal:"Suonare con sicurezza e sapere dove andare",b:{
+0:"Hai completato le basi: l'impugnatura, le corde vuote, lo schema delle dita, la distribuzione dell'arco e i cambi. Tutto il resto si costruisce su questo.",
+1:"Che cosa viene dopo: <b>la seconda posizione</b> (spostare tutta la mano lungo il manico), <b>suonare su due corde insieme</b> e <b>leggere la musica</b> mentre si suona.",
+2:"Brano finale",
+3:"<b>L'errore classico del secondo anno:</b> accelerare prima che il suono sia pulito. Suona tutto con metronomo lento e supererai chi ha avuto fretta.",
+4:{q:"Qual è il passo naturale successivo sul violino?",o:["Suonare più veloce","La seconda posizione e la lettura","Cambiare strumento","Rinunciare all'archetto"],w:"La seconda posizione apre il resto del manico, e la lettura apre il repertorio."},
+5:"Suona il brano finale e registrati. Riascoltarsi è il maestro più onesto."}},
+
+"harmonica-1":{title:"Soffiare e aspirare",goal:"Produrre un suono pulito da un solo foro",b:{
+0:"L'armonica è l'unico strumento in cui <b>sia soffiare sia aspirare producono un suono</b>, e due suoni diversi dallo stesso foro.",
+1:"Un'armonica in do ha dieci fori e venti ance. Il quarto foro è il punto di partenza di quasi ogni melodia.",
+3:["Tieni l'armonica fra pollice e indice, con i numeri verso l'alto.","Arrotonda le labbra come per dire «u».","Soffia delicatamente nel foro quattro: esce do.","Ora aspira dallo stesso foro: esce re."],
+4:"Escono più note insieme? La bocca è troppo aperta. Restringi le labbra finché non resta una sola nota pulita.",
+5:{q:"Che cosa distingue l'armonica dagli altri strumenti a fiato?",o:["Non ha note acute","Soffiare e aspirare producono entrambi un suono","Va riaccordata ogni volta","Bisogna premere dei tasti"],w:"In ogni foro ci sono due ance: una per soffiare e una per aspirare."},
+6:"Alterna soffio e aspirazione sul foro 4, venti volte, con suono pulito."}},
+
+"harmonica-2":{title:"Quattro fori: la tua prima melodia",goal:"Suonare una melodia conosciuta",b:{
+0:"I fori dal 4 al 7 contengono una scala completa di do maggiore. Lì vive quasi ogni canzone popolare.",
+2:"Guarda la freccia sopra lo schema: verso l'alto si soffia, verso il basso si aspira. È tutto ciò che serve ricordare.",
+3:"La scala sull'armonica",
+4:{q:"In quali fori si trova la scala completa di do maggiore?",o:["Dall'1 al 4","Dal 4 al 7","Dal 7 al 10","In tutti"],w:"Solo dal 4 al 7 la scala è completa senza bending."},
+5:"Suona la scala nei due sensi dieci volte."}},
+
+"harmonica-3":{title:"La tua prima canzone",goal:"Suonare una melodia intera a memoria",b:{
+0:"Ora si unisce tutto. Questa melodia usa solo i fori dal 4 al 6.",
+2:"Melodia per quattro fori",
+3:"Prova a suonare senza guardare i numeri. Sull'armonica l'orecchio trova il foro più in fretta dell'occhio.",
+4:{q:"Qual è il modo migliore per imparare una melodia sull'armonica?",o:["Memorizzare i numeri dei fori","Ascoltare e cercare a orecchio","Contare i respiri","Leggere la musica"],w:"L'armonica è nata per suonare a orecchio: è la sua forza."},
+5:"Suona la melodia tre volte a occhi chiusi."}},
+
+"harmonica-4":{title:"Suonare un solo foro",goal:"Produrre una nota pulita senza le vicine",b:{
+0:"Finora forse suonavano più note insieme. Ora impari a tirarne fuori <b>una sola</b>, ed è questo che trasforma il rumore in melodia.",
+1:["Infila l'armonica più a fondo fra le labbra, come se stessi bevendo.","La lingua sta in basso e rilassata.","Restringi l'apertura delle labbra finché non suona una sola nota.","Verifica: soffia nel foro 4; se senti un accordo, le labbra sono troppo larghe."],
+3:"Un secondo metodo, il <b>blocco con la lingua</b>: copri tre fori con la bocca e bloccane due con la lingua. Ne resta uno aperto.",
+4:{q:"Perché suonano più note insieme?",o:["L'armonica è rotta","L'apertura delle labbra è troppo larga","Soffi troppo forte","I fori sono ostruiti"],w:"Una bocca larga copre più fori contemporaneamente."},
+5:"Suona i fori 4, 5 e 6 soffiando: ciascuno separatamente e pulito, venti volte."}},
+
+"harmonica-5":{title:"La seconda ottava",goal:"Estendere l'estensione ai fori dall'1 al 7",b:{
+0:"I fori bassi (1–3) danno i suoni profondi, quelli alti (7–10) i suoni acuti. La maggior parte delle melodie vive in mezzo.",
+2:"Nota una curiosità: dal foro 7 in su <b>l'aspirazione è più grave del soffio</b>, al contrario dei fori bassi. È una proprietà dell'accordatura, non un guasto.",
+3:"Estensione completa",
+4:{q:"Che cosa cambia dal foro 7 in su?",o:["Niente","L'aspirazione diventa più grave del soffio","Non si può aspirare","Il suono è più debole"],w:"È un'inversione insita nell'accordatura Richter."},
+5:"Suona tutti i soffi dal foro 1 al 10 e ritorno."}},
+
+"harmonica-6":{title:"Ritmo e respirazione",goal:"Suonare a tempo senza restare senza fiato",b:{
+0:"Sull'armonica il respiro è insieme suono e carburante. Suona troppo a lungo in una direzione e resterai senza aria.",
+1:"Alternanza di soffio e aspirazione",
+2:"<b>La regola:</b> se la melodia chiede tre soffi di fila, cerca un punto per cambiare direzione. Quasi sempre la stessa nota si trova in un altro foro.",
+3:"Esercizio di respirazione",
+4:{q:"Che cosa fai quando resti senz'aria a metà frase?",o:["Soffiare più forte","Cercare un punto per cambiare direzione","Smettere di suonare","Suonare più veloce"],w:"Cambiare direzione è il modo di respirare dell'armonica."},
+5:"Suona l'esercizio due minuti di seguito senza restare senza fiato."}},
+
+"harmonica-7":{title:"Accordi e tremolo",goal:"Usare più fori insieme di proposito",b:{
+0:"Finora abbiamo combattuto contro le note vicine. Ora le <b>usiamo di proposito</b>: più fori insieme danno un accordo pieno.",
+1:"Soffiare nei fori 1–4 dà un accordo di do maggiore. Aspirare nei fori 1–4 dà un accordo di sol.",
+2:"<b>Tremolo:</b> agita davanti alla bocca la mano che tiene l'armonica. Il suono ondeggia e ricorda un treno.",
+3:"Accompagnamento di accordi",
+4:{q:"Quale accordo esce soffiando nei fori dall'1 al 4?",o:["Sol maggiore","Do maggiore","La minore","Re maggiore"],w:"I soffi sono costruiti sulle note dell'accordo di do: do, mi e sol."},
+5:"Suona un accompagnamento di accordi su una canzone che conosci, due minuti."}},
+
+"harmonica-8":{title:"Una canzone intera",goal:"Suonare una melodia nota dall'inizio alla fine",b:{
+0:"Ora si unisce tutto: foro singolo, ritmo e respirazione pianificata.",
+2:"Melodia completa",
+3:"Segnati in anticipo dove soffi e dove aspiri. Pianificare evita di restare senza fiato.",
+4:{q:"Che cosa aiuta a non restare senza fiato?",o:["Suonare piano","Pianificare in anticipo soffi e aspirazioni","Suonare veloce","Accorciare la canzone"],w:"Pianificare la direzione dell'aria è l'abilità centrale dell'armonica."},
+5:"Suona la melodia cinque volte di fila senza fermarti."}},
+
+"harmonica-9":{title:"Bilancio e prossimi passi",goal:"Sapere che cosa hai imparato e dove andare",b:{
+0:"Hai completato le basi: soffio e aspirazione, foro singolo, estensione completa, ritmo, accordi e una canzone intera.",
+1:"Che cosa viene dopo: il <b>bending</b>, cambiare l'altezza del suono con la lingua, che permette di suonare le note assenti dall'accordatura. È questo a dare all'armonica il suo colore blues.",
+2:"Brano finale",
+3:"Il bending richiede mesi, non giorni. Non esercitarti prima che le note singole siano perfettamente pulite.",
+4:{q:"Che cosa rende possibile il bending?",o:["Un'altra armonica","Cambiare la forma di bocca e lingua","Soffiare forte","Sostituire le ance"],w:"La forma della cavità orale modifica l'altezza del suono."},
+5:"Suona il brano finale e registrati."}},
+
+"glock-1":{title:"Il primo colpo",goal:"Produrre un suono pulito e capire la disposizione",b:{
+0:"Il glockenspiel è lo strumento melodico più facile con cui cominciare: <b>niente da accordare, nessuna diteggiatura e nessun fiato</b>. Colpisci ed esce la nota giusta.",
+1:"Le lame sono disposte esattamente come i tasti del pianoforte: una lunga fila di bianche e, sopra, gruppi di due e di tre.",
+2:"Colpisci la lama segnata: questo è do",
+3:["Tieni la bacchetta morbida, fra pollice e indice.","Colpisci il centro della lama, non l'estremità.","Solleva la bacchetta subito dopo il colpo. Una bacchetta che resta appoggiata soffoca il suono.","Basta un colpo leggero. Lo strumento fa il lavoro."],
+4:"Suono spento? La bacchetta resta sulla lama. Pensa a rimbalzare, non a premere.",
+5:{q:"Dove si colpisce la lama?",o:["All'estremità","Al centro","Vicino alla vite","È indifferente"],w:"Il centro dà il suono più pieno. Le estremità suonano spente."},
+6:"Colpisci ogni lama bianca una volta, dal grave all'acuto, con suono pulito."}},
+
+"glock-2":{title:"La scala e la tua prima melodia",goal:"Suonare una melodia conosciuta",b:{
+0:"La scala di do maggiore sono semplicemente tutte le lame bianche di seguito. Per la prima melodia basta questo.",
+1:"Scala di do maggiore",
+2:"Prima melodia",
+3:"<b>Alternare le mani:</b> destra-sinistra-destra-sinistra. Raddoppia la velocità senza sforzo aggiuntivo.",
+4:{q:"Qual è il vantaggio di alternare le mani?",o:["Un suono più forte","Si suona più veloce senza sforzo","Le lame si consumano meno","Non c'è vantaggio"],w:"Una mano sola deve tornare indietro; due mani si alternano senza interruzione."},
+5:"Suona la melodia alternando le mani, cinque volte."}},
+
+"glock-3":{title:"Ritmo e dinamica",goal:"Suonare a intensità diverse e a tempo",b:{
+0:"Sul glockenspiel il suono è breve, quindi <b>il tempo e l'intensità</b> sono tutta l'espressione a disposizione. È questo a trasformare un'esecuzione banale in una memorabile.",
+1:"Ritmo di base",
+2:"Prova a suonare la stessa melodia una volta forte e una volta delicatamente. La differenza è più grande di quanto sembri.",
+3:"La stessa melodia, un altro ritmo",
+4:{q:"Che cosa crea espressione sul glockenspiel?",o:["La durata delle note","L'intensità e il tempo","L'accordatura delle lame","Il numero di bacchette"],w:"Il suono è breve e fisso: i tuoi strumenti sono il volume e la precisione ritmica."},
+5:"Suona la melodia tre volte: piano, medio e forte."}},
+
+"glock-4":{title:"Due mani e salti",goal:"Suonare un passaggio che si sposta fra le zone",b:{
+0:"Sul glockenspiel la mano non resta ferma. <b>L'occhio guida, la mano segue</b>, e questo si impara a parte.",
+1:"Tre punti di riferimento: do, sol e do acuto",
+2:["Individua i tre punti di riferimento sullo strumento.","Colpisci do e poi sol, senza guardare la bacchetta.","Aggiungi il do acuto.","Ora suona tutti e tre di seguito con metronomo a 60."],
+3:"Guarda la lama <b>successiva</b> mentre colpisci quella attuale. È il segreto di ogni percussionista a tastiera.",
+4:{q:"Dove si guarda mentre si suona?",o:["La bacchetta","La lama successiva","Solo lo spartito","È indifferente"],w:"Lo sguardo precede la mano, esattamente come nella lettura."},
+5:"Suona do-sol-do venti volte senza sbagliare."}},
+
+"glock-5":{title:"Le lame superiori",goal:"Suonare in una scala con il diesis",b:{
+0:"Le lame superiori sono i semitoni, esattamente come i tasti neri del pianoforte, e negli stessi gruppi di due e di tre.",
+1:"Scala di sol maggiore: attenzione al fa diesis",
+2:"Le lame superiori sono più strette. Mira al centro, altrimenti la bacchetta scivola.",
+3:{q:"Come sono disposte le lame superiori?",o:["In una fila uniforme","In gruppi di due e di tre","A caso","Non ci sono lame superiori"],w:"Esattamente come i tasti neri di un pianoforte."},
+4:"Suona la scala di sol maggiore nei due sensi, cinque volte."}},
+
+"glock-6":{title:"Ritmo più complesso",goal:"Suonare crome e note puntate",b:{
+0:"Il suono del glockenspiel è breve, quindi <b>la precisione ritmica</b> si sente subito. Qui impari a dividere la pulsazione.",
+1:"Crome",
+2:"Melodia in crome",
+3:"Conta ad alta voce: «uno-e-due-e». Contare ad alta voce è più preciso che contare a mente.",
+4:{q:"Che cosa aiuta la precisione ritmica?",o:["Suonare forte","Contare ad alta voce","Suonare veloce","Guardarsi le mani"],w:"Contare ad alta voce collega il corpo al tempo."},
+5:"Suona la melodia con metronomo a 70 e poi a 85."}},
+
+"glock-7":{title:"Due voci",goal:"Suonare melodia e accompagnamento insieme",b:{
+0:"Due mani significano due voci. Una mano suona la melodia, l'altra aggiunge una nota di appoggio.",
+1:"Accordo di do: le tre note insieme",
+2:"Melodia con appoggio",
+3:"Comincia con la seconda mano che colpisce solo sul primo movimento di ogni battuta. Basta già a farla suonare piena.",
+4:{q:"Qual è il modo più semplice per aggiungere una seconda voce?",o:["Suonare tutto due volte","Una nota di appoggio sul primo movimento","Suonare più veloce","Aggiungere una terza bacchetta"],w:"Un solo appoggio per battuta crea già la sensazione di accompagnamento."},
+5:"Suona la melodia con l'appoggio, cinque volte."}},
+
+"glock-8":{title:"Un brano da eseguire",goal:"Suonare un brano completo con sicurezza",b:{
+0:"Ora si combina tutto: salti, lame superiori, ritmo e due voci.",
+1:"Brano da eseguire",
+2:"Studia il brano in tre sezioni separate e uniscile solo dopo. È così che studiano i professionisti.",
+3:{q:"Come si impara un brano lungo?",o:["Suonandolo all'infinito","Dividendolo in sezioni e poi unendole","Suonando solo l'inizio","Accelerando gradualmente"],w:"Dividere fa risparmiare tempo e impedisce che gli errori si fissino."},
+4:"Suona il brano tre volte di seguito senza fermarti."}},
+
+"glock-9":{title:"Bilancio e prossimi passi",goal:"Sapere che cosa hai imparato e dove andare",b:{
+0:"Hai completato: il colpo pulito, la scala, i salti, le lame superiori, il ritmo e le due voci.",
+1:"Che cosa viene dopo: lo <b>xilofono e la marimba</b> (lame di legno, suono più caldo), <b>quattro bacchette</b> in due mani e la <b>lettura</b> mentre si suona.",
+2:"Brano finale",
+3:"Il glockenspiel è un'ottima porta d'ingresso a tutte le percussioni melodiche. L'abilità si trasferisce quasi per intero.",
+4:{q:"Qual è la differenza fra glockenspiel e xilofono?",o:["La dimensione","Lame di metallo contro lame di legno","Il numero di lame","L'accordatura"],w:"Il metallo dà un suono brillante e lungo; il legno caldo e breve."},
+5:"Suona il brano finale e registrati."}},
+
+"mandolin-1":{title:"Primo contatto e corde vuote",goal:"Produrre un suono pulito e conoscere l'accordatura",b:{
+0:"Il mandolino è accordato <b>esattamente come un violino</b> — sol, re, la, mi — ma ha i tasti. Ogni nota ha un posto fisso e non c'è nulla da cercare a orecchio.",
+2:["Tieni il plettro fra pollice e indice, solo per la punta.","Suona alternando in giù e in su: è il movimento di base.","Mano sinistra: premi subito dietro il tasto, non sopra.","Suona ogni coppia di corde vuote quattro volte."],
+3:"Ogni nota ha due corde affiancate. È questo a dare al mandolino il suo suono squillante.",
+4:{q:"In che cosa il mandolino differisce dal violino?",o:["Nell'accordatura","Nell'avere i tasti","Nel numero di corde","Solo nelle dimensioni"],w:"L'accordatura è identica; la differenza sono i tasti, e sono proprio loro a facilitare l'inizio."},
+5:"Suona ogni corda vuota otto volte, in giù e in su."}},
+
+"mandolin-2":{title:"Prime note sul manico",goal:"Suonare la tua prima scala",b:{
+0:"Grazie ai tasti, trovare una nota sul mandolino è questione di contare, non di ascoltare.",
+2:"Cinque note",
+3:"Un dito per tasto: è la regola che ti risparmia anni di correzioni.",
+4:{q:"Come si trova una nota sul mandolino?",o:["Solo a orecchio","Dal numero del tasto","Dal colore della corda","Non se ne può essere certi"],w:"I tasti fissano l'altezza con precisione."},
+5:"Suona le cinque note nei due sensi, dieci volte."}},
+
+"mandolin-3":{title:"Una prima melodia",goal:"Suonare un brano intero",b:{
+0:"Ora si unisce tutto: corde vuote, note sul manico e plettro regolare.",
+2:"Melodia per mandolino",
+3:"<b>Tremolo:</b> ripetizione rapida del plettro sulla stessa nota. È il suono che tutti riconoscono come mandolino, ma solo dopo che il plettro normale è stabile.",
+4:{q:"Che cos'è il tremolo?",o:["Un cambio rapido di accordi","Ripetizione rapida del plettro sulla stessa nota","Suonare su due corde","Rallentare alla fine"],w:"È la tecnica distintiva del mandolino."},
+5:"Suona la melodia cinque volte con plettro regolare."}},
+
+"mandolin-4":{title:"Il tuo primo accordo",goal:"Suonare un accordo di sol e passarci sopra",b:{
+0:"Sul mandolino un accordo sono <b>solo due dita</b> nella maggior parte dei casi, molte meno di quante ne richieda una chitarra.",
+2:["Dito 1 sulla corda la, tasto 2.","Dito 2 sulla corda mi, tasto 3.","Le altre due corde restano vuote.","Suona in giù su tutte e quattro le coppie."],
+3:"Premi subito dietro il tasto, non sopra. Lì serve meno forza.",
+4:{q:"Quante dita servono per un accordo base sul mandolino?",o:["Quattro","Due","Tre","Nessuna"],w:"Due bastano per la maggior parte degli accordi aperti."},
+5:"Alterna fra l'accordo di sol e le corde vuote, venti volte."}},
+
+"mandolin-5":{title:"Due accordi e una canzone",goal:"Accompagnare una canzone intera con due accordi",b:{
+0:"Con due accordi si accompagnano già centinaia di canzoni. Il passaggio fra loro è tutto l'esercizio.",
+1:"Plettrata in giù e in su",
+2:"<b>La regola del cambio:</b> solleva le dita un attimo prima del movimento, non sopra di esso. Così non resta un buco nel ritmo.",
+3:"Esercizio di accompagnamento",
+4:{q:"Quando si sollevano le dita nel cambio di accordo?",o:["Esattamente sul movimento","Un attimo prima del movimento","Dopo il movimento","È indifferente"],w:"Sollevarle prima mantiene la continuità del ritmo."},
+5:"Alterna i due accordi per due minuti senza fermarti."}},
+
+"mandolin-6":{title:"Il tremolo",goal:"Produrre un suono tenuto con plettrata ripetuta",b:{
+0:"Il mandolino non ha suono lungo: si spegne subito. Il <b>tremolo</b> è la soluzione: una ripetizione rapida che crea l'illusione di un suono tenuto.",
+1:["Tieni il plettro molto morbido: è questa la chiave.","Muoviti dal polso, non dal gomito.","Comincia lento e regolare, e solo dopo accelera.","Suona una nota in tremolo per quattro secondi."],
+2:"Una presa rigida dà un tremolo a scatti. Più la presa è morbida, più il suono è liscio.",
+3:"Nota lunga in tremolo",
+4:{q:"Che cosa conta di più nel tremolo?",o:["La velocità","Una presa rilassata","Molta pressione","Un plettro spesso"],w:"Il rilassamento permette la velocità; la tensione la impedisce."},
+5:"Esercita il tremolo su una sola nota, un minuto per corda."}},
+
+"mandolin-7":{title:"Scale su due ottave",goal:"Estendere l'estensione lungo il manico",b:{
+0:"Grazie all'accordatura per quinte, lo stesso schema di dita si ripete su ogni coppia di corde. Si impara una volta e si suona ovunque.",
+2:"Scala di sol su due ottave",
+3:"Lo schema imparato sulla corda sol funziona esattamente allo stesso modo sulla corda re. È questo il grande risparmio dell'accordatura per quinte.",
+4:{q:"Qual è il vantaggio dell'accordatura per quinte?",o:["Un suono più forte","Lo stesso schema si ripete su ogni coppia di corde","È più facile da accordare","Meno corde"],w:"Lo schema si conserva, quindi va imparato una sola volta."},
+5:"Suona la scala su due ottave, dieci volte."}},
+
+"mandolin-8":{title:"Melodia con accompagnamento",goal:"Suonare una canzone intera e inserire gli accordi",b:{
+0:"Ora si combina: melodia, accordi e tremolo nello stesso brano.",
+1:"Brano combinato",
+2:"Suona prima solo la melodia, poi solo gli accordi, e unisci soltanto dopo. Unire troppo presto rovina entrambi.",
+3:{q:"Come si uniscono melodia e accompagnamento?",o:["Suonandoli insieme fin dall'inizio","Imparando ciascuno a parte e poi unendoli","Rinunciando a uno dei due","Suonando molto lentamente"],w:"Prima separare, poi unire: è la via rapida."},
+4:"Suona il brano combinato cinque volte."}},
+
+"mandolin-9":{title:"Bilancio e prossimi passi",goal:"Sapere che cosa hai imparato e dove andare",b:{
+0:"Hai completato: corde vuote, note sul manico, accordi, tremolo e scale su due ottave.",
+1:"Che cosa viene dopo: lo <b>stile bluegrass</b> (plettrata rapida e precisa), gli <b>accordi chiusi</b> che si spostano lungo il manico e l'<b>improvvisazione</b> sulle scale imparate.",
+2:"Brano finale",
+3:"Il mandolino condivide l'accordatura con il violino: tutto ciò che hai imparato qui si trasferisce quasi per intero, se vorrai provarlo.",
+4:{q:"Quale strumento condivide l'accordatura del mandolino?",o:["La chitarra","Il violino","Il basso","L'ukulele"],w:"Entrambi sono accordati sol-re-la-mi."},
+5:"Suona il brano finale e registrati."}}
+
+});

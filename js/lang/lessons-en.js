@@ -481,3 +481,283 @@ I18N.registerLessons("en", {
 3:"Play a complete song from beginning to end with a metronome."}}
 
 });
+
+/* ---- ארבעת הכלים החדשים ---- */
+I18N.registerLessons("en", {
+
+/* ===================== VIOLIN ===================== */
+"violin-1":{title:"Holding it, and the open strings",goal:"Produce a clean tone on all four strings",b:{
+0:"The violin is the instrument where <b>your ear leads your finger</b>. There are no frets, so every note is built by listening — and that is exactly what makes it the best teacher an ear can have.",
+1:"Four strings, thickest to thinnest: <b>G, D, A, E</b>. The distance between each pair is a fifth.",
+3:["Rest the violin on your collarbone, with your jaw on the chinrest.","Your left hand holds the neck lightly — it does not grip.","The bow sits on the string halfway between the bridge and the fingerboard.","Draw the bow slowly with even pressure. A clean tone matters more than a loud one."],
+4:"A whistling sound? One of three things: uneven bow pressure, the bow too far from the bridge, or changing speed. Slow down.",
+5:{q:"How are the violin strings tuned?",o:["In fourths","In fifths","In octaves","In thirds"],w:"G-D-A-E — a fifth between each pair of neighbouring strings."},
+6:"Play each open string eight times with a full bow, with no whistling."}},
+
+"violin-2":{title:"The first finger",goal:"Play four new notes",b:{
+0:"The first finger lands a <b>whole tone</b> away from the open string. This is the anchor point for the whole hand.",
+2:"Stick a small piece of tape where the first finger lands. That is not cheating — it is how every violinist in the world learns in their first year.",
+3:"Open string and first finger",
+4:{q:"How far is the first finger from the open string?",o:["A semitone","A whole tone","A tone and a half","Two tones"],w:"A whole tone — and it is the first distance the ear learns."},
+5:"Play the exercise slowly, and check every note against the tuner in the app."}},
+
+"violin-3":{title:"A first melody",goal:"Play a whole tune on two strings",b:{
+0:"With the open strings and the first finger you can already play a real melody.",
+2:"Two-string exercise",
+3:"<b>The rule of the first year:</b> slow and clean beats fast and messy, every single time.",
+4:{q:"What matters most at this stage?",o:["Playing fast to make progress","Playing slowly and listening to every note","Skipping the hard notes","Playing as loudly as possible"],w:"On a violin every inaccurate note is heard immediately. Slowing down is the shortcut."},
+5:"Play the melody five times, a little faster each time."}},
+
+"violin-4":{title:"Three fingers — your first scale",goal:"Play a D major scale across two strings",b:{
+0:"On a violin a scale is not built from frets but from a <b>fixed pattern of fingers</b>. Once the hand learns it, it repeats on every string.",
+1:"On the D string: finger 1 = E, finger 2 = F sharp, finger 3 = G. Notice that fingers 2 and 3 <b>touch each other</b> — that is the sign the pattern is right.",
+3:"D major scale",
+4:"Fingers 2 and 3 are together in a major scale. If a gap opens between them, the F sharp will come out flat.",
+5:{q:"What is special about fingers 2 and 3 in a major scale?",o:["A wide gap between them","They touch each other","Finger 3 is unused","There is no fixed rule"],w:"Their closeness is the semitone between the third and fourth notes of the scale."},
+6:"Play the scale up and down ten times, slowly, checking each note with the tuner."}},
+
+"violin-5":{title:"Dividing the bow",goal:"Control the length and the strength of a note",b:{
+0:"The bow is the <b>breath</b> of the violin. A long note needs a slow bow, a short note needs little bow — and the pressure stays constant.",
+1:["Mark three areas for yourself: frog, middle, tip.","Play a whole note with a full bow, frog to tip, in four seconds.","Play four quarter notes in that same bow — each one a quarter of the length.","Now play eighth notes using only the middle of the bow."],
+2:"Dividing the bow",
+3:"Tone fading at the end of the bow? The pressure drops along with your arm. Keep it even all the way to the tip.",
+4:{q:"What determines the length of a note on the violin?",o:["Finger pressure","Bow speed","How you hold the instrument","String thickness"],w:"Bow speed sets the length; pressure sets the volume."},
+5:"Play a full scale with a whole bow per note, then again with half a bow."}},
+
+"violin-6":{title:"A second string, and crossings",goal:"Cross between strings without noise",b:{
+0:"String crossings are where you hear the difference between a beginner and a player. The secret: <b>the arm starts moving before the note changes</b>.",
+2:"Crossing exercise",
+3:"If you hear a double sound during the crossing, the bow touched two strings. The angle should change, not the pressure.",
+4:{q:"What causes a double sound when crossing strings?",o:["Too much pressure","The bow is touching two strings","The instrument is out of tune","The finger is in the wrong place"],w:"It is the bow angle that separates the strings."},
+5:"Play the crossing exercise ten times, completely clean."}},
+
+"violin-7":{title:"A first vibrato",goal:"Learn the vibrato motion",b:{
+0:"Vibrato is a <b>small rocking of the finger</b> that warms the tone. It is taught later than people expect — and that is deliberate: it hides inaccuracy, so first you learn to play cleanly without it.",
+1:["Place finger 2 on the A string, without the bow.","Rock your hand back and forth from the wrist, not from the finger.","The finger stays in place — only the pitch shifts slightly.","Add the bow only once the motion is smooth."],
+2:"A fast, narrow vibrato sounds like a tremble. A slow, wide one sounds like singing. Start slow.",
+3:{q:"Where does the vibrato motion come from?",o:["The finger","The wrist","The elbow only","The shoulder"],w:"The motion comes from the wrist; the finger simply travels with it."},
+4:"Practise the motion for one minute without the bow, then one minute with it."}},
+
+"violin-8":{title:"A complete melody",goal:"Play a familiar tune from beginning to end",b:{
+0:"Now everything comes together: the finger pattern, the bow division and the crossings.",
+1:"Melody for two strings",
+2:"Play it first without the bow — just plucking — to check that the fingers are in place. Then add the bow.",
+3:{q:"What is worth checking before you add the bow?",o:["The volume","That the fingers are in the right place","The tempo","Your head position"],w:"Plucking isolates the left hand and exposes inaccuracy straight away."},
+4:"Play the melody five times — twice plucked and three times bowed."}},
+
+"violin-9":{title:"Wrapping up, and what comes next",goal:"Play with confidence and know where to go",b:{
+0:"You have finished the foundations: holding the instrument, open strings, the finger pattern, bow division and crossings. Everything else is built on this.",
+1:"What comes next: <b>second position</b> (moving the whole hand up the neck), <b>playing on two strings at once</b>, and <b>reading music</b> while you play.",
+2:"Closing piece",
+3:"<b>The classic second-year mistake:</b> speeding up before the tone is clean. Play everything with a slow metronome — and you will overtake whoever rushed.",
+4:{q:"What is the natural next step on the violin?",o:["Playing faster","Second position and reading music","Switching instruments","Giving up the bow"],w:"Second position opens the rest of the neck, and reading music opens the repertoire."},
+5:"Play the closing piece and record yourself. Listening back is the most honest teacher there is."}},
+
+/* ===================== HARMONICA ===================== */
+"harmonica-1":{title:"Blow and draw",goal:"Produce a clean tone from a single hole",b:{
+0:"The harmonica is the only instrument where <b>both blowing and drawing produce a note</b> — and two different notes from the same hole.",
+1:"A harmonica in C has ten holes and twenty reeds. The fourth hole is the starting point of almost every tune.",
+3:["Hold the harmonica between your thumb and index finger, numbers facing up.","Purse your lips as if you were saying 'oo'.","Blow gently into hole four — that is C.","Now draw from exactly the same hole — that is D."],
+4:"Several notes coming out at once? Your mouth is too open. Narrow your lips until a single clean note remains.",
+5:{q:"What makes the harmonica different from other wind instruments?",o:["It has no high notes","Both blowing and drawing produce a note","It has to be retuned every time","You have to press buttons"],w:"Each hole holds two reeds — one for blowing and one for drawing."},
+6:"Switch between blowing and drawing on hole 4, twenty times, with a clean tone."}},
+
+"harmonica-2":{title:"Four holes — your first tune",goal:"Play a familiar melody",b:{
+0:"Holes 4 to 7 hold a complete C major scale. Almost every folk song lives right there.",
+2:"Look at the arrow above the diagram: pointing up means blow, pointing down means draw. That is all you need to remember.",
+3:"The scale on the harmonica",
+4:{q:"Which holes hold a complete C major scale?",o:["1 to 4","4 to 7","7 to 10","All of them"],w:"Only holes 4 to 7 give the full scale without bending."},
+5:"Play the scale up and down ten times."}},
+
+"harmonica-3":{title:"Your first song",goal:"Play a whole tune from memory",b:{
+0:"Now you put it together. This tune uses only holes 4 to 6.",
+2:"Melody for four holes",
+3:"Try playing without looking at the numbers. On a harmonica the ear finds the hole faster than the eye.",
+4:{q:"What is the best way to learn a tune on the harmonica?",o:["Memorising the hole numbers","Listening and searching by ear","Counting breaths","Reading music"],w:"The harmonica was built for playing by ear — that is its strength."},
+5:"Play the melody three times with your eyes closed."}},
+
+"harmonica-4":{title:"Playing a single hole",goal:"Produce one clean note with no neighbours",b:{
+0:"Until now you may have heard several notes together. Now you learn to bring out <b>one note only</b> — and that is what turns noise into a melody.",
+1:["Place the harmonica deeper into your lips, as if you were drinking.","Your tongue rests low and relaxed.","Narrow the opening of your lips until a single note sounds.","Test it: blow on hole 4 — if you hear a chord, your lips are too wide."],
+3:"A second method, <b>tongue blocking</b>: cover three holes with your mouth and block two of them with your tongue. That leaves one hole open.",
+4:{q:"Why do several notes sound at once?",o:["The harmonica is broken","The lip opening is too wide","You are blowing too hard","The holes are blocked"],w:"A wide mouth covers several holes at the same time."},
+5:"Play holes 4, 5 and 6 blowing — each one separately and cleanly, twenty times."}},
+
+"harmonica-5":{title:"The second octave",goal:"Extend your range to holes 1 through 7",b:{
+0:"The low holes (1–3) give the deep notes, and the high ones (7–10) the sharp ones. Most tunes live in the middle.",
+2:"Notice something odd: from hole 7 upwards <b>the draw is lower than the blow</b> — the opposite of the low holes. That is a feature of the tuning, not a fault.",
+3:"Full range",
+4:{q:"What changes from hole 7 upwards?",o:["Nothing changes","The draw is lower than the blow","You cannot draw","The tone is weaker"],w:"It is a built-in reversal in Richter tuning."},
+5:"Play every blow note from hole 1 to 10 and back."}},
+
+"harmonica-6":{title:"Rhythm and breathing",goal:"Play in steady time without running out of air",b:{
+0:"On a harmonica your breath is both the sound and the fuel. Play too long in one direction and you will run out.",
+1:"Alternating blow and draw",
+2:"<b>The rule:</b> if a tune asks for three blows in a row, look for a place to change direction. Usually the same note is available in another hole.",
+3:"Breathing exercise",
+4:{q:"What do you do when you run out of air mid-phrase?",o:["Blow harder","Look for a place to change direction","Stop playing","Play faster"],w:"Changing direction is how a harmonica breathes."},
+5:"Play the exercise for two minutes straight without getting out of breath."}},
+
+"harmonica-7":{title:"Chords and tremolo",goal:"Use several holes together on purpose",b:{
+0:"Until now we fought against the neighbouring notes. Now you <b>use them deliberately</b>: several holes together give a full chord.",
+1:"Blowing holes 1–4 together gives a C major chord. Drawing holes 1–4 gives a G chord.",
+2:"<b>Tremolo:</b> shake the hand holding the harmonica in front of your mouth. It makes the note waver and sounds like a train.",
+3:"Chord accompaniment",
+4:{q:"Which chord comes from blowing holes 1 to 4?",o:["G major","C major","A minor","D major"],w:"The blow notes are built from the notes of a C chord — C, E and G."},
+5:"Play a chord accompaniment to a song you know, for two minutes."}},
+
+"harmonica-8":{title:"A whole song",goal:"Play a familiar tune from start to finish",b:{
+0:"Now you combine it all: single holes, rhythm and planned breathing.",
+2:"A complete melody",
+3:"Mark for yourself in advance where you blow and where you draw. Planning ahead saves you from running out of air.",
+4:{q:"What helps you avoid running out of breath?",o:["Playing quietly","Planning in advance when to blow and when to draw","Playing fast","Shortening the song"],w:"Planning the direction of the air is the core skill of the harmonica."},
+5:"Play the melody five times in a row without stopping."}},
+
+"harmonica-9":{title:"Wrapping up, and what comes next",goal:"Know what you learned and where to go",b:{
+0:"You have finished the foundations: blowing and drawing, single holes, the full range, rhythm, chords and a whole song.",
+1:"What comes next: <b>bending</b> — changing the pitch with your tongue, which lets you play the notes that are not in the tuning. That is what gives the harmonica its bluesy sound.",
+2:"Closing piece",
+3:"Bending takes months, not days. Do not work on it before your single notes are completely clean.",
+4:{q:"What makes bending possible?",o:["A different harmonica","Changing the shape of your mouth and tongue","Blowing hard","Replacing the reeds"],w:"The shape of the mouth cavity changes the pitch."},
+5:"Play the closing piece and record yourself."}},
+
+/* ===================== GLOCKENSPIEL ===================== */
+"glock-1":{title:"A first strike",goal:"Produce a clean tone and learn the layout",b:{
+0:"The glockenspiel is the easiest melodic instrument to start on: <b>nothing to tune, no fingering, and no breath</b>. You strike — and the right note comes out.",
+1:"The bars are laid out exactly like piano keys: a long row of white ones, and above them groups of two and three.",
+2:"Strike the marked bar — this is C",
+3:["Hold the mallet loosely, between your thumb and index finger.","Strike the centre of the bar — not the end.","Lift the mallet immediately after the strike. A mallet left on the bar chokes the note.","A light strike is enough. The instrument does the work."],
+4:"A dull sound? The mallet is staying on the bar. Think of bouncing, not pressing.",
+5:{q:"Where do you strike the bar?",o:["At the end","In the centre","Near the screw","It makes no difference"],w:"The centre gives the fullest tone. The ends sound dull."},
+6:"Strike every white bar once, from low to high, with a clean tone."}},
+
+"glock-2":{title:"The scale and your first tune",goal:"Play a familiar melody",b:{
+0:"A C major scale is simply all the white bars in a row. That is all you need for your first tune.",
+1:"C major scale",
+2:"A first melody",
+3:"<b>Alternating hands:</b> right-left-right-left. It doubles your speed with no extra effort.",
+4:{q:"What is the advantage of alternating hands?",o:["A louder sound","You can play faster with no extra effort","The bars wear out less","There is no advantage"],w:"One hand has to travel back; two hands alternate continuously."},
+5:"Play the melody with alternating hands, five times."}},
+
+"glock-3":{title:"Rhythm and dynamics",goal:"Play at different volumes and in time",b:{
+0:"On a glockenspiel the note is short, so <b>timing and volume</b> are all the expression you have. That is what turns unremarkable playing into remarkable playing.",
+1:"Basic rhythm",
+2:"Try playing the same melody once strongly and once gently. The difference is bigger than it seems.",
+3:"The same melody, a different rhythm",
+4:{q:"What creates expression on a glockenspiel?",o:["Note length","Volume and timing","Tuning the bars","The number of mallets"],w:"The note is short and fixed, so volume and timing are your tools."},
+5:"Play the melody three times: softly, moderately and loudly."}},
+
+"glock-4":{title:"Two hands and jumps",goal:"Play a passage that moves between areas",b:{
+0:"On a glockenspiel the hand does not stay put. <b>The eye leads — the hand follows</b>, and that is a skill learned separately.",
+1:"Three anchor points — C, G and high C",
+2:["Find the three anchor points on the instrument.","Strike C and then G, without looking at the mallet.","Add the high C.","Now play all three in sequence at metronome 60."],
+3:"Look at the <b>next</b> bar while you are striking the current one. That is the secret of every mallet player.",
+4:{q:"Where do you look while playing?",o:["At the mallet","At the next bar","Only at the music","It makes no difference"],w:"The eye runs ahead of the hand, just as in reading."},
+5:"Play C-G-C twenty times without missing."}},
+
+"glock-5":{title:"The upper bars",goal:"Play in a scale with a sharp",b:{
+0:"The upper bars are the semitones — exactly like the black keys on a piano, and in the same groups of two and three.",
+1:"G major scale — watch out for the F sharp",
+2:"The upper bars are narrower. Aim for the centre, or the mallet will slip off.",
+3:{q:"How are the upper bars arranged?",o:["In an even row","In groups of two and three","Randomly","There are no upper bars"],w:"Exactly like the black keys of a piano."},
+4:"Play a G major scale up and down, five times."}},
+
+"glock-6":{title:"More complex rhythm",goal:"Play eighth notes and dotted notes",b:{
+0:"The note on a glockenspiel is short, so <b>accuracy in time</b> is heard immediately. Here you learn to divide the beat.",
+1:"Eighth notes",
+2:"A melody in eighths",
+3:"Count out loud: 'one-and-two-and'. Counting aloud is more accurate than counting in your head.",
+4:{q:"What helps with rhythmic accuracy?",o:["Playing loudly","Counting out loud","Playing fast","Watching your hands"],w:"Counting aloud connects your body to time."},
+5:"Play the melody at metronome 70, then at 85."}},
+
+"glock-7":{title:"Two voices",goal:"Play a melody and an accompaniment together",b:{
+0:"Two hands means two voices. One hand plays the melody, the other adds an anchor note.",
+1:"A C chord — the three notes together",
+2:"A melody with an anchor",
+3:"Start with the second hand striking only on the first beat of each bar. That is already enough to sound full.",
+4:{q:"What is the simplest way to add a second voice?",o:["Play everything twice","An anchor note on the first beat","Play faster","Add a third mallet"],w:"A single anchor per bar already creates the feel of accompaniment."},
+5:"Play the melody with an anchor, five times."}},
+
+"glock-8":{title:"A piece to perform",goal:"Play a complete piece with confidence",b:{
+0:"Now you combine it all: jumps, upper bars, rhythm and two voices.",
+1:"A piece to perform",
+2:"Play the piece in three separate sections, and only then join them. That is how professionals learn.",
+3:{q:"How do you learn a long piece?",o:["Play it over and over","Split it into sections and then join them","Play only the beginning","Speed up gradually"],w:"Splitting it saves time and prevents mistakes from being baked in."},
+4:"Play the piece three times in a row without stopping."}},
+
+"glock-9":{title:"Wrapping up, and what comes next",goal:"Know what you learned and where to go",b:{
+0:"You have finished: a clean strike, the scale, jumps, the upper bars, rhythm and two voices.",
+1:"What comes next: <b>xylophone and marimba</b> (wooden bars, a warmer tone), <b>four mallets</b> in two hands, and <b>reading music</b> while you play.",
+2:"Closing piece",
+3:"The glockenspiel is an excellent gateway to every melodic percussion instrument. The skill transfers almost entirely.",
+4:{q:"What is the difference between a glockenspiel and a xylophone?",o:["The size","Metal bars versus wooden bars","The number of bars","The tuning"],w:"Metal gives a bright, long tone; wood gives a warm, short one."},
+5:"Play the closing piece and record yourself."}},
+
+/* ===================== MANDOLIN ===================== */
+"mandolin-1":{title:"Getting to know it, and the open strings",goal:"Produce a clean tone and learn the tuning",b:{
+0:"The mandolin is tuned <b>exactly like a violin</b> — G, D, A, E — but it has frets. Every note sits in a fixed place, and nothing has to be found by ear.",
+2:["Hold the pick between your thumb and index finger, by the tip only.","Pick down and up alternately — that is the basic motion.","Left hand: press just behind the fret, not on top of it.","Play each open pair of strings four times."],
+3:"Every note has two strings side by side. That is what gives the mandolin its ringing sound.",
+4:{q:"How does a mandolin differ from a violin?",o:["In its tuning","In having frets","In the number of strings","Only in size"],w:"The tuning is identical; the frets are the difference, and they are what makes it easier for beginners."},
+5:"Pick each open string eight times, down and up."}},
+
+"mandolin-2":{title:"First notes on the neck",goal:"Play your first scale",b:{
+0:"Thanks to the frets, finding a note on a mandolin is a matter of counting — not of listening.",
+2:"Five notes",
+3:"One finger per fret — that is the rule that saves you years of corrections.",
+4:{q:"How do you find a note on a mandolin?",o:["By ear only","By the fret number","By the colour of the string","You cannot be certain"],w:"The frets fix the pitch exactly."},
+5:"Play the five notes up and down, ten times."}},
+
+"mandolin-3":{title:"A first melody",goal:"Play a whole tune",b:{
+0:"Now you combine them: open strings, notes on the neck, and a steady picking hand.",
+2:"A melody for mandolin",
+3:"<b>Tremolo:</b> fast repeated picking on the same note. It is the sound everyone recognises as a mandolin — but only once your ordinary picking is steady.",
+4:{q:"What is tremolo?",o:["A fast chord change","Fast repeated picking on the same note","Playing on two strings","Slowing down at the end"],w:"It is the signature technique of the mandolin."},
+5:"Play the melody five times with even picking."}},
+
+"mandolin-4":{title:"Your first chord",goal:"Play a G chord and change to it",b:{
+0:"On a mandolin a chord is <b>two fingers only</b> in most cases — far fewer than a guitar needs.",
+2:["Finger 1 on the A string, fret 2.","Finger 2 on the E string, fret 3.","The other two strings stay open.","Pick downwards across all four pairs."],
+3:"Press just behind the fret, not on it. That is where the least force is needed.",
+4:{q:"How many fingers does a basic mandolin chord need?",o:["Four","Two","Three","None"],w:"Two are enough for most open chords."},
+5:"Switch between the G chord and open strings, twenty times."}},
+
+"mandolin-5":{title:"Two chords and a song",goal:"Accompany a whole song with two chords",b:{
+0:"With two chords you can already accompany hundreds of songs. The change between them is the whole practice.",
+1:"Down-up picking",
+2:"<b>The rule of the change:</b> lift your fingers a moment before the beat, not on it. That way there is no hole in the rhythm.",
+3:"Accompaniment exercise",
+4:{q:"When do you lift your fingers during a chord change?",o:["Exactly on the beat","A moment before the beat","After the beat","It makes no difference"],w:"Lifting early keeps the rhythm continuous."},
+5:"Alternate between the two chords for two minutes without stopping."}},
+
+"mandolin-6":{title:"Tremolo",goal:"Produce a sustained sound with repeated picking",b:{
+0:"A mandolin has no long note — it dies away immediately. <b>Tremolo</b> is the answer: fast repeated picking that creates the illusion of a sustained tone.",
+1:["Hold the pick very loosely — that is the key.","Move from the wrist, not the elbow.","Start slow and even, and only then speed up.","Play one note in tremolo for four seconds."],
+2:"A tight grip on the pick means a jumpy tremolo. The softer the grip, the smoother the sound.",
+3:"A long note in tremolo",
+4:{q:"What matters most in tremolo?",o:["Speed","A relaxed grip","Heavy pressure","A thick pick"],w:"Relaxation is what allows the speed; tension prevents it."},
+5:"Practise tremolo on a single note, one minute per string."}},
+
+"mandolin-7":{title:"Scales across two octaves",goal:"Extend your range along the neck",b:{
+0:"Because the tuning is in fifths, the same finger pattern repeats on every pair of strings. You learn it once — and play it everywhere.",
+2:"G scale across two octaves",
+3:"The pattern you learned on the G string works in exactly the same way on the D string. That is the great saving of tuning in fifths.",
+4:{q:"What is the advantage of tuning in fifths?",o:["A louder sound","The same pattern repeats on every pair of strings","It is easier to tune","Fewer strings"],w:"The pattern is preserved, so you only ever learn it once."},
+5:"Play the scale across two octaves, ten times."}},
+
+"mandolin-8":{title:"Melody with accompaniment",goal:"Play a whole song and weave in chords",b:{
+0:"Now you combine them: melody, chords and tremolo in the same piece.",
+1:"A combined piece",
+2:"Play the melody alone first, then the chords alone, and only then combine. Combining too early ruins both.",
+3:{q:"How do you combine melody and accompaniment?",o:["Play them together from the start","Learn each separately and then combine","Give up one of them","Play very slowly"],w:"Separate first, combine afterwards — that is the fast route."},
+4:"Play the combined piece five times."}},
+
+"mandolin-9":{title:"Wrapping up, and what comes next",goal:"Know what you learned and where to go",b:{
+0:"You have finished: open strings, notes on the neck, chords, tremolo and scales across two octaves.",
+1:"What comes next: <b>bluegrass style</b> (fast, precise picking), <b>closed chords</b> that move along the neck, and <b>improvising</b> on the scales you have learned.",
+2:"Closing piece",
+3:"The mandolin shares its tuning with the violin — everything you learned here transfers almost entirely if you ever want to try it.",
+4:{q:"Which instrument shares the mandolin's tuning?",o:["Guitar","Violin","Bass","Ukulele"],w:"Both are tuned G-D-A-E."},
+5:"Play the closing piece and record yourself."}}
+
+});
