@@ -2,7 +2,6 @@
    Song source / public-domain provenance in English, used for all non-Hebrew locales. */
 const SONG_SRC_EN = {
   furelise:"Ludwig van Beethoven (d. 1827); opening theme, from the Wikipedia score",
-  happybirthday:"Melody 'Good Morning to All' by Mildred J. Hill (d. 1916); from the Wikipedia score",
   silentnight:"Franz Xaver Gruber (d. 1863); from the Wikipedia score",
   tarantella:"Traditional Neapolitan dance; from the Wikipedia score",
   canonind:"Johann Pachelbel (d. 1706); melody from the Wikipedia score",
