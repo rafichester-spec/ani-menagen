@@ -1,6 +1,9 @@
 /* מקורות השירים בכתיב לטיני – משמש לכל השפות שאינן עברית.
    Song source / public-domain provenance in English, used for all non-Hebrew locales. */
 const SONG_SRC_EN = {
+  mozart40:"Wolfgang Amadeus Mozart (d. 1791); from the Wikipedia score",
+  newworld:"Antonin Dvorak (d. 1904); Largo theme, from the Wikipedia score",
+  harktheherald:"Felix Mendelssohn (d. 1847); from the Wikipedia score",
   furelise:"Ludwig van Beethoven (d. 1827); opening theme, from the Wikipedia score",
   silentnight:"Franz Xaver Gruber (d. 1863); from the Wikipedia score",
   tarantella:"Traditional Neapolitan dance; from the Wikipedia score",
